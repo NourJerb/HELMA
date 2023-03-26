@@ -1,7 +1,9 @@
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
-import Presentation from "./pages/Item/Item";
-import Services from "./pages/Commander/Commander";
+import Item from "./pages/Item/Item";
+import Confirmer from "./pages/Confirmer/Confirmer";
+import Commander from "./pages/Commander/Commander";
+import Shop from "./pages/Shop/Shop";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 
