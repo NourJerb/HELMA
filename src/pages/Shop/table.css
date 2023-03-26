@@ -1,0 +1,14 @@
+.container{
+    width: 200vw;
+    height: 150vh;
+    display:grid;
+    justify-content: start;
+    grid-template-columns: 10% 10% 10%;
+    grid-template-rows: 30% 30%;
+    gap: 30% 6%;
+    border:none;
+    padding-top: 1%;
+    
+    
+}
+

@@ -7,7 +7,8 @@ import Footer from "./components/Footer";
 import Shop from "./pages/Shop/Shop";
 import Item from "./pages/Item/Item";
 import Commander from "./pages/Commander/Commander";
-import Confirmer from "./pages/Confirmer/Confirmer"
+import Confirmer from "./pages/Confirmer/Confirmer";
+
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/*" Component={Shop} />
           <Route path="/item" element={<Item/>} />
           <Route path="/commander" element={<Commander/>} />
           <Route path="/confirmer" element={<Confirmer/>} />
