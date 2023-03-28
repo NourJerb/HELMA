@@ -2,7 +2,7 @@ import React from "react";
 import "./Confirmer.css";
 
 function Confirmer() {
-  return <div>Confirmer</div>;
+  return <div>nour</div>;
 }
 
 export default Confirmer;
