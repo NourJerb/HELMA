@@ -1,7 +1,7 @@
 import React from "react";
 import "./Item.css";
 function Item() {
-  return <div>Item</div>;
+  return <div>Baha</div>;
 }
 
 export default Item;
