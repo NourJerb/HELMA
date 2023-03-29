@@ -160,18 +160,23 @@ img {
     padding: 20px 0;
   }
 
-  .btnMenu {
+  button.btnMenu {
     display: block;
-    margin-right: 5%;
+    margin-right: -4%;
+    margin-bottom:80% ;
   }
   .btnMenu:hover{
     cursor: pointer;
     
   }
+  .searchC{
+    
+    
+  }
 
   .search-container {
     margin-bottom: 80%;
-    margin-right: 60%;
+    
 
   }
 
@@ -182,41 +187,7 @@ img {
   }
 }
 
-/* @media only screen and (max-width: 1024px){
-  header .nav-btn{
-    visibility: visible;
-    opacity: 1;
-  }
-  header .nav-btn:hover{
-    color: #E8C895;
-    
-  }
-  header ul{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: var(--darkColor);
-    transition: 1s;
-    transform: translateX(-100vh);
-  }
-  header .responsive_nav{
-    transform: none;
-  }
-  .nav-close-btn{
-    position: absolute;
-    top: 0.5rem;
-    right: 2rem;
-  }
+@media only screen and (max-width: 1024px){
   
-  nav a{
-    font-size: 1.5rem;
-  }
   
-}  */
+}  
