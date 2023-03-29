@@ -48,14 +48,14 @@ function NavBar() {
                 
                 <li className='elem elemi'><a href="#">HOME</a></li>
                 <li className='elem elemi'><a href="#">BOUTIQUE</a></li>
-                <li className='  elemi '><a href="#">CONTACTS</a></li>
+                <li className='elemi '><a href="#">CONTACTS</a></li>
               
                 {/* <button className="nav-btn  nav-close-btn" onClick={showNavBar}>
                         <FaTimes></FaTimes>
 
                 </button> */}
             </ul>))}
-            <ul>
+            <ul className='searchC'>
                  <li className=" search-container">
                     <input type="text"  className='inputText'/>
                     <button type="submit" >

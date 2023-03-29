@@ -5,6 +5,7 @@
   height: 20%;
   display: flex;
   font-size: 110%;
+  margin-top: 0;
 
 }
 
@@ -72,8 +73,10 @@ input {
 button[type="submit"] {
   border: none;
   background-color: transparent;
-  color: #333;
+  
   font-size: 1rem;
+  
+  
 }
 
 .elem {
@@ -94,6 +97,7 @@ button[type="submit"] {
 
 }
 
+
 .search {
   color: #fff;
   font-size: 1.6rem;
@@ -113,9 +117,9 @@ img {
 .btnMenu {
 
   display: none;
-  position: absolute;
+  position: fixed;
   right: 3px;
-  top: 10px;
+  top: 12px;
   padding: 3hv;
   color: #fff;
 
@@ -125,55 +129,25 @@ img {
   color: #e5c492;
 }
 
-/* @media screen and (max-width: 769px) {
-  #navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: fixed;
-    top: 90px;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    background: #2a3239;
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 40px 0 0 10px;
-    transition: 0.3s ease-in-out;
-  }
 
-  #navbar.active {
-    right: 0px;
-  }
-
-  #navbar li {
-    margin-bottom: 25px;
-  }
-
-  #mobile {
-    display: block;
-  }
-
-  #mobile i {
-    font-size: 24px;
-    cursor: pointer;
-  }
- } */
 @media screen and (max-width: 1024px) {
 
   .hbc {
     flex-direction: column;
     height: auto;
     width: 100%;
-    
+    position: fixed;
     color: #514F62;
+   
    
   }
 
 
   .elemi:nth-child(1) {
     border-top: 1px solid rgba(255, 255, 255, 0.555);
-    margin-top: 50px;
+    margin-top: 10%;
+    width: 100%;
+    
   }
   
   .elemi {
@@ -188,6 +162,7 @@ img {
 
   .btnMenu {
     display: block;
+    margin-right: 5%;
   }
   .btnMenu:hover{
     cursor: pointer;
