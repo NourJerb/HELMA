@@ -1,37 +1,91 @@
 .element {
     font-size: larger;
-    width: 58vh;
-    height:85vh;
+    width: 100%;
+    height:92%;
     border: 1px solid #707070;
-    margin-left: 17%;
     border-radius: 2%;
     overflow: hidden;
     background-color: #F1F1F1;
-    
+    padding-bottom: 9%;  
 }
+
 
 .img{
     display: block;
     background-color: #40485B;
     max-width: 100%;
-    height: 46vh;
+    height: 35vh;
     border-top-left-radius:2%;
     border-top-right-radius: 2%; 
-    
 }
 
 .boutton{
     border-radius: 15px;
-    margin-left: 22%;
-    margin-top: 7%;
-    width: 53%;
-    height: 7vh;
+    width: 55%;
+    margin-left: 23%;
+    height: 5vh;
     background-color: #40485B;
     color:white;
     font-family:'Quicksand';
-    padding: 1.5%;
-    font-size: larger;
+    padding: 0.5%;
+    font-size: 90%;
     border-color: #707070;
+    cursor: pointer;
+    
     
 }
+
+.title{
+    color:#1B2437;
+    font-size: larger;
+    width:60%;
+    height:30%;
+    padding-left: 9%;
+    padding-top: 10%;
+    font-family: Playfair Display;
+}
+
+.desc{
+    color: #8E8E93;
+    font-size: small;
+    padding-left: 9%;
+    padding-top: 7%;
+}
+
+.btn{
+    margin-top: 8%;
+}
+
+
+
+
+
+@media (max-width:1024px) {
+    .img{
+        height: 37vh;
+        
+}}
+@media (max-width:600px) {
+    .img{
+        height: 45vh;
+        
+}}
+
+@media (max-width:414px) {
+    .img{
+        height: 40vh;
+        
+}}
+
+@media (max-width:912px) {
+    .img{
+        
+        height:35vh;
+    
+}}
+
+
+
+
+
 
