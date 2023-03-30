@@ -6,22 +6,11 @@ import { Route,Routes,useLocation} from 'react-router-dom';
 import Pagination from './pagination';
 import Table from './table';
 import {getUsers,getLength} from '../../data/dataselim'
-
+import { BrowserRouter } from "react-router-dom";
 
 function Shop() {
-  const mediaQuery = window.matchMedia("(max-width: 1024px)");
-  const mediaQuery1 = window.matchMedia("(min-width: 1025px)");
-  let n=1
-  if (mediaQuery.matches){
-     n=10;
-  }
-  if(mediaQuery1.matches){
-     n=9;
-  }
-
-  console.log(n)
   let [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(n);
+  const [limit, setLimit] = useState(6);
   let totalPages=Math.ceil(getLength()/limit);
   const location = useLocation();
 
@@ -53,7 +42,6 @@ function Shop() {
     } 
   }
 
-
   // refreshing page issue
  useEffect(() => {
    const storedPage = localStorage.getItem('currentPage');
@@ -64,9 +52,11 @@ function Shop() {
 
 // My component 
 let MyComponent = () => (
-  <div id={localStorage.getItem('currentPage')} className="parent" >
-    <Table users={getUsers(page,limit)} className="contain" />
-    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pag" ></Pagination>   
+  <div id={localStorage.getItem('currentPage')}>
+    <hr></hr>
+    <Table users={getUsers(page,limit)}  />
+    <br></br>
+    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange}></Pagination>
   </div>
 ) 
 
@@ -80,7 +70,7 @@ useEffect(() => {
     localStorage.setItem('currentPage',newPage);
     setPage(newPage);
   }
-},[]);
+});
 
 // giving title to the page 
 let text='page '+localStorage.getItem('currentPage');
@@ -93,9 +83,7 @@ if (path1==='/shop'){
 }
 console.log (location.pathname)
 
-
-
-  return <div className="parent"> 
+  return <div> kkkk 
 <Routes>
 <Route  path='page1' exact element={<MyComponent  />}></Route>
 <Route  path={'page'+localStorage.getItem('currentPage')} exact element={<MyComponent  />}></Route>
