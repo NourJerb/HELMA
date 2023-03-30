@@ -76,11 +76,11 @@
 
 }} 
 
-/* @media (max-height:px) {  */
-    /* .container{  */
-        /* padding-bottom: 10%; */
+@media (max-height:px) { 
+    .container{ 
+        padding-bottom: 10%;
 
-/* }}  */
+}} 
 
 
 
