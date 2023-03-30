@@ -1,5 +1,7 @@
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
+import Presentation from "./pages/Item/Item";
+import Services from "./pages/Commander/Commander";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop/Shop";
