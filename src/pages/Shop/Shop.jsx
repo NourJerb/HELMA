@@ -7,7 +7,6 @@ import Pagination from './pagination';
 import Table from './table';
 import {getUsers,getLength} from '../../data/dataselim'
 
-
 function Shop() {
   const mediaQuery = window.matchMedia("(max-width: 1024px)");
   const mediaQuery1 = window.matchMedia("(min-width: 1025px)");
@@ -18,8 +17,6 @@ function Shop() {
   if(mediaQuery1.matches){
      n=9;
   }
-
-  console.log(n)
   let [page, setPage] = useState(1);
   const [limit, setLimit] = useState(n);
   let totalPages=Math.ceil(getLength()/limit);
@@ -30,29 +27,32 @@ function Shop() {
     if(value === "&laquo;" || value ==="... " ){
       setPage(1);
       localStorage.setItem('currentPage',1);
+      
      }
 
     else if(value === "&lsaquo;"){
       if(page !== 1){
         localStorage.setItem('currentPage',page-1);
         setPage(page - 1);   
+        
       }
     }else if(value==="&rsaquo;"){
       if(page !== totalPages){
         setPage(page+1);
         localStorage.setItem('currentPage',page+1);
+        
       }
     }else if (value === "&raquo;" || value ===" ..." || value ==="..." ){
       setPage(totalPages);
       localStorage.setItem('currentPage',totalPages);
+      
 
     }else{
       setPage(value);   
       localStorage.setItem('currentPage',value);
-    
     } 
   }
-
+  
 
   // refreshing page issue
  useEffect(() => {
@@ -69,6 +69,11 @@ let MyComponent = () => (
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pag" ></Pagination>   
   </div>
 ) 
+
+//number of elements in the last Page
+const elementLastPage=getLength()-(n*(totalPages-1))
+
+
 
 // the problem of previous and next button
 const path = location.pathname;
@@ -91,9 +96,6 @@ const path1 = location.pathname;
 if (path1==='/shop'){
   location.pathname+='/page1';
 }
-console.log (location.pathname)
-
-
 
   return <div className="parent"> 
 <Routes>
