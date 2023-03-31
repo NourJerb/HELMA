@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Quicksand:wght@700&display=swap');
+*{
+    font-family: 'Quicksand', sans-serif;}
+
+    iframe{
+    margin-top: 2vh;
+    width: 70% ;
+    height : 70vh;
+    border:0;
+    
+}
+.Location h6 {
+    font-size: 1em;
+}
+    
+
+.description-location{
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+
+}
+
+.loc-image{
+    margin-top: 5vh;
+}
+
+.helma-bande{
+    background-color: #40485B ;
+    height: 15vh;
+}
+.Location{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo-bande{
+    padding: 3vh;
+}
+
+
+.contactcp{
+    display: flex;
+    justify-content: center;
+    gap: 14vw;
+    padding-left: 6vw;
+}
+
+
+.logos{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    gap: 13vw;
+    padding-left:1vw ;
+  margin-bottom: 10vh;
+}
+
+
+
+
