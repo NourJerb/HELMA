@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Quicksand:wght@700&display=swap');
+
+.container-description{
+    margin: 2%;
+    width: 60.71vw ;
+    height: 92.63vh ;
+    background-color:#40485B ;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;}
+
+h1{
+    margin-top: 2rem;
+    color: white;
+    font-size: 3vw;
+}
+
+.presentation-description{
+    display: flex;
+    gap: 7%;
+    margin-top: 3vh;
+    
+
+}
+.prod{
+    margin-left: 5rem;
+    margin-top: 3rem;
+    margin-right: 1rem;
+}
+
+.image-description{
+    width: 24vw;
+    height: 47.74vh;
+    
+}
+
+.donnees-description{
+    text-align: left;
+    padding-left: 3vw;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+h4{
+    color: #E8C895;
+    font-size: 1.2vw;
+    margin:2.7vh auto ;
+}
+span{
+    font-size: 1vw;
+    color: white;
+    font-weight:lighter;
+}
+
+
+
+.prix-produit{
+    font-size: 2.5vw;
+    margin-top: 0;
+    padding-top: 1.5vw;
+}
+.dt{
+    font-size: 1.2vw;
+    color: #E8C895;
+    padding-left: 0.2rem;
+}
+.button-description{
+    width: 10vw;
+    height: 4vh;
+    color: black;
+    background-color: #E8C895;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 1.4vw;
+    margin-top: 2%;
+    margin-bottom: 5%;
+
+}
