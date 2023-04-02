@@ -1,6 +1,7 @@
 import React from "react"
 import Element from "./element";
 import './table.css'
+
 function Table (props){
     let users=props.users;
     return(<div className="container" > 

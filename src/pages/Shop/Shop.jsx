@@ -62,18 +62,25 @@ function Shop() {
 }
 }, []);
 
+
+
 // My component 
-let MyComponent = () => (
+//number of elements in the last Page
+const elementLastPage=getLength()-(n*(totalPages-1))
+function MyComponent(){
+  let path=location.pathname
+  if(path[path.length-1]==totalPages && elementLastPage<=6 && elementLastPage>=4){
+    return(<div id="lastPage" className="parent" >
+    <Table users={getUsers(page,limit)} className="last" />
+    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
+  </div>)
+  }else{
+  return(
   <div id={localStorage.getItem('currentPage')} className="parent" >
     <Table users={getUsers(page,limit)} className="contain" />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pag" ></Pagination>   
-  </div>
-) 
-
-//number of elements in the last Page
-const elementLastPage=getLength()-(n*(totalPages-1))
-
-
+  </div>)
+}}
 
 // the problem of previous and next button
 const path = location.pathname;
@@ -106,3 +113,4 @@ if (path1==='/shop'){
 }
 
 export default Shop;
+
