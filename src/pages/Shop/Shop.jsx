@@ -62,15 +62,35 @@ function Shop() {
 }
 }, []);
 
+function NumberInPath(path){
+  let number=""
+  for(let i=0;i<path.length;i++){
+      if(path[i] in ["1","2","3","4","5","6","7","8","9","0"]){
+        number+=path[i]
+      }
+  }
+  return (number);
+}
+
+window.scrollTo({
+  top: 0,
+  left: 0,
+});
 
 
 // My component 
-//number of elements in the last Page
-const elementLastPage=getLength()-(n*(totalPages-1))
+const elementLastPage=getLength()-(n*(totalPages-1)) //number of elements in the last Page
 function MyComponent(){
   let path=location.pathname
-  if(path[path.length-1]==totalPages && elementLastPage<=6 && elementLastPage>=4){
-    return(<div id="lastPage" className="parent" >
+  console.log(Number(NumberInPath(path)))
+  if(Number(NumberInPath(path))===totalPages && elementLastPage<=3 && elementLastPage>=1){
+    return(<div id="lastPage1" className="parent" >
+    <Table users={getUsers(page,limit)} className="last" />
+    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
+  </div>)
+  }else{
+  if(Number(NumberInPath(path))===totalPages && elementLastPage<=6 && elementLastPage>=4){
+    return(<div id="lastPage2" className="parent" >
     <Table users={getUsers(page,limit)} className="last" />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
   </div>)
@@ -80,12 +100,13 @@ function MyComponent(){
     <Table users={getUsers(page,limit)} className="contain" />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pag" ></Pagination>   
   </div>)
-}}
+}}}
+
 
 // the problem of previous and next button
 const path = location.pathname;
 useEffect(() => {
-  const newPage = Number(path[path.length-1]);
+  const newPage = Number(NumberInPath(path));
   if(newPage===localStorage.getItem('currentPage')){
   setPage(newPage);}
   else{

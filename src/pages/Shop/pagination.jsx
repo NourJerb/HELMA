@@ -2,6 +2,9 @@
 import { returnPaginationRange } from './apputils';
 import './pagination.css';
 import { Link } from 'react-router-dom';
+import right from "../../assets/right.png"
+import left from "../../assets/left.png"
+
 
 
 
@@ -22,9 +25,10 @@ function Pagination(props){
             previousPage = 1;
                         }
     
-    return(<div className='nav' >
+    return(<div className='pagination' >
         
-        <Link to={`/shop/page${previousPage}`}  className="PageItem" onClick={()=>props.onPageChange("&lsaquo;")} >&lsaquo;</Link>
+        <Link to={`/shop/page${previousPage}`}  className="left" onClick={()=>props.onPageChange("&lsaquo;")} ><img src={left} alt="left"></img></Link>
+        <div className='nav'>
         {array.map(value => {
             let pt
             if (value ===" ..." || value ==="..."){
@@ -38,18 +42,18 @@ function Pagination(props){
             }}
             if(value === props.page){
                 
-               return(<div key={value} className="PageItem" onClick={()=>props.onPageChange(value)} style={{background:"green"}} >{value}</div>);}
+               return(<div key={value} className="PageItem" onClick={()=>props.onPageChange(value)} style={{background:"#E8C895",color:"#FFFFFF"}} >{value}</div>);}
             else {
                 
                 return(<Link to={`/shop/page${pt}`} key={value} className="PageItem" onClick={()=>props.onPageChange(value)}>{value}</Link>);
 
             }
         })}
-         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className="PageItem">&rsaquo;</Link>
+        </div>
+         
+         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className="right"><img src={right} alt="right"></img></Link>
+         
 
-        
-        
-        
 
     </div>);
 }

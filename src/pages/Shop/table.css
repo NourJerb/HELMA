@@ -39,7 +39,8 @@
 
 @media (max-width:832px) {
     .container{
-        height: 450vh;  
+        height: 300vh;  
+    
     
 }}
 
@@ -86,13 +87,20 @@
 
 
 
-#lastPage > .container {
-    height: 160vh;
+#lastPage2 > .container {
+    height: 10vh;
     display:grid;
     grid-template-columns: 23.5% 23.5% 23.5% ;
-    grid-template-rows: 45% 45%;
+    grid-template-rows: 50% 50%;
   }
 
+#lastPage1 > .container {
+    height: 66vh;
+    display:grid;
+    grid-template-columns: 23.5% 23.5% 23.5% ;
+    grid-template-rows: 109%;
+    
+  }
 
 
 

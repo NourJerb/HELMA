@@ -84,7 +84,10 @@
     
 }}
 
-
+@media (max-width:832px) {
+    .img{
+        height: 28vh;   
+}}
 
 
 
