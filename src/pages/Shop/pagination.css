@@ -46,6 +46,10 @@
     
 }
 
-
+@media (max-width:1495px) {
+    .pagination{
+    position: relative;
+    top:-0vh;
+}}
 
 

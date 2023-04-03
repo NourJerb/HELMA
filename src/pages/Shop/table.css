@@ -12,9 +12,9 @@
 }
 @media (max-width:1495px) {
     .container{
-    height: 240vh;
+    height: 230vh;
     grid-template-columns: 28% 28% 28% ;
-    grid-template-rows: 32% 32% 32%;
+    grid-template-rows: 31% 31% 31%;
     gap:4.5%;
     margin-left: 0%;
 }}
@@ -101,6 +101,11 @@
     grid-template-rows: 109%;
     
   }
+
+@media (max-width:1495px) {
+    #lastPage1 > .container {
+        grid-template-rows: 105% ;
+}}
 
 
 

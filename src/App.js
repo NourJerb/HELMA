@@ -6,9 +6,8 @@ import Shop from "./pages/Shop/Shop";
 import Item from "./pages/Item/Item";
 import Commander from "./pages/Commander/Commander";
 import Confirmer from "./pages/Confirmer/Confirmer";
-
-
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
     <>
