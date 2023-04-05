@@ -57,6 +57,20 @@
   margin-bottom: 10vh;
 }
 
+@media (max-width: 768px) {
+    .logos {
+      flex-direction: column;
+      gap: 5vw;
+    }
+
+    .contactcp{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+
+
 
 
 
