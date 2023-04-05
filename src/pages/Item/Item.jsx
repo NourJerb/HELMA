@@ -1,5 +1,7 @@
 import React from "react";
 import "./Item.css";
+import { produit } from "../assets/file"
+
 function Item() {
   return  <div className="container-description">
   <h1>sdgsdgsdgsdgsdgsdgsdg</h1>
@@ -31,7 +33,7 @@ function Item() {
        </div>
      </div>
      <div className="prod">
-     <img className="image-description" src="https://cdn.shopify.com/s/files/1/0557/9158/3406/products/cscplr2_f.jpg?v=1625149064" alt="wait" />
+     <img className="image-description" src={produit} alt="wait" />
      
      <h4 className="prix-produit">500<span className="dt">DT</span></h4>
      

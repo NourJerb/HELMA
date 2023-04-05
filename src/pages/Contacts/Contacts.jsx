@@ -8,6 +8,8 @@ import { Facebook } from "../assets/file"
 import { Twitter } from "../assets/file"
 import { Instagram } from "../assets/file"
 import "./Contacts.css";
+
+
 function Contacts() {
   return <div className="Location">
   <div className="map">

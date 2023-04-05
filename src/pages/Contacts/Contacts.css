@@ -57,7 +57,7 @@
   margin-bottom: 10vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .logos {
       flex-direction: column;
       gap: 5vw;
