@@ -2,12 +2,12 @@ import './Boutique.css';
 function Boutique(){
     return(
         <div className='container-boutique'>
-            <div>
+            <div className='helmaJewelry'>
                 <p className='helma'>HELMA</p>
                 <p className='text'>All <span>jewelry</span> items</p>
             </div>
-            <div>
-                <button>Voir boutique</button>
+            <div className=' btnSeeShop'>
+                <button>See Shop</button>
             </div>
 
         </div>

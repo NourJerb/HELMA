@@ -1,10 +1,12 @@
 .container-boutique{
     display: flex;
+    
     justify-content: space-around;
     align-items: center;
     margin-top: 300px;
     margin-bottom: 20px;
-    height:320px;
+    height: 10%;
+    /* height:320px; */
     background: linear-gradient(180deg,#fff,#514F62);
 
    
@@ -19,6 +21,7 @@
 .helma{
     color: #514F62;
     padding-left: 10%;
+    padding-right: 10%;
     
     padding-bottom: 2%;
     font-size: 9rem;
@@ -37,4 +40,35 @@ button{
      border-radius: 0.9vh;
      font-size: 1.2rem;
      font-weight: 580;
+    
+}
+@media screen and (max-width: 766px){
+    .container-boutique{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .btnSeeShop{
+    padding-bottom: 30vh;
+   
+    }
+    .helmaJewelry{
+        margin-top: 12vh;
+        padding-bottom: 0;
+        
+    }
+    .helma{
+        font-size: 5rem;
+    }
+    .text{
+        font-size: 1.2rem;
+        width: 100%;
+        padding-left: 10%;
+    }
+    .helmaJewelry p{
+        text-align: center;
+    }
+
 }

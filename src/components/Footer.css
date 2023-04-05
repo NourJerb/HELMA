@@ -4,43 +4,68 @@ footer {
     padding: 20px;
     color: #E8C895;
     margin-bottom: 0;
-    height: 300px;
+    
     
   }
   
   .container {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
-    align-items: center;
+    padding-bottom: 2vh;
+    
+    
   }
+  .logoScContainer{
+    width: 70%;
+  }
+  .logo{
+    
+    padding-bottom: 38px; 
+    height:50%;
+    width: 100%;
+    
+  }
+  .logo  img {
+    margin-top: 5vh;
+    height: 100%;
+    width: 100%;
+    
   
-  .logo {
-    width: 80px;
-    padding-left: 12vh;
   }
-  .socialMedia{
-    padding-left: 15vh;
-  }
-  .columns {
-    margin-right: 25vh;
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
-    align-items:center
-  }
+ .socialMedia{
+  padding-bottom: 3px;
+  
+
+ }
   
   .column {
    
-    padding: 5vh 12vh 0 8vh;
+    
     display: flex;
 
     flex-direction: column;
     
     align-items: center;
   }
+   
+  .column-1,
+.column-5 {
+  flex: 2;
+}
+.column-1{
+
+    float: none;
+    clear: both;
+    width: 100%;
   
+}
+
+
+.column-2,
+.column-3,
+.column-4 {
+  flex: 1;
+}
   .column h4 {
     
     padding-bottom: 3vh;
@@ -53,26 +78,100 @@ footer {
     display: flex;
     flex-direction: column;
     list-style: none;
+    margin-bottom: 0;
    
   }
   
   .column ul li {
     
-    padding-bottom: 3vh;
+    /* padding-bottom: 3vh; */
     font-weight: 600;
   }
-  .item:not(:last-child) {
-    border-right: 1px solid #E8C895;
-    margin-right: 10px;
-  }
+
+ .column ul li p{
+  width: 100%;
+  margin-bottom: 0;
+ }
   li{
     padding: 5px 10px;
   }
-  .rights{
-    padding-right: 100vh;
+  .column{
+    margin-bottom: 0;
+  }
+  
+  .contacts{
+    /* display: none;  */
+    position: relative;
     font-weight: 600;
+    margin-top: -2%;
+    padding-bottom: 1vh;
+   
+    
   }
-  .column button{
-    background-color: #ffffff;
+  .contacts .textC{
+    
+    font-size: 2rem;
+    letter-spacing: 2px;
   }
+
+  
+  .subscribe-btns{
+    padding-top: 2vh;
+    
+    
+   
+  }
+  
+ .responsiveLogoContacts{
+  display: none; 
+  
+
+}
+  
+  .rights{
+    width:100%;
+    
+    font-weight: 600;
+    margin-bottom: -0.8%;
+    
+  }
+ 
+  .rights p{
+    padding-right: 100vh;
+  }
+  @media screen and (max-width: 698px){
+   .subscribe-btns{
+    
+    margin-top: 20vh;
+   }
+    /* .column-1{
+    float: none;
+    clear: both;
+    width: 100%;
+    margin-top: 40vh;
+  
+    }  */
+    .column-1{
+      display: none;
+    }
+ /* .container  .contacts{
+    display: block;
+    margin-left: 150vh;
+    
+  } */
+  .responsiveLogoContacts{
+    /* display: none; */
+    display: flex;
+    justify-content: space-evenly;
+  
+  }
+  .rights p{
+    text-align: center;
+    padding-right: 0;
+  }
+
+  
+  }
+
+  
  

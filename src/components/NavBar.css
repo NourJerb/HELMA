@@ -98,13 +98,12 @@ button[type="submit"] {
 }
 
 
-.search {
-  color: #fff;
-  font-size: 1.6rem;
-}
+
 
 .searchloop {
   margin-right: 30vh;
+  color: #ffffff;
+  font-size: 1.6rem;
 }
 
 
@@ -115,7 +114,7 @@ img {
 }
 
 .btnMenu {
-
+  background-color: transparent;
   display: none;
   position: fixed;
   right: 3px;
@@ -128,10 +127,15 @@ img {
 .btnMenu:hover{
   color: #e5c492;
 }
+.searchloop:hover{
+  color: #e5c492;
+  
+
+}
 
 
 @media screen and (max-width: 1024px) {
-
+   
   .hbc {
     flex-direction: column;
     height: auto;
@@ -149,6 +153,7 @@ img {
     width: 100%;
     
   }
+
   
   .elemi {
     
@@ -163,19 +168,24 @@ img {
   button.btnMenu {
     display: block;
     margin-right: -4%;
-    margin-bottom:80% ;
+    margin-top: 1%;
+   
+
   }
   .btnMenu:hover{
     cursor: pointer;
     
   }
   .searchC{
+    margin-left: -50%;
     
     
   }
+  
 
   .search-container {
     margin-bottom: 80%;
+    
     
 
   }
@@ -187,7 +197,10 @@ img {
   }
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 536px){
+  .inputText{
+    display: none;
+  }
   
   
 }  

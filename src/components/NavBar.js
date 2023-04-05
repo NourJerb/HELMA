@@ -47,7 +47,7 @@ function NavBar() {
             {((toggleMenu || screenWidth > 1024) && (<ul className='hbc' >
                 
                 <li className='elem elemi'><a href="#">HOME</a></li>
-                <li className='elem elemi'><a href="#">BOUTIQUE</a></li>
+                <li className='elem elemi'><a href="#">SHOP</a></li>
                 <li className='elemi '><a href="#">CONTACTS</a></li>
               
                 {/* <button className="nav-btn  nav-close-btn" onClick={showNavBar}>
@@ -59,7 +59,7 @@ function NavBar() {
                  <li className=" search-container">
                     <input type="text"  className='inputText'/>
                     <button type="submit" >
-                      <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
+                      <AiOutlineSearch  className=' searchloop' color='#fff' size={25}  />
                     </button>
                     
                   

@@ -1,0 +1,22 @@
+.logos{
+   
+    color: #e5c492;
+    opacity: 1;
+    
+    display: flex;
+    /* justify-content: space-between; */
+    width:100%;
+    cursor: pointer;
+    
+ }
+ /* .logos div:hover{
+    color:#E8C895 ;
+    
+ } */
+ .logo{
+  padding-left: 20px;
+
+  font-size: 1.7rem;
+ }
+ 
+ 

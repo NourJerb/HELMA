@@ -1,0 +1,54 @@
+.email-subscription {
+    display: flex;
+
+    align-items: center;
+    
+    /* border: 1px solid #ddd; */
+    /* padding: 10px; */
+  }
+  
+  .email-form {
+    flex: 1;
+    margin-right: 10px;
+    
+  }
+  
+  input[type="email"] {
+    background-color: #fff;
+    width: 100%;
+   
+    padding: 8px 8px 8px 8px;
+   
+    border: none;
+    color: #514F62;
+
+    
+
+    border-bottom-left-radius:20px;
+    border-top-left-radius:20px;
+    font-size: 14px;
+    
+  }
+  .email-subscription button{
+    background-color: #E8C895; 
+   
+  }
+  .subscribe-button {
+   
+    color: #514F62;
+    
+    
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-bottom-right-radius:20px;
+    border-top-right-radius:20px;
+    
+  }
+  
+  .subscribe-button:hover {
+    cursor: pointer;
+   
+  }
+  
