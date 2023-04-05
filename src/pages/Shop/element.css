@@ -60,34 +60,7 @@
 
 
 
-@media (max-width:1024px) {
-    .img{
-        height: 37vh;
-        
-}}
-@media (max-width:600px) {
-    .img{
-        height: 45vh;
-        
-}}
 
-@media (max-width:414px) {
-    .img{
-        height: 40vh;
-        
-}}
-
-@media (max-width:912px) {
-    .img{
-        
-        height:35vh;
-    
-}}
-
-@media (max-width:832px) {
-    .img{
-        height: 28vh;   
-}}
 
 
 

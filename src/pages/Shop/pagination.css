@@ -52,4 +52,23 @@
     top:-0vh;
 }}
 
+@media (max-width:450px) { 
+    .pagination{ 
+        font-size: small; 
 
+}} 
+
+@media (max-width:360px) { 
+    .left{
+        right:17%;
+    }
+    .right{
+        left:17%;
+    }
+
+} 
+@media (max-width:280px) { 
+    .pagination{ 
+        font-size: x-small; 
+
+}} 

@@ -10,6 +10,8 @@
     padding-bottom: 5%;
     margin-left: -1%;
 }
+
+/* Normal page */
 @media (max-width:1495px) {
     .container{
     height: 230vh;
@@ -23,14 +25,14 @@
 @media (max-width:1024px) {
     .container{
         height: 450vh;
-        grid-template-columns: 40% 40%  ;
+        grid-template-columns: 35% 35%  ;
         grid-template-rows: 17% 17% 17% 17% 17%  ;
-        gap: 2% 5%;}
+        gap: 2% 6%;}
     }
 
 @media (max-width:912px) {
     .container{
-        height: 400vh;
+        height: 250vh;
         grid-template-columns: 45% 45%  ;
         grid-template-rows: 18% 18% 18% 18% 18%  ;
         gap: 2% 5%;
@@ -39,7 +41,7 @@
 
 @media (max-width:832px) {
     .container{
-        height: 380vh;  
+        height: 300vh;  
     
     
 }}
@@ -68,12 +70,14 @@
         height: 800vh; 
         grid-template-columns: 95%   ; 
         grid-template-rows: 9.3% 9.3% 9.3% 9.3% 9.3% 9.3% 9.3% 9.3% 9.3% 9.3%;
-        gap:0.7% 
+        gap:0.7% ;
+        margin-left: 0.5%;
 
 }} 
 @media (max-width:395px) { 
     .container{ 
         height: 850vh;
+        grid-template-columns: 95%; 
 
 }} 
 
@@ -87,14 +91,14 @@
 
 
 
-#lastPage2 > .container {
-    height: 10vh;
+ #lastPage4 > .container,#lastPage5 > .container,#lastPage6 > .container {
+    height: 145vh;
     display:grid;
     grid-template-columns: 23.5% 23.5% 23.5% ;
     grid-template-rows: 50% 50%;
   }
 
-#lastPage1 > .container {
+  #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container {
     height: 66vh;
     display:grid;
     grid-template-columns: 23.5% 23.5% 23.5% ;
@@ -104,7 +108,7 @@
 
 
   @media (max-width:1495px) {
-    #lastPage1 > .container {
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container {
         grid-template-rows: 106% ;
         grid-template-columns: 28% 28% 28%;
     
@@ -113,7 +117,7 @@
 
 
   @media (max-width:1024px) {
-  #lastPage1 > .container {
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container {
     height:150vh;
     grid-template-columns: 40% 40%  ;
     grid-template-rows: 50% 50%  ;
@@ -121,7 +125,7 @@
 
 
 @media (max-width:912px) {
-    #lastPage1 > .container{
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container{
         height: 150vh;
         grid-template-columns: 45% 45%  ;
         grid-template-rows: 45% 45% ;
@@ -131,7 +135,7 @@
 
 
 @media (max-width:540px) {
-    #lastPage1 > .container{
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container{
         height: 270vh;
         grid-template-columns: 70%   ;
         grid-template-rows: 28% 28% 28% ;
@@ -140,7 +144,7 @@
 }}
 
 @media (max-width:500px) {
-    #lastPage1 > .container{
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container{
         height: 270vh;
         grid-template-columns: 85%   ;
         gap:2%
@@ -148,14 +152,14 @@
 }}
 
 @media (max-width:460px) { 
-    #lastPage1 > .container{ 
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container{ 
         height: 300vh; 
         grid-template-columns: 95%   ; 
         gap:3% 
 
 }} 
 @media (max-width:395px) { 
-    #lastPage1 > .container{ 
+    #lastPage1 > .container,#lastPage2 > .container,#lastPage3 > .container{ 
         height: 260vh;
 
 }} 
