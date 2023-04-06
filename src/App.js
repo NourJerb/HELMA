@@ -4,6 +4,10 @@ import Presentation from "./pages/Item/Item";
 import Services from "./pages/Commander/Commander";
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Commander from "./pages/Commander/Commander";
+import Confirmer from "./pages/Confirmer/Confirmer";
+import Item from "./pages/Item/Item";
+import Shop from "./pages/Shop/Shop";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {

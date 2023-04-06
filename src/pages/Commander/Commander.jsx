@@ -1,27 +1,52 @@
 import React from "react";
 import "./Commander.css";
+import image from '../assets/image.png';
 
 function Commander() {
-  return <div>
-   <div>
+  return <div style={{border:"solid",width:"80%",marginLeft:"10%",height:"80vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
+   
 
-<form action="" method="post">
-  <label for="name" className="fn">First name:</label>
-  <label for="name" className="ln" >Last name:</label> <br/>
-  <input type="text" id="naame" name="name" placeholder="First name" ></input>
-  <input type="text" id="name" name="name" placeholder="Last name" /> <br/> 
-  <label for="email" className="em"> Your Email:</label>
-  <label for="email" className="phoone"> Your phone:</label> <br/>
-  <input type="phone" id="phone" name="phone" placeholder="Your phone"/>
-  <input type="email" id="email" name="email" placeholder="Your Email"/> <br/>
-  <label for="Country" className="country">Country:</label>
-  <label for="City" className="ci">City:</label> 
-  <label for="Zip code" className="zc">Zip code:</label> <br/>
-  <select id="country" name="country" >
+<form action="" method="post" style={{display:"flex",flexDirection:"column", justifyContent:"center",backgroundColor:"#40485B",paddingLeft:"10%",paddingTop:"0%",gap:"3%"}}>
+  
+  <div>
+  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="name" className="titre">First name:</label>
+  <input type="text" className="inputt" name="name" placeholder="First name" />
+  </div>
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="last" className="titre" >Last name:</label> 
+  <input type="text" className="inputt" name="last" placeholder="Last name" /> 
+  </div>
+  </div> 
+
+
+  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="phone" className="titre">Your phone:</label>
+  <input type="text" className="inputt" name="phone" placeholder="Your phone" ></input>
+  </div>
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="email" className="titre" >Your Email:</label> 
+  <input type="text" className="inputt" name="email" placeholder="Your Email" /> 
+  </div>
+  </div>
+
+
+
+  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
+
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="Country" id="country" className="titre">Country:</label>
+  <select id="countryy" name="country" >
       <option value="">--Country--</option>
       <option value="TU">Tunisia</option>
-        
   </select>
+  </div>
+
+  
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}> 
+  <label for="City" id="ci" className="titre">City:</label> 
   <select id="City" name="City">
     <option value="">--city--</option>
     <option value="TUN">Tunis</option> 
@@ -65,29 +90,49 @@ function Commander() {
     <option value="MN">Manouba</option>
     <option value="KB">Kélibia</option>
   </select>
+  </div>
+
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
+  <label for="Zip code" id="zc" className="titre">Zip code:</label> 
   <select id="Zipcode" name="Zip code">
   <option value="">--Zip Code--</option>
     <option value="zipcode">200</option>
-  </select> <br/>
-  <label for="State" className="st">State:</label>
-  <label for="Address" className="add">Adress:</label> <br/>
+  </select> 
+  </div>
+  </div>
+
+  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh", width:"11.5%"}}>
+  <label for="State" id="st" className="titre">State:</label>
   <select id="State" name="State" className="state">
   <option value="">--State--</option>
   </select>
-  <input type="text" id="Address" name="Address" placeholder="Address" /><br/>
-  <input type="button" value="Back" className="bt" />
- <input type="submit" value="Continue" className="mbt" />
-  </form>
-<img src={image} className="imaage"/>
- <p className="firstparagraph"> Bague CELOR en Or 375/1000 Blanc</p><br/>
- <p className="secondparagraph"> et Oxyde Blanc </p> <br/>
- <input type="button" value="Back" className="bt" />
- <input type="button" value="Continue" className="mbt" /> 
+  </div>
 
+  <div style={{display:"flex",flexDirection:"column",gap:"1vh",width:"31.5%"}}>
+  <label for="Address" id="add" className="titre">Adress:</label> 
+  <input type="text" id="Address" className="inputt" name="Address" placeholder="Address" />
+  </div>
+  </div>
+ 
+<div>
+<input type="button" value="Back" className="bt" />
+</div >
+</div>
 
-</div>    
+<div>
+<div style={{display:"flex",flexDirection:"column",gap:"5%",width:"40%",height:"60vh",marginLeft:"58%",marginTop:"-45.5%"}}>
+<div >
+<img src={image} className="imaage"/> 
+</div>
+<div style={{width:"85%",marginLeft:"10%",marginTop:"-5%"}}>
+<p className="firstparagraph"> Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
+</div> 
+<input type="submit" value="Continue" className="mbt" />
+</div>
+</div>
 
-
+</form>
 
 </div>
 }

@@ -1,182 +1,139 @@
 @font-face {
-    font-family:'Roboto-Bold.ttf' ;
-    src: url('../assets/Roboto-Bold.ttf') format(truetype);
-    font-weight: bold;
-    font-style: normal;
-  } 
-  @font-face {
-    font-family:'Gilroy-ExtraBold.otf' ;
-    src: url('../assets/Gilroy-ExtraBold.otf') format(truetype);
-    font-style: normal;
-  } 
-  @font-face {
-    font-family:'multi-regular.ttf' ;
-    src: url('../assets/multi-regular.ttf') format(truetype);
-    font-style: normal;
-  } 
-  @font-face {
-    font-family:'Quicksand_Bold.ttf' ;
-    src: url('../assets/Quicksand_Bold.otf') format(truetype);
-    font-weight: bold;
-    font-style: normal;
-  } 
-  @font-face {
-    font-family:'segoe-ui.otf' ;
-    src: url('../assets/segoe-ui.otf') format(truetype);
-    font-weight: bold;
-    font-style: normal;
-  } 
-  body {
-      background-color: #40485B;
-      font-family: 'Roboto Bold'
-    }
-  .imaage {
-      max-width: 100%;
-      height: auto;
-      margin-left: 50px;
+  font-family:'Roboto-Bold.ttf' ;
+  src: url('../assets/Roboto-Bold.ttf') format(truetype);
+  font-weight: bold;
+  font-style: normal;
+} 
+@font-face {
+  font-family:'Gilroy-ExtraBold.otf' ;
+  src: url('../assets/Gilroy-ExtraBold.otf') format(truetype);
+  font-style: normal;
+} 
+@font-face {
+  font-family:'multi-regular.ttf' ;
+  src: url('../assets/multi-regular.ttf') format(truetype);
+  font-style: normal;
+} 
+@font-face {
+  font-family:'Quicksand_Bold.ttf' ;
+  src: url('../assets/Quicksand_Bold.otf') format(truetype);
+  font-weight: bold;
+  font-style: normal;
+} 
+@font-face {
+  font-family:'segoe-ui.otf' ;
+  src: url('../assets/segoe-ui.otf') format(truetype);
+  font-weight: bold;
+  font-style: normal;
+} 
+
+form {
+    height: 80vh;
+    font-family: 'Roboto Bold'
   }
-  .fn{
-    margin-left: 100px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf';
-  }
-  .ln{
-    margin-left: 120px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf'
+
+.titre{
+  color: #c7c7cc;
+  font-size: larger;
+  font-family:'Quicksand_Bold.otf';
+}
+.inputt{
+  background-color: #40485B;
+  font-size:large;
+  font-family: 'multi-regular.ttf';
+  color:#C7C7CC  ;
+  border: 0.4vh solid #E5E5EA;
+  border-radius: 1vh;
+  height:3vh;
+  width:100%;
+  padding: 3%;
+}
+
+
+
+
+#country{
+  font-family:'Quicksand_Bold.otf'
+}
+#ci{
+  font-family:'Quicksand_Bold.otf';
+}
+#zc{
+  font-family:'Quicksand_Bold.otf'
+}
+
+
+#countryy,#City,#Zipcode,.state{
+  
+  background-color: #40485B;
+  font-size: larger;
+  font-family: 'multi-regular.ttf';
+  color: #c7c7cc ;
+  border: 0.4vh solid #E5E5EA;
+  height:5vh;
+  padding: 2%;
+  border-radius: 1vh;
+}
+
+
+#st,#add{
+  font-family:'Quicksand_Bold.otf';
+}
+
+.state{
+  width:100%;
+  font-family: 'multi-regular.ttf';
+  height:5.2vh;
+  padding:2%;
+  
+}
+#Address{
+  width:100%;
+  height: 2vh;
+  font-family: 'multi-regular.ttf';
+  padding:3.05%;
+}
+.bt{
+  width:15%;
+  height: 8vh;
+  font-size: x-large;
+  font-weight: bold;
+  color: #E8C895;
+  border: 0.5vh solid #E8C895;
+  border-radius: 2vh;
+  background-color: #40485B;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 5%;
+  margin-left: 3%;;
   
   }
-  #naame{
-    margin-left: 100px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color:#c7c7cc  ;
-    border: 1px solid #707070;
-  }
-  #name{
-    margin-left: 22px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color:#c7c7cc  ;
-    border: 1px solid #707070;
-  }
-  .em{
-    margin-top: 10px;
-    margin-left: 100px; 
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf'
-  }
-  .phoone{
-    margin-left: 120px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf'
-  }
-  #phone{
-    margin-left: 100px;
-    background-color: #40485B; 
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color:#c7c7cc  ;
-    border: 1px solid #707070;
-  }
-  #email{
-    margin-left: 22px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-  }
-  .country{
-    margin-left: 100px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf'
-  }
-  .ci{
-    margin-left: 55px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf';
-  }
-  .zc{
-    margin-left: 122px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf'
-  }
-  #country{
-    margin-left: 100px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-  }
-  #City{
-    margin-left: 25px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-  }
-  #Zipcode{
-    margin-left: 25px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-    padding-right: 20px;
-  }
-  .st{
-    margin-left: 100px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf';
-  }
-  .add{
-    margin-left: 88px;
-    font-size: 16px;
-    font-family:'Quicksand_Bold.otf';}
-  .state{
-    margin-left: 100px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-  }
-  #Address{
-    margin-left: 52px;
-    padding-right: 80px;
-    background-color: #40485B;
-    font-size: 14px;
-    font-family: 'multi-regular.ttf';
-    color: #c7c7cc ;
-    border: 1px solid #707070;
-  }
-  .bt{
-    font-size: 20px;
-    color: #E8C895;
-    border: 4px solid #E8C895; 
-    background-color: #40485B;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: -500px;}
-  .mbt{
-    border: #707070;
-    font-family: 'segoe-ui.otf'; 
-    color: #40485B;
-    font-size: 20px;
-  }
-  .firstparagraph{
-    margin-left:900px ;
-    margin-top: 10px;
-  }
-  .secondparagraph{
-    margin-left: 1050px;
-    margin-top: 10px;
-  }
-  p{
-    font-size: 25px;
-    font-family: 'Gilroy-ExtraBold.otf';
-  }
+.mbt{
+  width:30%;
+  height: 70vh;
+  font-size: x-large;
+  font-weight: bolder;
+  border: 0.5vh solid #E8C895;
+  border-radius: 2vh;
+  font-family: 'segoe-ui.otf'; 
+  color: #40485B;
+  background-color: #E8C895;
+  margin-left: 35%;
+  padding: 2%;
+  margin-top: -2%;;
+ 
+}
+
+.firstparagraph{
+  font-family: 'Gilroy-ExtraBold.otf';
+  font-size:x-large;
+  text-align: center;
+  color: #F8F8F8;
+  font-weight: bolder;
+}
+
+.imaage {
+  width: 60%;
+  height: 90%;
+  margin-left: 20%;
+  
+}
