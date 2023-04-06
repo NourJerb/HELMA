@@ -1,0 +1,30 @@
+.Product-container2{
+    display: flex;  
+    gap: 3ch;
+    justify-content: center;
+    padding: 5ch;
+    margin-right: 10ch;
+   
+  }
+  .title-container{
+      background-color: #40485B;
+      border-top-left-radius: 3ch;
+      border-top-right-radius: 0ch;
+      height: 4ch;  
+      color: white;
+      height: 6CH;
+  }
+  .title{
+      margin-inline-start:10ch;
+     padding: 0.5ch
+  
+  }
+  .newarrivals-container {
+  
+  margin-left: 10ch;
+      background-color: white;
+      border-top-left-radius: 5ch;
+      border-bottom-left-radius: 3ch;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }

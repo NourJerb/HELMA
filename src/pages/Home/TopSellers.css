@@ -1,0 +1,26 @@
+.topsellers-container {
+
+    background-color: white;
+    margin-right: 10ch;
+    border-top-right-radius: 5ch;
+    border-bottom-right-radius: 3ch;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+.title-container-top-seller{
+    background-color: #40485B;
+   border-top-right-radius: 3ch;
+    color: white;
+    height: 6CH;
+   
+}
+.title{
+    margin-inline-start:10ch;
+   padding: 0.5ch
+
+}
+.product-card-container{
+    padding: 4ch;
+    margin-left: 10ch;
+    justify-content: center;
+}

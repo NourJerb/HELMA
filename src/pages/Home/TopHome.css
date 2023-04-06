@@ -1,0 +1,28 @@
+.top-home-design {
+    margin-right: 10ch;
+    margin-bottom: 10ch;
+    margin-top: 10ch;
+  }
+  .Top-home-container {
+    height: 60ch;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .image-design {
+    height: 60ch;
+    width: 100%;
+  }
+  .number {
+    position: absolute;
+    top: 60%;
+    margin-left: 87%;
+    color: white;
+    font-size: 100px;
+  }
+  .number-of-photos {
+    position: absolute;
+    top: 83%;
+    margin-left: 93%;
+    color: white;
+  }
+  
