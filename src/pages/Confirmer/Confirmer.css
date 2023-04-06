@@ -11,33 +11,35 @@
     }
     img {
       max-width: 100%;
-      height: auto;
-      margin-left: 700px;
-      margin-top: 80px;
+      height: 30%;
+      margin-left: 43%;
+      margin-top: 5%;
   }
   
   .first-paragraph {
-    font-size: 40px;
+    font-size: 250%;
     font-family: Roboto;
     color: white;
-    padding-left: 500px;
+    padding-left: 25%;
+    margin-top: 1vh;
     
   }    
   .second-paragraph {
-    font-size: 22px;
+    font-size: 135%;
     font-family: Roboto;
     color: white;
-    padding-left: 520px;
-    margin-top: -60px;
+    padding-left: 45vh;
+    margin-top: -5%;
   
   } 
   .button{
-      margin-top: -210px;
-      margin-left: 700px;
-      font-size: 20px;
-      padding-left:30px ;
-      padding-right:30px ;
-      padding-top: 7px;
-      padding-bottom: 7px;
+      margin-top: -5%;
+      margin-left: 72vh;
+      font-size: 150%;
+      padding-left:3vh ;
+      padding-right:3vh ;
+      padding-top: 1.5vh;
+      padding-bottom: 1vh;
+      border-radius: 1vh;
   
     }
