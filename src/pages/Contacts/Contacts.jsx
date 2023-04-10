@@ -1,12 +1,12 @@
 import React from "react";
 import Info from "./Info"
-import { location_icn } from "../assets/file"
-import { helmalogo } from "../assets/file"
-import { mail } from "../assets/file"
-import { icon } from "../assets/file"
-import { Facebook } from "../assets/file"
-import { Twitter } from "../assets/file"
-import { Instagram } from "../assets/file"
+import { location_icn } from "../../assets/file"
+import { helmalogo } from "../../assets/file"
+import { mail } from "../../assets/file"
+import { icon } from "../../assets/file"
+import { Facebook } from "../../assets/file"
+import { Twitter } from "../../assets/file"
+import { Instagram } from "../../assets/file"
 import "./Contacts.css";
 
 
