@@ -4,32 +4,32 @@ import {produit} from "../../assets/file"
 
 function Item() {
   return  <div className="container-description">
-  <h1>sdgsdgsdgsdgsdgsdgsdg</h1>
+  <h1 className="title-item">sdgsdgsdgsdgsdgsdgsdg</h1>
   <div className="presentation-description">
      <div className="donnees-description">
        <div>
-         <h4>Poids :</h4>
-         <span>dsgqsfsqfsqfqs</span>
+         <h4 className="item-h4">Poids :</h4>
+         <span className="item-span">dsgqsfsqfsqfqs</span>
        </div>
        <div>
-         <h4>Couleur de la pierre principale:</h4>
-         <span>kjbkhgkg</span>
+         <h4 className="item-h4">Couleur de la pierre principale:</h4>
+         <span className="item-span">kjbkhgkg</span>
        </div>
        <div>
-         <h4>Marque :</h4>
-         <span>sdsdfs</span>
+         <h4 className="item-h4">Marque :</h4>
+         <span className="item-span">sdsdfs</span>
        </div>
        <div>
-         <h4>Forme de la pierre principale:</h4>
-         <span>sdfsdfsf</span>
+         <h4 className="item-h4">Forme de la pierre principale:</h4>
+         <span className="item-span">sdfsdfsf</span>
        </div>
        <div>
-         <h4>Matière:</h4>
-         <span>dsfsdfsdf</span>
+         <h4 className="item-h4">Matière:</h4>
+         <span className="item-span">dsfsdfsdf</span>
        </div>
        <div>
-         <h4>Type:</h4>
-         <span>bague</span>
+         <h4 className="item-h4">Type:</h4>
+         <span className="item-span">bague</span>
        </div>
      </div>
      <div className="prod">

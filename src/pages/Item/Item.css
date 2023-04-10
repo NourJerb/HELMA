@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Quicksand:wght@700&display=swap');
 
 .container-description{
-    margin: 2%;
-    width: 60.71vw ;
-    min-height: 92.63vh ;
+    margin: 1% 4%;
+    width: 90vw ;
+    height: 80vh ;
     background-color:#40485B ;
     text-align: center;
     font-family: 'Quicksand', sans-serif;}
 
-h1{
+.title-item{
+  
     margin: 2rem 5rem;
     color: white;
-    font-size: 2.2vw;
+    font-size: 40px;
 }
 
 .presentation-description{
     display: flex;
-    gap: 7%;
+    gap: 35%;
     margin-top: 3vh;
     
 
@@ -28,25 +29,26 @@ h1{
 }
 
 .image-description{
-    width: 26vw;
-    height: 55vh;
+    width: 18vw;
+    height: 42vh;
+    padding-top: 3px;
     
 }
 
 .donnees-description{
     text-align: left;
-    padding-left: 4vw;
+    padding-left: 5vw;
     margin-top: 0;
     padding-top: 0;
     
 }
 
-h4{
+.item-h4{
     color: #E8C895;
     font-size: 1.2vw;
-    margin:2.7vh auto ;
+    margin:2vh auto ;
 }
-span{
+.item-span{
     font-size: 1vw;
     color: white;
     font-weight:lighter;
@@ -55,20 +57,21 @@ span{
 
 
 .prix-produit{
-    font-size: 2.5vw;
+    font-size: 2.5vw; 
     margin-top: 0;
-    padding-top: 1.5vw;
+    padding-top: 1vw;
+    color: #E8C895;
 }
-.dt{
+.prix-produit .dt{
     font-size: 1.2vw;
     color: #E8C895;
     padding-left: 0.2rem;
 }
 .button-description{
-    margin-top: 2%;
+    margin-top: 0;
     margin-bottom: 5%;
     height: 6vh;
-    width: 13vw ;
+    width: 150px;
     font-size: 1.3vw;
     border-radius: 8px;
     background-color: #E8C895;
@@ -81,10 +84,108 @@ span{
 }
 
 
+
+
+@media only screen and (max-width: 1100px)  and (max-height:900px) {
+
+  .container-description {
+    margin: 2%;
+    width: 90%;
+    min-height: 620px;
+    background-color: #40485B;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+ .title-item{
+    margin: 2rem 5rem;
+    color: white;
+    font-size: 40px;
+}
+
+.presentation-description{
+    display: flex;
+    gap: 27%;
+    margin-top: 3vh;
+    
+
+}
+.prod{
+    margin-left: 2rem;
+    margin-top: 4rem;
+    margin-right: 2rem;
+}
+
+.image-description{
+    width: 20vw;
+    height: 35vh;
+    
+}
+
+.donnees-description{
+    text-align: left;
+    padding-left: 5vw;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+.item-h4{
+    color: #E8C895;
+    font-size: 2vw;
+    margin:2vh auto ;
+}
+.item-span{
+    font-size: 1.5vw;
+    color: white;
+    font-weight:lighter;
+}
+
+
+
+.prix-produit{
+    font-size: 20px; 
+    margin-top: 0;
+    padding-top: 1vw;
+    color: #E8C895;
+    font-size: 3vw;
+}
+.prix-produit .dt{
+    font-size: 1.2vw;
+    color: #E8C895;
+    padding-left: 0.2rem;
+    font-size: 1.5vw;
+}
+
+  .button-description {
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-size:17px;
+    border-radius: 5px;
+    background-color: #E8C895;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  
+
+  
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
 
     .container-description {
-      margin: 2%;
+      margin: 2% 4% ;
       width: 90%;
       height: auto;
       background-color: #40485B;
@@ -92,10 +193,11 @@ span{
       font-family: 'Quicksand', sans-serif;
     }
   
-    h1 {
-      margin-top: 2rem;
+    .title-item{
+      margin-left:10% ;
       color: white;
       font-size: 6vw;
+      text-align: center;
     }
   
     .presentation-description {
@@ -107,15 +209,13 @@ span{
   
     .prod {
       margin: 0 auto;
-      margin-top: 3rem;
-      margin-right: 1rem;
+      margin-top: 1rem;
       text-align: center;
     }
   
     .image-description {
-      width: 90%;
+      width: 30%;
       height: auto;
-      margin-bottom: 1rem;
     }
   
     .donnees-description {
@@ -126,20 +226,20 @@ span{
       gap: 2%;
     }
 
-    .donnees-description h4 {
+    .item-h4 {
         font-size: 1rem;
+        margin-bottom: 4px;
     }
 
-    .donnees-description span {
+    .item-span {
         font-size: 0.7rem;
     }
   
     .button-description {
-      width: 50%;
+      width: 150px;
       margin: 0 auto;
-      margin-top: 1rem;
       margin-bottom: 1rem;
-      font-size: 4vw;
+      font-size: 15px;
       border-radius: 5px;
       background-color: #E8C895;
       color: rgb(0, 0, 0);
@@ -150,12 +250,11 @@ span{
     }
   
     .prix-produit {
-      font-size: 5vw;
-      margin-top: 1rem;
+      font-size: 3vw;
     }
   
     .dt {
-      font-size: 3vw;
+      font-size: 1.5vw;
     }
   }
   
