@@ -1,6 +1,6 @@
 import React from "react";
 import "./Item.css";
-import { produit } from "../assets/file"
+import {produit} from ""
 
 function Item() {
   return  <div className="container-description">

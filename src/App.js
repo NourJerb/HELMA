@@ -1,9 +1,6 @@
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
-import Presentation from "./pages/Item/Item";
-import Services from "./pages/Commander/Commander";
-import NavBar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Item from "./pages/Item/Item";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
@@ -12,14 +9,8 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/item" element={<Item/>} />
-          <Route path="/commander" element={<Commander/>} />
-          <Route path="/confirmer" element={<Confirmer/>} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="*" element={<div>404 not found</div>} />
+          <Route path="./pages/Item/Item" element={<Item/>} />
         </Routes>
       </BrowserRouter>
       <Footer />
