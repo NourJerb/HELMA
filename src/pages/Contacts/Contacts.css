@@ -58,15 +58,18 @@
 }
 
 @media (max-width: 700px) {
-    .logos {
+    
+    /*.logos {
       flex-direction: column;
       gap: 5vw;
-    }
+    }*/
 
     .contactcp{
         display: flex;
         flex-direction: column;
+        gap: 5px;
     }
+    
   }
 
 
