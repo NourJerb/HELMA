@@ -1,7 +1,7 @@
-import React from "react";
+import React ,{useState} from "react";
 import "./Commander.css";
 import image from '../assets/image.png';
-
+import MonFormulaire from "../MonForm";
 function Commander() {
   return <div style={{border:"solid",width:"80%",marginLeft:"10%",height:"80vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
    
@@ -12,11 +12,11 @@ function Commander() {
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="name" className="titre">First name:</label>
-  <input type="text" className="inputt" name="name" placeholder="First name" />
+  <input type="text" className="inputt" name="name" placeholder="First name" onChange={(event) => React.setNom(event.target.value)} />
   </div>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="last" className="titre" >Last name:</label> 
-  <input type="text" className="inputt" name="last" placeholder="Last name" /> 
+  <input type="text" className="inputt" name="last" placeholder="Last name"  onChange={(event) => React.setLast(event.target.value)}/> 
   </div>
   </div> 
 
@@ -24,11 +24,12 @@ function Commander() {
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="phone" className="titre">Your phone:</label>
-  <input type="text" className="inputt" name="phone" placeholder="Your phone" ></input>
+  <input type="text" className="inputt" name="phone" placeholder="Your phone" onChange={(event) => React.setPhone(event.target.value)} ></input>
   </div>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="email" className="titre" >Your Email:</label> 
-  <input type="text" className="inputt" name="email" placeholder="Your Email" /> 
+  <input type="text" className="inputt" name="phone" placeholder="Your phone" onChange={(event) => React.setPhone(event.target.value)} ></input>
+  <input type="text" className="inputt" name="email" placeholder="Your Email" onChange={(event) => React.setEmail(event.target.value)} /> 
   </div>
   </div>
 
@@ -38,7 +39,7 @@ function Commander() {
 
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="Country" id="country" className="titre">Country:</label>
-  <select id="countryy" name="country" >
+  <select id="countryy" name="country" onChange={(event) => React.setCountry(event.target.value)}>
       <option value="">--Country--</option>
       <option value="TU">Tunisia</option>
   </select>
@@ -47,7 +48,7 @@ function Commander() {
   
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}> 
   <label for="City" id="ci" className="titre">City:</label> 
-  <select id="City" name="City">
+  <select id="City" name="City" onChange={(event) => React.setCity(event.target.value)} >
     <option value="">--city--</option>
     <option value="TUN">Tunis</option> 
     <option value="SF">Sfax</option> 
@@ -94,7 +95,7 @@ function Commander() {
 
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="Zip code" id="zc" className="titre">Zip code:</label> 
-  <select id="Zipcode" name="Zip code">
+  <select id="Zipcode" name="Zip code" onChange={(event) => React.setZipCode(event.target.value)}>
   <option value="">--Zip Code--</option>
     <option value="zipcode">200</option>
   </select> 
@@ -104,14 +105,14 @@ function Commander() {
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh", width:"11.5%"}}>
   <label for="State" id="st" className="titre">State:</label>
-  <select id="State" name="State" className="state">
+  <select id="State" name="State" className="state" onChange={(event) => React.setState(event.target.value)}>
   <option value="">--State--</option>
   </select>
   </div>
 
   <div style={{display:"flex",flexDirection:"column",gap:"1vh",width:"31.5%"}}>
   <label for="Address" id="add" className="titre">Adress:</label> 
-  <input type="text" id="Address" className="inputt" name="Address" placeholder="Address" />
+  <input type="text" id="Address" className="inputt" name="Address" placeholder="Address" onChange={(event) => React.setAddress(event.target.value)}/>
   </div>
   </div>
  

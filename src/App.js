@@ -8,6 +8,7 @@ import Commander from "./pages/Commander/Commander";
 import Confirmer from "./pages/Confirmer/Confirmer";
 import Item from "./pages/Item/Item";
 import Shop from "./pages/Shop/Shop";
+import { useState } from "react";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
