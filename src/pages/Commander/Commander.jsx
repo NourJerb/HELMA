@@ -3,6 +3,10 @@ import "./Commander.css";
 import image from '../assets/image.png';
 import MonFormulaire from "../MonForm";
 function Commander() {
+  const [nom, setNom] = useState("");
+  const [last, setLast] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   return <div style={{border:"solid",width:"80%",marginLeft:"10%",height:"80vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
    
 
