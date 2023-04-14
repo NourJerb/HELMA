@@ -18,11 +18,12 @@ import img6 from "./Assets/Product 6.jpg";
 const ProductSlider = () => {
   return (
     <div className="product-slider-container">
-      <Swiper
+      <Swiper 
         freeMode={true}
         grabCursor={true}
         modules={FreeMode}
         className="mySwiper"
+     
         breakpoints={{
         
           720: {
@@ -37,31 +38,43 @@ const ProductSlider = () => {
             slidesPerView: 4,
             spaceBetween: 5,
           },
-          1430: {
-            slidesPerView: 5,
-            spaceBetween: 5,
-          },
+       
+         
           
         }}
-      >
-        <SwiperSlide>
+      ><div className="elements">
+        <div>
+        <SwiperSlide >
           <ProductCard data={{ imgSrc: img1 }} />
         </SwiperSlide>
-        <SwiperSlide>
+        </div>
+        <div>
+        <SwiperSlide >
           <ProductCard data={{ imgSrc: img2 }} />
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard data={{ imgSrc: img3 }} />
+        </div>
+        <div>
+        <SwiperSlide >
+          <ProductCard data={{ imgSrc: img3}} />
         </SwiperSlide>
-        <SwiperSlide>
+        </div>
+        <div>
+        <SwiperSlide >
           <ProductCard data={{ imgSrc: img4 }} />
         </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard data={{ imgSrc: img5}} />
+        </div>
+        <div>
+        <SwiperSlide >
+          <ProductCard data={{ imgSrc: img5 }} />
         </SwiperSlide>
-        <SwiperSlide>
+        </div>
+        <div>
+        <SwiperSlide >
           <ProductCard data={{ imgSrc: img6 }} />
         </SwiperSlide>
+        </div>
+        
+        </div>
       </Swiper>
     </div>
   );

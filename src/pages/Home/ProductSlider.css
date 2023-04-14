@@ -1,7 +1,22 @@
 .product-slider-container{
     justify-content: center;
-   gap: 1ch;
+   gap: 3ch;
    margin-left: 10ch;
    padding: 4ch;
    margin-right: 10ch;
 }
+
+@media screen and (max-width:720px) {
+    .product-slider-container{
+     margin-right: 2ch ;
+     margin-left: 0ch;
+
+    }
+ 
+   }
+   @media screen and (min-width:720px) {
+    .elements{
+        gap: 3ch;
+    }
+ 
+   }

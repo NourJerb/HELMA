@@ -23,4 +23,18 @@
     padding: 4ch;
     margin-left: 10ch;
     justify-content: center;
+    justify-content: space-around;
 }
+@media screen and (max-width:720px) {
+    .topsellers-container{
+        margin-right: 3ch;
+        
+    }
+    .product-card-container{
+      margin: 0%;
+
+    }
+   }
+  
+   
+    

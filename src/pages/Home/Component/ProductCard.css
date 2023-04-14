@@ -5,4 +5,13 @@
 .product-photo{
     height: 35ch;
     border-radius: 1ch;
+    object-fit: cover;
 }
+
+
+@media screen and (max-width:2400px) {
+    .card-design{
+       width: 100%;
+    }
+   
+   }

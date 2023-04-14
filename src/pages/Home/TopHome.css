@@ -1,7 +1,7 @@
 .top-home-design {
     margin-right: 10ch;
     margin-bottom: 10ch;
-    margin-top: 10ch;
+    
   }
   .Top-home-container {
     height: 60ch;
@@ -11,6 +11,7 @@
   .image-design {
     height: 60ch;
     width: 100%;
+    object-fit: cover;
   }
   .number {
     position: absolute;
@@ -24,5 +25,32 @@
     top: 83%;
     margin-left: 93%;
     color: white;
+  }
+  @media  screen and (max-width:480px) {
+    .top-home-design{
+      margin-right: 0ch;
+      margin-top: 0ch;
+    }
+    .image-design {
+      height: 25ch;
+    }
+    .Top-home-container{
+      height: 25ch;
+    }
+ 
+  }
+  @media  screen and (min-width:480px ) and (max-width:900px) {
+   
+    .image-design {
+      height: 30ch;
+    }
+    .Top-home-container{
+      height: 30ch;
+    }
+    .top-home-design {
+      margin-right: 7ch;
+      
+      
+    }
   }
   

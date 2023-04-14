@@ -17,9 +17,11 @@ const Newarrivals = () => {
             </div>
             <div>
             <div className="Product-container2">
+             
                 <BigProductCard data={{ imgSrc: img1 }} />
                 <ProductCard data={{ imgSrc: img2 }} />
                 <ProductCard data={{ imgSrc: img3 }} />
+               
             </div>
             <div className="Product-container2">
             

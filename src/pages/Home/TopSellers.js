@@ -27,6 +27,8 @@ const TopSellers = () => {
             <Swiper
                 modules={FreeMode}
                 className="mySwiper"
+
+           
                 breakpoints={{
                     0:{
                         slidesPerView: 1,
@@ -44,10 +46,8 @@ const TopSellers = () => {
                         slidesPerView: 4,
                         spaceBetween: 5,
                     },
-                    1430:{
-                        slidesPerView: 5,
-                        spaceBetween: 5,
-                    },
+                   
+                
 
                 }}
             >
@@ -72,6 +72,7 @@ const TopSellers = () => {
 
 
             </Swiper>
+           
             </div>
         </div>
     );
