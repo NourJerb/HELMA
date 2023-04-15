@@ -5,9 +5,12 @@
     font-style: normal;
   } 
   body {
-    background-color: #40485B;
+    background-color: white;
     color: white;
-    font-family: 'Roboto Bold'
+    font-family: 'Roboto-Bold.ttf';
+  }
+  .big{
+    background-color: #40485B;
   }
   
   img {
@@ -32,17 +35,20 @@
     font-family: Roboto;
     color: white;
     text-align: center;
-    margin-top: -2%;
+    margin-top: -3.5%;
   } 
   
   .button {
-    margin-top: -2%;
+    margin-top: 0%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5.5%;
+    padding-top:1.4% ;
+    padding-right:5.5% ;
+    padding-bottom:1.2% ;
     font-size: 1.5em;
-    padding: 1em;
-    border-radius: 1em;
+    border-radius: 0.5em;
   }
   
   /* Media queries */

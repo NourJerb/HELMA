@@ -3,7 +3,7 @@ import "./Confirmer.css";
 import image3 from "../assets/image3.png"
 
 function Confirmer() {
-  return <div style={{border:"solid",width:"80%",marginLeft:"10%",height:"60vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
+  return <div className="big" style={{border:"solid",width:"80%",marginLeft:"10%",height:"60vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
     
     <img src={image3}/>
     <p className="first-paragraph"> Votre lettre est reçue avec succés.</p><br/>
