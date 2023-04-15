@@ -1,22 +1,57 @@
-import React ,{useState} from "react";
+import React  from "react";
 import "./Commander.css";
 import image from '../assets/image.png';
-import MonFormulaire from "../MonForm";
 function Commander() {
+  let ok1=0;
+  function handleCountryChange (event) {
+    if (event.target.value!==""){
+      ok1=1;
+    }
+  }
+  let ok2=0;
+  function handleCityChange (event){
+    if(event.target.value!==""){
+      ok2=1;
+    }
+  }
+  let ok3=0;
+  function handleZipChange (event) {
+    if (event.target.value!==""){
+      ok3=1;
+    }
+  }
+  let ok4=0;
+  function handleStateChange (event) {
+    if (event.target.value!==""){
+      ok4=1;
+    }
+  }
+  function handleSubmit(event){
+    let message=""
+    if (ok1==0){
+      message+="select a city/n";
+      event.preventDefault();
+    }
+    if (ok4==0){
+      message+="select a state";
+      if (message!="")
+      {alert(message);}
+    }
+  }
   return <div  className="big" style={{border:"solid",width:"80%",marginLeft:"10%",height:"60vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
    
 
-<form action="" method="post"  style={{display:"flex",flexDirection:"column", justifyContent:"center",backgroundColor:"#40485B",paddingLeft:"10%",paddingTop:"0%",gap:"3%", marginTop:"-4%"}}>
+<form action="../confirmer" method="get"  className="forms" style={{display:"flex",flexDirection:"column", justifyContent:"center",backgroundColor:"#40485B",paddingLeft:"10%",paddingTop:"0%",gap:"3%", marginTop:"-4%"}}>
   
   <div>
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="name" className="titre">First name:</label>
-  <input type="text" className="inputt" name="name" placeholder="First name"  />
+  <input type="text" className="inputt" name="name" placeholder="First name" required />
   </div>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="last" className="titre" >Last name:</label> 
-  <input type="text" className="inputt" name="last" placeholder="Last name"/> 
+  <input type="text" className="inputt" name="last" placeholder="Last name" required/> 
   </div>
   </div> 
 
@@ -24,11 +59,11 @@ function Commander() {
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="phone" className="titre">Your phone:</label>
-  <input type="text" className="inputt" name="phone" placeholder="Your phone" ></input>
+  <input type="text" className="inputt" name="phone" placeholder="Your phone" required ></input>
   </div>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="email" className="titre" >Your Email:</label> 
-  <input type="text" className="inputt" name="phone" placeholder="Your phone"></input>
+  <label for="email" className="titre" id="email" >Your Email:</label> 
+  <input type="text" className="inputt" name="phone" placeholder="Your phone" required></input>
   </div>
   </div>
 
@@ -38,7 +73,7 @@ function Commander() {
 
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="Country" id="country" className="titre">Country:</label>
-  <select id="countryy" name="country">
+  <select id="countryy" name="country" required onChange={handleCountryChange}> 
       <option value="">--Country--</option>
       <option value="TU">Tunisia</option>
   </select>
@@ -47,7 +82,7 @@ function Commander() {
   
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}> 
   <label for="City" id="ci" className="titre">City:</label> 
-  <select id="City" name="City" >
+  <select id="City" name="City" required onChange={handleCityChange}>
     <option value="">--city--</option>
     <option value="TUN">Tunis</option> 
     <option value="SF">Sfax</option> 
@@ -94,7 +129,7 @@ function Commander() {
 
   <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
   <label for="Zip code" id="zc" className="titre">Zip code:</label> 
-  <select id="Zipcode" name="Zip code">
+  <select id="Zipcode" name="Zip code" required onChange={handleZipChange}>
   <option value="">--Zip Code--</option>
     <option value="zipcode">200</option>
   </select> 
@@ -104,8 +139,9 @@ function Commander() {
   <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
   <div style={{display:"flex",flexDirection:"column",gap:"1vh", width:"11.5%"}}>
   <label for="State" id="st" className="titre">State:</label>
-  <select id="State" name="State" className="state" >
+  <select id="State" name="State" className="state" required onChange={handleStateChange}>
   <option value="">--State--</option>
+  <option value="kkk"> kkkk</option>
   </select>
   </div>
 
@@ -116,7 +152,7 @@ function Commander() {
   </div>
  
 <div>
-<input type="button" value="Back" className="bt" />
+<input type="button" value="Back" className="bt" required/>
 </div >
 </div>
 
@@ -128,7 +164,7 @@ function Commander() {
 <div style={{width:"85%",marginLeft:"10%",marginTop:"-5%"}}>
 <p className="firstparagraph"> Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
 </div> 
-<input type="submit" value="Continue" className="mbt" />
+<input type="submit" value="Continue" className="mbt" required onClick={handleSubmit}/>
 </div>
 </div>
 

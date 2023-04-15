@@ -114,8 +114,8 @@ form {
   }
 .mbt{
   width:30%;
-  height: 6vh;
-  font-size: 120%;
+  height: 8.5vh;
+  font-size: 90%;
   font-weight: bolder;
   border: 0.5vh solid #E8C895;
   border-radius: 2vh;
@@ -124,7 +124,7 @@ form {
   background-color: #E8C895;
   margin-left: 35%;
   padding: 1.5%;
-  margin-top: 0.1%;;
+  margin-top: 2%;;
   padding-left:5.5% ;
   padding-right:5.5% ;
  
