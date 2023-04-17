@@ -18,11 +18,13 @@
     display: flex; 
     text-align: center;
     justify-content: center;
+    align-items: center;
+    height: 60px;
 
 }
 
 .loc-image{
-    margin-top: 5vh;
+    margin-top: 1.5vh;
 }
 
 .helma-bande{
@@ -54,20 +56,26 @@
     justify-content: center;
     gap: 13vw;
     padding-left:1vw ;
-  margin-bottom: 10vh;
+  margin-bottom: 3vh;
 }
 
 @media (max-width: 700px) {
     
-    /*.logos {
-      flex-direction: column;
-      gap: 5vw;
-    }*/
+    .logos img {
+        height: 56px;
+        width: 60px;
+
+    }
 
     .contactcp{
         display: flex;
         flex-direction: column;
         gap: 4px;
+    }
+
+    iframe{
+        width: 90% ;
+       
     }
     
   }
