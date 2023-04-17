@@ -6,7 +6,8 @@
     height: 580px ;
     background-color:#40485B ;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;}
+    font-family: 'Quicksand', sans-serif;
+  }
 
 .title-item{
   padding-top: 10px;
@@ -16,8 +17,8 @@
 
 .presentation-description{
     display: flex;
-    gap: 35%;
     margin-top: 3vh;
+    gap: 27%;
     
 
 }
@@ -39,6 +40,8 @@
     padding-left: 5vw;
     margin-top: 0;
     padding-top: 0;
+    height: 430px; /* to control the button*/
+    width: 600px;
     
 }
 
@@ -116,8 +119,8 @@
 }
 
 .image-description{
-    width: 20vw;
-    height: 35vh;
+    width: 23vw;
+    height: 32vh;
     
 }
 
@@ -159,7 +162,7 @@
   .button-description {
     width: 150px;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    margin-bottom: 4px;
     font-size:17px;
     border-radius: 5px;
     background-color: #E8C895;
@@ -204,6 +207,7 @@
       flex-direction: column;
       margin-top: 3vh;
       gap: 2%;
+      
     }
   
     .prod {
@@ -259,3 +263,13 @@
   
 
 
+  @media only screen and (max-width: 360px) {
+
+    .image-description {
+      width: 100px;
+      height: auto;
+    }
+
+
+
+  }
