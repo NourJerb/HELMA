@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./ProductSlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
+import { FreeMode, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/navigation";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductCard from "./Component/ProductCard";
 
@@ -18,14 +20,14 @@ import img6 from "./Assets/Product 6.jpg";
 const ProductSlider = () => {
   return (
     <div className="product-slider-container">
-      <Swiper 
+      <Swiper
         freeMode={true}
         grabCursor={true}
-        modules={FreeMode}
+        modules={[Navigation]}
         className="mySwiper"
-     
+        onSlideChange={() => console.log("slide change")}
+        navigation={true}
         breakpoints={{
-        
           720: {
             slidesPerView: 2,
             spaceBetween: 5,
@@ -38,44 +40,28 @@ const ProductSlider = () => {
             slidesPerView: 4,
             spaceBetween: 5,
           },
-       
-         
-          
         }}
-      ><div className="elements">
-        <div>
-        <SwiperSlide >
+      >
+        <SwiperSlide>
           <ProductCard data={{ imgSrc: img1 }} />
         </SwiperSlide>
-        </div>
-        <div>
-        <SwiperSlide >
+        <SwiperSlide>
           <ProductCard data={{ imgSrc: img2 }} />
         </SwiperSlide>
-        </div>
-        <div>
-        <SwiperSlide >
-          <ProductCard data={{ imgSrc: img3}} />
+        <SwiperSlide>
+          <ProductCard data={{ imgSrc: img3 }} />
         </SwiperSlide>
-        </div>
-        <div>
-        <SwiperSlide >
+        <SwiperSlide>
           <ProductCard data={{ imgSrc: img4 }} />
         </SwiperSlide>
-        </div>
-        <div>
-        <SwiperSlide >
+        <SwiperSlide>
           <ProductCard data={{ imgSrc: img5 }} />
         </SwiperSlide>
-        </div>
-        <div>
-        <SwiperSlide >
+        <SwiperSlide>
           <ProductCard data={{ imgSrc: img6 }} />
         </SwiperSlide>
-        </div>
-        
-        </div>
       </Swiper>
+      
     </div>
   );
 };

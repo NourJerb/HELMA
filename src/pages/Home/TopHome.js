@@ -17,8 +17,10 @@ function createSlide() {
     <SwiperSlide>
       <div className="Top-home-container">
         <img className="image-design" src={img6} alt="photo du produit" />
+        <div>
         <p className="number">01</p>
         <p className="number-of-photos">/ 04</p>
+        </div>
       </div>
     </SwiperSlide>
   );
@@ -63,7 +65,7 @@ function TopHome() {
   return (
     <div className="top-home-design">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[ Pagination, Autoplay]}
         SlidesPerView={1}
         Navigation
         autoplay={ true }
