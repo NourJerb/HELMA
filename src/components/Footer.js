@@ -6,29 +6,29 @@ import SubscribeButtonsFooter from './SubscribeButtonsFooter.js';
 function Footer() {
     return (
         <footer>
-            <div class="container">
-                <div class="column   column-1 col-md-12 ">
+            <div className="container">
+                <div className="column   column-1 col-md-12 ">
                     <div className="logoScContainer">
-                    <div class="logo">
-                        <img src='logoHelmaCr.png' />
-                    </div>
-                    <div class="socialMedia">
-                      <SocialMedia></SocialMedia>
-                    </div>
+                       <div class="logo">
+                           <img  className='imgLogo' src='logoHelmaCreations.png' />
+                       </div>
+                       <div className="socialMedia">
+                         <SocialMedia></SocialMedia>
+                       </div>
                     </div>
                 </div>
 
                 
-                <div class=" column col column-2">
-                        <h4>HELMA</h4>
-                         <ul>
+                <div className=" column col column-2">
+                        <h4 className='titleColumn'>HELMA</h4>
+                         <ul >
                             <li>Home</li>
                             <li>Boutique</li>
                             <li>Contacts</li>
                         </ul>
                 </div>
-                <div class="column col column-3">
-                        <h4>POLICY</h4>
+                <div className="column col column-3">
+                        <h4 className='titleColumn'>POLICY</h4>
                          <ul>
                             <li>Terms of Usage </li>
                             <li>Privacy Policy</li>
@@ -36,24 +36,28 @@ function Footer() {
 
                         </ul> 
                 </div>
-                <div class="column col column-4">
-                        <h4>CATEGORIES</h4>
+                <div className="column col column-4">
+                        <h4 className='titleColumn'>CATEGORIES</h4>
                          <ul>
                             <li>Ring</li>
 
                         </ul> 
                 </div>
-                <div class="column col column-5">
-                        <h4>SUBSCRIBE</h4>
+                <div className="column col column-5">
+                        <h4 className='titleColumn'>SUBSCRIBE</h4>
                         <ul>
-                            <li><p>Be the first to receive our news!</p> </li>
-                            <li>
-                                 <div className='subscribe-btns'>
-                                      <SubscribeButtonsFooter></SubscribeButtonsFooter>
-                                 </div>
-                            </li>
-                           
+                            <li className='beTheFirst'>Be the first to receive our news! </li>
+                            <div className='respElemList'>
+                            <div className='responsiveElementdivst'>Be the first</div>
+                            <div className='responsiveElementList'>to receive</div>
+                            <div className='responsiveElementList last'>our news !</div>
+                            </div>
                         </ul>
+                        
+                        <div className='subscribe-btns'>
+                            <SubscribeButtonsFooter></SubscribeButtonsFooter>
+                        </div> 
+                            
                         
                         
                 </div>
@@ -64,25 +68,25 @@ function Footer() {
         
 <div className='responsiveLogoContacts'>
 
-<div class="logoSomed">
+<div className="logoSomed">
                     <div class="logo">
-                        <img src='logoHelmaCr.png' />
+                        <img src='logoHelmaCreations.png' />
                     </div>
                     <div class="socialMedia">
                       <SocialMedia></SocialMedia>
                     </div>
 </div>
 <div className='contacts'>
-    <p className='textC'>CONTACT US</p>
-    <p>+216 99 999 999</p>
-    <p>helmazomara@gmail.com</p>
+    <p className='textC textC1'>CONTACT US</p>
+    <p className='textC textC2'>+216 25 662 889</p>
+    <p className='textC textC3'>helmacreations@gmail.com</p>
 </div>
 </div>
 
             
     
             <div className='rights'>
-                <p>&copy; 2022 Helma.All Rights Reserved.</p>
+                <p>&copy;{new Date().getFullYear()} Helma. All Rights Reserved.</p>
             </div>
         </footer>
 
