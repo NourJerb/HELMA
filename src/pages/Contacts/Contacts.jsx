@@ -30,7 +30,7 @@ function Contacts() {
   
   <div className="contactcp">
       <Info icon={icon} nom='Telephone' information="+216 25 662 889"/>
-      <Info icon={location_icn} nom='Adresse' information= "Rue Du Général Jawhar، Ariana" />
+      <Info icon={location_icn} nom='Adresse' information= "Rue Du Général Jawhar، Ariana" className="locimg"/>
       <Info icon={mail} nom='Email' information="helmacreations@gmail.com" />
    
   </div>

@@ -27,6 +27,8 @@
     margin-top: 1.5vh;
 }
 
+
+
 .helma-bande{
     background-color: #40485B ;
     height: 15vh;
@@ -50,12 +52,13 @@
 }
 
 
+
 .logos{
     margin-top: 5vh;
     display: flex;
     justify-content: center;
     gap: 13vw;
-    padding-left:1vw ;
+    
   margin-bottom: 3vh;
 }
 
@@ -71,6 +74,8 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
+        margin-right: 0;
+        padding-left: 0;
     }
 
     iframe{
@@ -78,10 +83,36 @@
        
     }
     
+    .logos{
+        margin-right: 0;
+        margin-left: 10vw;
+    }
+    
   }
 
 
+  @media (max-width: 900px) {
 
+
+    .logos{
+        margin-right: 5vw;
+        gap: 10vw;
+       
+    }
+
+  }
+
+
+  @media (max-width: 800px) {
+
+
+    .logos{
+        margin-right: 10vw;
+        gap: 8vw;
+       
+    }
+
+  }
 
 
 
