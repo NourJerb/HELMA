@@ -200,11 +200,25 @@
     }
   
     .prix-produit .dt{
-      font-size: 2vw;
+      font-size: 3vw;
       
   }
 }
   
+
+@media only screen and (max-width: 600px) {
+
+  .prix-produit {
+    font-size: 20px;
+  }
+
+  .prix-produit .dt{
+    font-size: 14px;
+    
+}
+
+
+}
 
 
   @media only screen and (max-width: 360px) {
