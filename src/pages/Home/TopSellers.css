@@ -23,7 +23,8 @@
     padding: 4ch;
     margin-left: 10ch;
     justify-content: center;
-    justify-content: space-around;
+  
+    gap: 10ch;
 }
 @media screen and (max-width:720px) {
     .topsellers-container{
@@ -34,6 +35,9 @@
       margin: 0%;
 
     }
+   }
+   .swiper-button-next{
+    
    }
   
    

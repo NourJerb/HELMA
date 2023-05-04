@@ -25,6 +25,7 @@
     top: 83%;
     margin-left: 93%;
     color: white;
+    
   }
   @media  screen and (max-width:480px) {
     .top-home-design{
@@ -36,6 +37,20 @@
     }
     .Top-home-container{
       height: 25ch;
+    }
+    .number {
+      position: absolute;
+      top: 60%;
+      margin-left: 87%;
+      color: white;
+      font-size: 100px;
+    }
+    .number-of-photos {
+      position: absolute;
+      top: 83%;
+      margin-left: 93%;
+      color: white;
+      
     }
  
   }
@@ -50,6 +65,20 @@
     .top-home-design {
       margin-right: 7ch;
       
+      
+    }
+    .number {
+      position: absolute;
+      top: 60%;
+      margin-left: 87%;
+      color: white;
+      font-size: 100px;
+    }
+    .number-of-photos {
+      position: absolute;
+      top: 83%;
+      margin-left: 93%;
+      color: white;
       
     }
   }

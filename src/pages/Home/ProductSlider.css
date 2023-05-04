@@ -1,6 +1,6 @@
 .product-slider-container{
     justify-content: center;
-   gap: 3ch;
+   gap: 30ch;
    margin-left: 10ch;
    padding: 4ch;
    margin-right: 10ch;
@@ -15,9 +15,7 @@
  
    }
    @media screen and (min-width:720px) {
-    .elements{
-        gap: 3ch;
-    }
+    
  
    }
    

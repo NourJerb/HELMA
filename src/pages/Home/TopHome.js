@@ -16,11 +16,13 @@ function createSlide() {
   return (
     <SwiperSlide>
       <div className="Top-home-container">
+        
         <img className="image-design" src={img6} alt="photo du produit" />
-        <div>
+        <div className="Numbers">
         <p className="number">01</p>
         <p className="number-of-photos">/ 04</p>
         </div>
+        
       </div>
     </SwiperSlide>
   );
