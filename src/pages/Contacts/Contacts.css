@@ -4,7 +4,7 @@
 
     iframe{
     margin-top: 2vh;
-    width: 70% ;
+    width: 75% ;
     height : 70vh;
     border:0;
     
@@ -30,8 +30,11 @@
 
 
 .helma-bande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #40485B ;
-    height: 15vh;
+    height: 14vh;
 }
 .Location{
     width: 100%;
@@ -116,3 +119,9 @@
 
 
 
+  @media (max-width: 1200px) {
+    iframe{
+        width: 80% ;
+
+  }
+}

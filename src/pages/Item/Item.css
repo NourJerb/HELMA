@@ -241,3 +241,24 @@
 
 
   }
+
+  @media only screen and (min-width: 1300px) {
+
+    .title-item{
+      
+        font-size: 3rem;
+    }
+
+    .item-h4{
+      color: #E8C895;
+      font-size: 1.2rem;
+      margin:0.3rem auto ;
+  }
+  .item-span{
+      font-size: 1rem;
+      color: white;
+      font-weight:lighter;
+  }
+
+
+  }

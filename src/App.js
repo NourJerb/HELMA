@@ -6,7 +6,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      <Item />
+      <Contacts />
       <BrowserRouter>
         <Routes>
           <Route path="/contacts" element={<Contacts />} />
