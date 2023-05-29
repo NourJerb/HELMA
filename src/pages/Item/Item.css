@@ -29,6 +29,10 @@
     margin-left: 2rem;
     margin-top: 1rem;
     margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .image-description{
@@ -157,12 +161,14 @@
       gap: 2%;
       
       
+      
     }
   
     .prod {
       margin: 0 auto;
       margin-top: 1rem;
       text-align: center;
+     
     }
   
     .image-description {
@@ -246,7 +252,7 @@
 
     .title-item{
       
-        font-size: 3rem;
+        font-size: 4vw;
     }
 
     .item-h4{
