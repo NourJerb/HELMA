@@ -10,3 +10,17 @@
 .container{
     margin-top: 2vh;
 }
+
+@media (max-width: 900px) {
+    .a img{width: 3vw;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+    .a img{width: 20px;
+
+    }
+
+}

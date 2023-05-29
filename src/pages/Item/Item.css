@@ -257,11 +257,11 @@
 
     .item-h4{
       color: #E8C895;
-      font-size: 1.2rem;
+      font-size: 1.2vw;
       margin:0.3rem auto ;
   }
   .item-span{
-      font-size: 1rem;
+      font-size: 1vw;
       color: white;
       font-weight:lighter;
   }
