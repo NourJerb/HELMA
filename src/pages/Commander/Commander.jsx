@@ -1,176 +1,204 @@
-import React  from "react";
 import "./Commander.css";
 import image from '../assets/image.png';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useState } from 'react';
+
 function Commander() {
-  let ok1=0;
-  function handleCountryChange (event) {
-    if (event.target.value!==""){
-      ok1=1;
+  const [errors, setErrors] = useState({});
+  const [showErrors, setShowErrors] = useState(false);
+
+  const handleInputChange = (e) => {};
+
+  const handleSubmit = (values) => {
+    let newErrors = {};
+
+    if (!values.firstName.match(/^[a-zA-Z]+$/)) {
+      newErrors.fst = '*This field must only contain letters.';
     }
-  }
-  let ok2=0;
-  function handleCityChange (event){
-    if(event.target.value!==""){
-      ok2=1;
+
+    if (!values.lastName.match(/^[a-zA-Z]+$/)) {
+      newErrors.lst = '*This field must only contain letters.';
     }
-  }
-  let ok3=0;
-  function handleZipChange (event) {
-    if (event.target.value!==""){
-      ok3=1;
+
+    if (!values.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      newErrors.email = '*Please enter a valid email address.';
     }
-  }
-  let ok4=0;
-  function handleStateChange (event) {
-    if (event.target.value!==""){
-      ok4=1;
+
+    if (!values.phone.match(/^[0-9]+$/) || values.phone.length !== 8) {
+      newErrors.phone = '*This field must contain exactly 8 numbers.';
     }
-  }
-  function handleSubmit(event){
-    let message=""
-    if (ok1==0){
-      message+="select a city/n";
-      event.preventDefault();
+
+    if (values.countryy === "Country") {
+      newErrors.country = "*Select a country.";
     }
-    if (ok4==0){
-      message+="select a state";
-      if (message!="")
-      {alert(message);}
+
+    if (values.city === "City") {
+      newErrors.city = "*Select a city.";
     }
-  }
-  return <div  className="big" style={{border:"solid",width:"80%",marginLeft:"10%",height:"60vh",borderRadius:"3vh",border:"1px solid #707070",overflow:"hidden"}}>
-   
 
-<form action="../confirmer" method="get"  className="forms" style={{display:"flex",flexDirection:"column", justifyContent:"center",backgroundColor:"#40485B",paddingLeft:"10%",paddingTop:"0%",gap:"3%", marginTop:"-4%"}}>
-  
-  <div>
-  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="name" className="titre">First name:</label>
-  <input type="text" className="inputt" name="name" placeholder="First name" required />
-  </div>
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="last" className="titre" >Last name:</label> 
-  <input type="text" className="inputt" name="last" placeholder="Last name" required/> 
-  </div>
-  </div> 
+    if (values.zipcode === "Zip code") {
+      newErrors.zipcode = "*Select a zip code.";
+    }
 
+    if (values.state === "State") {
+      newErrors.state = "*Select a state.";
+    }
 
-  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="phone" className="titre">Your phone:</label>
-  <input type="text" className="inputt" name="phone" placeholder="Your phone" required ></input>
-  </div>
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="email" className="titre" id="email" >Your Email:</label> 
-  <input type="text" className="inputt" name="phone" placeholder="Your phone" required></input>
-  </div>
-  </div>
+    setErrors(newErrors);
+    setShowErrors(true);
+    
+  };
 
+  return (
+    <div className="big">
+      <Formik
+        initialValues={{
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          countryy: "",
+          city: "",
+          zipcode: "",
+          state: "",
+          address: ""
+        }}
+        onSubmit={handleSubmit}
+      >
+        <Form action="../cofirmer" method="get" className="forms" >
+          <div>
+            <div className="ddiv">
+              <div className="ss-container1">
+                <label htmlFor="firstName" className="titre">First name</label>
+                <Field type="text" className="inputt" name="firstName" placeholder="First name" required />
+                <div className="error">
+                {showErrors && errors.fst && <p style={ {margin:0 , padding:0}   }>{errors.fst}</p>}
+                </div>
+              </div>
+              <div className="ss-container1">
+                <label htmlFor="lastName" className="titre">Last name</label>
+                <Field type="text" className="inputt" name="lastName" placeholder="Last name" required />
+                <div className="error">
+                {showErrors && errors.lst && <p className="error">{errors.lst}</p>}
+                </div>
+              </div>
+            </div>
 
+            <div className="ddiv">
+              <div className="ss-container2">
+                <label htmlFor="email" className="titre">Your Email</label>
+                <Field type="email" className="inputt" name="email" placeholder="Your email" required />
+                {showErrors && errors.email && <p className="error">{errors.email}</p>}
+              </div>
+              <div className="ss-container2">
+                <label htmlFor="phone" className="titre" id="ph">Your phone</label>
+                <Field type="tel" className="inputt" name="phone" placeholder="Your phone" required />
+                {showErrors && errors.phone && <p className="error">{errors.phone}</p>}
+              </div>
+            </div>
 
-  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
+            <div className="ddiv2">
+              <div className="ss-container2">
+                <label htmlFor="country" id="country" className="titre">Country</label>
+                <Field as="select" id="countryy" className="selectt" name="country" required>
+                  <option value="" className="vv">Country</option>
+                  <option value="TU">Tunisia</option>
+                </Field>
+                {showErrors && errors.countryy && <p className="error">{errors.countryy}</p>}
+              </div>
 
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="Country" id="country" className="titre">Country:</label>
-  <select id="countryy" name="country" required onChange={handleCountryChange}> 
-      <option value="">--Country--</option>
-      <option value="TU">Tunisia</option>
-  </select>
-  </div>
+              <div className="ss-container2">
+                <label htmlFor="city" id="ci" className="titre">City</label>
+                <Field as="select" id="City" className="selectt" name="city" required>
+                  <option className="vv" value="">City</option>
+                  <option value="TUN">Tunis</option>
+                  <option value="SF">Sfax</option>
+                  <option value="SS">Sousse</option>
+                  <option value="KR">Kairouan</option>
+                  <option value="MT">Métouia</option> 
+<option value="KB">Kebili</option> 
+<option value="BZ">Bizerte</option> 
+<option value="SB">Sidi Bouzid</option> 
+<option value="GB">Gabès</option> 
+<option value="AR">Ariana</option> 
+<option value="JD">Jendouba</option> 
+<option value="GF">Gafsa</option> 
+<option value="MS">Msaken</option>
+<option value="MD">Medenine</option>
+<option value="BJ">Béja</option> 
+<option value="KS">Kasserine</option>   
+<option value="MN">Monastir</option>
+<option value="HM">Hammamet</option>  
+<option value="TT">Tataouine</option> 
+<option value="MR">La Marsa</option>
+<option value="BA">Ben Arous</option>
+<option value="SZ">Sakiet ez Zit</option>  
+<option value="ZS">Zarzis</option>
+<option value="BG">Ben Gardane</option>
+<option value="MH">Mahdia</option>
+<option value="HS">Houmt Souk</option>    
+<option value="FC">Fouchana</option>
+<option value="KR">Le Kram</option>  
+<option value="BD">Le Bardo</option>
+<option value="Ek">El Kef</option>
+<option value="Eh">El Hamma</option>
+<option value="NB">Nabeul</option>
+<option value="DJ">Djemmal</option>
+<option value="KB">Korba</option>
+<option value="MT">Menzal Temime</option>
+<option value="GH">Ghardimaou</option>
+<option value="MG">Menzel Bourguiba</option>
+<option value="RD">Radès</option>
+<option value="MN">Manouba</option>
+<option value="KB">Kélibia</option>
+                </Field>
+                {showErrors && errors.city && <p className="error">{errors.city}</p>}
+              </div>
 
-  
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}> 
-  <label for="City" id="ci" className="titre">City:</label> 
-  <select id="City" name="City" required onChange={handleCityChange}>
-    <option value="">--city--</option>
-    <option value="TUN">Tunis</option> 
-    <option value="SF">Sfax</option> 
-    <option value="SS">Sousse</option> 
-    <option value="KR">Kairouan</option>
-    <option value="MT">Métouia</option> 
-    <option value="KB">Kebili</option> 
-    <option value="BZ">Bizerte</option> 
-    <option value="SB">Sidi Bouzid</option> 
-    <option value="GB">Gabès</option> 
-    <option value="AR">Ariana</option> 
-    <option value="JD">Jendoouuuuuouba</option> 
-    <option value="GF">Gafsa</option> 
-    <option value="MS">Msaken</option>
-    <option value="MD">Medenine</option>
-    <option value="BJ">Béja</option> 
-    <option value="KS">Kasserine</option>   
-    <option value="MN">Monastir</option>
-    <option value="HM">Hammamet</option>  
-    <option value="TT">Tataouine</option> 
-    <option value="MR">La Marsa</option>
-    <option value="BA">Ben Arous</option>
-    <option value="SZ">Sakiet ez Zit</option>  
-    <option value="ZS">Zarzis</option>
-    <option value="BG">Ben Gardane</option>
-    <option value="MH">Mahdia</option>
-    <option value="HS">Houmt Souk</option>    
-    <option value="FC">Fouchana</option>
-    <option value="KR">Le Kram</option>  
-    <option value="BD">Le Bardo</option>
-    <option value="Ek">El Kef</option>
-    <option value="Eh">El Hamma</option>
-    <option value="NB">Nabeul</option>
-    <option value="DJ">Djemmal</option>
-    <option value="KB">Korba</option>
-    <option value="MT">Menzal Temime</option>
-    <option value="GH">Ghardimaou</option>
-    <option value="MG">Menzel Bourguiba</option>
-    <option value="RD">Radès</option>
-    <option value="MN">Manouba</option>
-    <option value="KB">Kélibia</option>
-  </select>
-  </div>
+              <div className="ss-container2">
+                <label htmlFor="zipcode" id="zc" className="titre">Zip code</label>
+                <Field type="text"  name="zipcode" placeholder="Zip code" required id="zic"  />
+                  
+                
+                {showErrors && errors.zipcode && <p className="error">{errors.zipcode}</p>}
+              </div>
+            </div>
 
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh"}}>
-  <label for="Zip code" id="zc" className="titre">Zip code:</label> 
-  <select id="Zipcode" name="Zip code" required onChange={handleZipChange}>
-  <option value="">--Zip Code--</option>
-    <option value="zipcode">200</option>
-  </select> 
-  </div>
-  </div>
+            <div className="ddiv3">
+              <div className="ss-container3">
+                <label htmlFor="state" id="st" className="titre">State</label>
+                <Field as="select" name="state" className="state" id="State" required>
+                  <option value="" className="vv">State</option>
+                  <option value="kkk">kkkk</option>
+                 
+                </Field>
+                {showErrors && errors.state && <p className="error">{errors.state}</p>}
+              </div>
 
-  <div style={{display:"flex",flexDirection:"row", gap:"5%"}}>
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh", width:"11.5%"}}>
-  <label for="State" id="st" className="titre">State:</label>
-  <select id="State" name="State" className="state" required onChange={handleStateChange}>
-  <option value="">--State--</option>
-  <option value="kkk"> kkkk</option>
-  </select>
-  </div>
+              <div className="divad">
+                <label htmlFor="address" id="add" className="titre">Address</label>
+                <Field type="text" id="Address" className="inputt" name="address" placeholder="Address" />
+              </div>
+              </div>
 
-  <div style={{display:"flex",flexDirection:"column",gap:"1vh",width:"31.5%"}}>
-  <label for="Address" id="add" className="titre">Adress:</label> 
-  <input type="text" id="Address" className="inputt" name="Address" placeholder="Address" />
+<div className="tt">
+  <img src={image} className="imaage" />
+  <div className="parbt">
+    <p className="firstparagraph">Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
   </div>
-  </div>
- 
-<div>
-<input type="button" value="Back" className="bt" required/>
-</div >
 </div>
 
-<div>
-<div style={{display:"flex",flexDirection:"column",gap:"5%",width:"40%",height:"60vh",marginLeft:"58%",marginTop:"-45.5%"}}>
-<div >
-<img src={image} className="imaage"/> 
-</div>
-<div style={{width:"85%",marginLeft:"10%",marginTop:"-5%"}}>
-<p className="firstparagraph"> Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
-</div> 
-<input type="submit" value="Continue" className="mbt" required onClick={handleSubmit}/>
+<div className="bouttton">
+  <input type="button" value="Back" className="bt" required />
+  <input type="submit" value="Continue" className="mbt" required />
 </div>
 </div>
-
-</form>
-
+</Form>
+</Formik>
 </div>
+ );
 }
 
 export default Commander;
+
+
