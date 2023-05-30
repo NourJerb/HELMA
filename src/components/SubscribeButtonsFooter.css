@@ -172,35 +172,35 @@
 }
 @media screen and (max-width: 308px){
   .email-subscription {
-    width: 146px;
+    width: 142.8px;
 }
 .email-subscription button{
     
-  font-size: 7px;
+  font-size: 6.8px;
  
 }
 .input-btn {
-  font-size: 7px;
+  font-size: 6.8px;
 
 
 }
 }
 @media screen and (max-width: 290px){
   .email-subscription {
-    width: 134px;
+    width: 125px;
 }
 .input-btn {
-  font-size: 7.2px;
+  font-size: 6px;
 
 
 }
 .email-subscription button{
     
-  font-size: 6.9px;
+  font-size: 6px;
  
 }
-.subscribe-button{
+/* .subscribe-button{
   padding: 6.9px 4.5px;
-}
+} */
 }
 

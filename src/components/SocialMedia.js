@@ -22,7 +22,7 @@ function SocialMedia() {
                 {/* <button  className='btns' type='submit'> */}
                     <FontAwesomeIcon icon={faFacebook}  onClick={handleButtonClickFacebook}/>
                 {/* </button> */}
-            </div>
+             </div>
 
               <div className='logo'>
               
@@ -32,11 +32,8 @@ function SocialMedia() {
                 
 
              <div className='logo'>
-             
                 <FontAwesomeIcon icon={faWhatsapp} onClick={handleButtonClickWhatsapp} />
-              
-            </div>
-
+             </div>
 
         </div>
     )

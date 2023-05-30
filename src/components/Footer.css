@@ -64,9 +64,10 @@ footer {
   .column .titleColumn {
 
    
-    padding-bottom: 2px;
-    text-decoration:  underline 2px ;
+   
+    
     text-underline-offset:1vh;
+    text-decoration:  underline 4.5px  ;
     
   }
   .titleColumn{
@@ -266,6 +267,9 @@ footer {
     margin-right: 10vw;
     margin-left: 10vw;
   }
+  .logoSomed .socialMedia{
+    margin-left: 0.1w;
+  }
   .contacts{
     margin-right: 150px ;
   }
@@ -308,6 +312,12 @@ footer {
     font-size: 3vw;
     
    }
+  .contacts .textC2{
+    font-size: 2vw;
+   }
+   .contacts .textC3{
+    font-size: 2vw;
+   }
   
   }
 
@@ -324,10 +334,7 @@ footer {
     }
   } 
   @media screen and (max-width: 720px){
-     /* .contacts{
-      margin-top: 20px;
-     }
-      */
+     
      .subscribe-btns{
       width: 45vw;
       /* height: 15vh; */
@@ -335,9 +342,7 @@ footer {
       
       
     }
-    /* .column-5{
-      width: 25vw;
-    } */
+    
     .titleColumn{
       font-size: 2.2vw;
     }
@@ -406,10 +411,7 @@ footer {
     .column ul div{
       font-size: 2.7vw;
     }
-    .rights{
-      padding-left: 10vw;
-    }
-    
+   
 
   }
   @media screen and (max-width: 504px){
@@ -537,5 +539,15 @@ footer {
     }
  
   }
+  @media screen and (max-width: 308px){
+    
+    .column-5 .last{
+      position: relative;
+    }
+    .column-5 .subscribe-btns{
+      position: absolute;
+      margin-top:65px;
+      margin-left: -85px;
+    }}
   
  

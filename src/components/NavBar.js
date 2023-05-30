@@ -34,23 +34,7 @@ function NavBar() {
      
        }, [])
    
-    //  // when I click to the search icon I will be allowed to write on the  input
-       
-    //  const searchIcon = document.getElementById('search-icon');
-    //  const searchInput = document.getElementById('search-input');
-     
-    //  searchIcon.addEventListener('click', function() {
-    //    searchInput.focus();
-    //  });
-     
-    //  searchIcon.addEventListener('mouseover', function() {
-    //    searchInput.style.cursor = 'text';
-    //  });
-     
-    //  searchIcon.addEventListener('mouseout', function() {
-    //    searchInput.style.cursor = 'default';
-    //  });
-     
+    
 
     return (
       
@@ -82,15 +66,29 @@ function NavBar() {
         <div className='respNavBar'>
           <div className='firstPart'>
             <div className='respImgLogoNb'><img src='respLogo.png' /></div>
-             <div><ul className='searchC1'>
-                 <li className=" search-container1">
-                 <input type="text" class="inputText1" id="search-input" />
-                  <img class="searchloop1" src="searchloop1.png" id="search-icon" alt="Search Icon" />
-                    
-                    
-                    
-                </li>
-            </ul></div>  
+            <div class="searchContainerE">
+              <div class="search">
+                  <input className='inputC1' type="text" placeholder=" " />
+                  <div>
+                     <svg>
+                       <use className='si'  xlinkHref="#path"/>
+                     </svg>
+                  </div>
+              </div>
+              
+              <a class="dribbble" href="https://dribbble.com/shots/5547403-Search-input-animation" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" alt=""/></a>
+               
+              <div className="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
+                  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
+                   <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+                  </symbol>
+                </svg>
+              </div>
+ 
+               
+   
+            </div> 
           
             {/* <div><inputSearch></inputSearch></div> */}
             <div><img src='menuToggle.png' className='btnMenu1' onClick={toggleNav}/></div>
