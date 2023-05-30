@@ -1,7 +1,9 @@
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
-import NavBar from "./components/Navbar";
-import Footer from "./components/Footer";
+import NavBar from './components/NavBar';
+import Categories from './components/Categories'; 
+import Boutique from './components/Boutique';
+import Footer from './components/Footer';
 import Shop from "./pages/Shop/Shop";
 import Item from "./pages/Item/Item";
 import Commander from "./pages/Commander/Commander";
@@ -12,7 +14,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <hr></hr>
+      <Categories></Categories>  
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +27,6 @@ function App() {
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </BrowserRouter>
-      <hr></hr>
       <Footer />
     </>
   );

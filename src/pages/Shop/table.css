@@ -1,4 +1,4 @@
-.container{ 
+.containerrr{ 
     width: 99%;
     display:grid;
     grid-template-columns: 345px 345px 345px ;
@@ -15,88 +15,88 @@
 }
 
 @media(max-width:1190px){
-    .container{
+    .containerrr{
         grid-template-columns: 330px 330px 330px ;
         column-gap: 4%;
         margin-left: 0.4%;
     }
 }
 @media(max-width:1120px){
-    .container{
+    .containerrr{
         grid-template-columns: 310px 310px 310px ;
         column-gap: 4%;
     }
 }
 @media(max-width:1050px){
-    .container{
+    .containerrr{
         grid-template-columns: 300px 300px 300px ;
         column-gap: 4%;
     }
 }
 @media(max-width:1000px){
-    .container{
+    .containerrr{
         grid-template-columns: 280px 280px 280px ;
         column-gap: 4%;
     }
 }
 @media(max-width:940px){
-    .container{
+    .containerrr{
         grid-template-columns: 270px 270px 270px ;
         column-gap: 2.5%;
     }
 }
 @media(max-width:870px){
-    .container{
+    .containerrr{
         grid-template-columns: 345px 345px ;
         column-gap: 10%;
     }
 }
 @media(max-width:800px){
-    .container{
+    .containerrr{
         grid-template-columns: 330px 330px ;
         column-gap: 10%;
     }
 }
 @media(max-width:770px){
-    .container{
+    .containerrr{
         grid-template-columns: 310px 310px ;
         column-gap: 8%;
     }
 }
 @media(max-width:700px){
-    .container{
+    .containerrr{
         grid-template-columns: 300px 300px ;
         column-gap: 7%;
     }
 }
 @media(max-width:670px){
-    .container{
+    .containerrr{
         grid-template-columns: 280px 280px ;
         column-gap: 6%;
     }
 }
 @media(max-width:615px){
-    .container{
+    .containerrr{
         grid-template-columns: 260px 260px ;
         column-gap: 4%;
     }
 }
 @media(max-width:570px){
-    .container{
+    .containerrr{
         grid-template-columns: 345px ;
         margin-left: 0.5%;
     }
     
 }
 @media(max-width:455px){
-    .container{
+    .containerrr{
         grid-template-columns: 345px ;
         margin-left: 0.25%;
     }
     
 }
 @media(max-width:390px){
-    .container{
+    .containerrr{
         grid-template-columns: 330px ;
         margin-left: 0.25%;
     }
@@ -104,35 +104,35 @@
 }
 
 @media(max-width:350px){
-    .container{
+    .containerrr{
         grid-template-columns: 310px ;
         margin-left: 0.25%;
     }
     
 }
 @media(max-width:330px){
-    .container{
+    .containerrr{
         grid-template-columns: 290px ;
         margin-left: 0.25%;
     }
     
 }
 @media(max-width:310px){
-    .container{
+    .containerrr{
         grid-template-columns: 280px ;
         margin-left: 0.25%;
     }
     
 }
 @media(max-width:300px){
-    .container{
+    .containerrr{
         grid-template-columns: 270px ;
         margin-left: 0.25%;
     }
     
 }
 @media(max-width:290px){
-    .container{
+    .containerrr{
         grid-template-columns: 260px ;
         margin-left: 0.25%;
     }

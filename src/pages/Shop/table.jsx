@@ -6,7 +6,7 @@ import Shop from './Shop'
 function Table (props){
     let users=props.users;
     return(
-     <div className="container" > 
+     <div className="containerrr" > 
             {users.map(user=>(
                     <div  key={user.id} className="divElement" >
                         
