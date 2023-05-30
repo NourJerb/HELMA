@@ -1,18 +1,10 @@
 .card-design{
     width: 27ch;
-    height: 35ch;
+    height: 40ch;
 }
-.product-photo{
-    height: 35ch;
+.small-product-photo{
+    height: 40ch;
     border-radius: 1ch;
-    object-fit: cover;
+  
 }
 
-
-@media screen and (max-width:2500px) {
-    .card-design{
-       width: 100%;
-     
-    }
-   
-   }

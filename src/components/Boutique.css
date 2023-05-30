@@ -1,0 +1,259 @@
+.container-boutique{
+    
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+  
+    /* margin-bottom: 20px; */
+    height: 10%;
+    width: 100%;
+    /* height:320px; */
+    background: linear-gradient(180deg,#fff ,#40485B 99.9%);
+
+   
+}
+.text{
+    margin-top: -8%;
+    margin-bottom: 30%;
+    /* padding-left: 40%; */
+    padding-top: 2vh;
+    padding-left: 20vw;
+    
+    color: #E8C895;
+    /* font-size: 1.8rem; */
+    font-size: 2.3vw;
+    font-weight: 500;
+    
+
+}
+.helma{
+    color: #514F62;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    text-align: center;
+    
+    padding-bottom: 2%;
+    /* font-size: 9rem; */
+    font-size: 10vw;
+    margin-bottom:0 ;
+    font-weight: 600;
+}
+.jewelry{
+    font-size: 2.8vw;
+    font-weight: 550;
+}
+
+
+.container-boutique div .btnSeeShop{
+     width: 20vw; 
+
+
+    /* height: 10vw; */
+    
+}
+
+.btnSeeShop1{
+    color: #fff;
+     border: none;
+     background-color: #40485B;
+     /* width: 30vh;
+     height: 6vh; */
+     width: 22vw;
+     height: 9vh;
+     border-radius: 1vw;
+     font-size: 2vw; 
+     /* font-size: 1.8vw; */
+     font-weight: 590;
+     cursor: pointer;
+    
+}
+
+@media screen and (max-width: 1212px){
+    .btnSeeShop1{
+        width: 22vw;
+        height: 8.5vh;
+        font-weight: 599;
+        font-size: 2.1vw;
+        
+        
+    }
+
+}
+@media screen and (max-width: 1028px){
+    .container-boutique{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        
+    }
+    .btnSeeShop{
+    padding-bottom: 30vh;
+   
+
+    }
+    .btnSeeShop1{
+        font-weight: 599;
+        font-size: 25px;
+        width: 230px;
+        height: 50px;
+        border-radius: 14px;
+    }
+    .helmaJewelry{
+        margin-top: 12vh;
+        padding-bottom: 0;
+        text-align: center;
+        
+    }
+    .helma{
+        font-size: 5rem;
+    }
+    .text{
+        /* font-size: 1.2rem; */
+        font-size: 3.2vw;
+        width: 100%;
+        padding-left: 40%;
+        /* padding-right: 40%; */
+    }
+    .jewelry{
+        font-size: 3.9vw;
+    }
+   
+}
+@media screen and (max-width: 706px){
+    .text{
+        font-size: 3.2vw;
+    }
+    .jewelry{
+        font-size: 4vw;
+    }
+    /* .btnSeeShop1{
+        font-weight: 600;
+        font-size: 2.5vw;
+    } */
+
+}
+@media screen and (max-width: 620px){
+    .text{
+        font-size: 4vw;
+        /* padding-right: 20%; */
+    }
+    .jewelry{
+        font-size: 5.1vw;
+    }
+     
+    .btnSeeShop1{
+        
+        font-size: 20px;
+        width: 200px;
+ 
+    } 
+}
+
+@media screen and (max-width: 483px){
+    .text{
+        font-size: 4.5vw;
+        /* padding-right: 29%; */
+    }
+    /* .btnSeeShop1{
+        font-size: 3.2vw;
+        font-weight: 600;
+        width: 40vw;
+        height: 9vw;
+    } */
+    .jewelry{
+        font-size: 6vw;
+        font-family: 600;
+    }
+   
+
+}
+@media screen and (max-width: 460px){
+
+.text{
+    padding-left: 18vw;
+    padding-top: 5px;
+    /* margin-right: -120px; */
+   
+}
+}
+
+
+
+@media screen and (max-width: 420px){
+    .text{
+        font-size: 4.8w;
+        
+       
+        
+    }
+     /* .btnSeeShop1{
+        font-size: 3.9vw;
+        font-weight: 600;
+        width: 45vw;
+        height:10vw ;
+    } */
+    .jewelry{
+        font-size: 6vw;
+    }
+   
+
+}
+@media screen and (max-width: 402px){
+    .text{
+        font-size: 5.2vw;
+        padding-left: 16vw;
+        /* padding-right: 30%; */
+        
+    }
+    .jewelry{
+        font-size: 6.3vw;
+    }
+    .btnSeeShop1{
+        height: 47px;
+        width: 170px;
+    }
+   
+   
+}
+@media screen and (max-width: 348px){
+   .helma{
+    text-align: center;
+    font-size: 60px;
+
+   }
+   .text{
+    font-size: 18px;
+    /* padding-right: 70px; */
+    padding-left: -240px;
+    
+
+   }
+   
+
+   
+   .jewelry{
+    font-size: 23px;
+}
+
+}
+@media screen and (max-width: 320px){
+    .text{
+        font-size: 17px;
+        /* padding-right: 70px; */
+        padding-left: 11vw;
+       
+    
+       }
+       .btnSeeShop1{
+        font-size: 18px;
+        width: 170px;
+       }
+
+}

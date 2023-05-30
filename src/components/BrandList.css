@@ -1,0 +1,21 @@
+.brandListContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+     
+}
+.brandListBtn{
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 333px){
+    .brandListBtn{
+         
+         font-size: 15px;
+    }
+}

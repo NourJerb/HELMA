@@ -9,7 +9,7 @@ const BigProductCard = props => {
 
         <Card className="big-card-design">
             <div >
-                <Card.Img variant="top" className="product-photo" src={imgSrc} />
+                <Card.Img variant="top" className="big-product-photo" src={imgSrc} />
             </div>
         </Card>
     );

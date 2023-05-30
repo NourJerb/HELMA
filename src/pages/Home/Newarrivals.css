@@ -1,38 +1,218 @@
-.Product-container2{
-    display: flex;  
-    gap: 3ch;
-    justify-content: center;
-    padding: 5ch;
-    margin-right: 10ch;
-   
+.Product-container2 {
+  display: flex;
+  gap: 2ch;
+  justify-content: center;
+  padding: 2ch;
+margin-right: 5ch;
+margin-left: 3ch;
+}
+.big-card-design2 {
+  width: 42vw;
+  height: 40ch;
+}
+.big-product-photo2 {
+  height: 40ch;
+  border-radius: 1ch;
+  object-fit: cover;
+}
+.card-design2 {
+  width: 22vw;
+  height: 40ch;
+}
+.small-product-photo2 {
+  height: 40ch;
+  border-radius: 1ch;
+}
+
+.title-container {
+  background-color: #40485b;
+  border-top-left-radius: 3ch;
+  border-top-right-radius: 0ch;
+  height: 4ch;
+  color: white;
+  height: 6ch;
+}
+.title {
+  margin-inline-start: 10ch;
+  padding: 0.5ch;
+}
+.newarrivals-container {
+  margin-left: 10ch;
+  background-color: white;
+  border-top-left-radius: 5ch;
+  border-bottom-left-radius: 3ch;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 1200px) {
+  .Product-component:nth-child(3) {
+    display: none;
   }
-  .title-container{
-      background-color: #40485B;
-      border-top-left-radius: 3ch;
-      border-top-right-radius: 0ch;
-      height: 4ch;  
-      color: white;
-      height: 6CH;
+  .Product-component2:nth-child(3) {
+    display: none;
   }
-  .title{
-      margin-inline-start:10ch;
-     padding: 0.5ch
-  
+}
+@media screen and (max-width: 990px) {
+  .big-card-design2 {
+    width: 32vw;
+    height: 40ch;
+  }
+  .card-design2 {
+    width: 32vw;
+    height: 40ch;
+  }
+ 
+}
+@media screen and (max-width: 700px) {
+  .Product-component:nth-child(2) {
+    display: none;
+  }
+  .Product-component2:nth-child(2) {
+    display: none;
+  }
+  .big-card-design2 {
+    width: 75vw;
+    height: 40ch;
   }
   .newarrivals-container {
+    margin-left: 3ch;
+   
+  }
   
-  margin-left: 10ch;
-      background-color: white;
-      border-top-left-radius: 5ch;
-      border-bottom-left-radius: 3ch;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*
+@media screen and (max-width: 480px) {
+  .newarrivals-container {
+    margin-left: 3ch;
+  }
+}
+@media screen and (max-width: 950px) {
+  .Product-component:nth-child(1) {
+    display: none;
+  }
+  .Product-component2:nth-child(3) {
+    display: none;
+  }
+  .card-design2 {
+    width: 40ch;
+    
+  }
+  .small-product-photo2 {
+    width:40ch;
+   
+  }
+  .big-product-photo2{
+    width: 40ch;
+  }
+  .big-card-design2{
+    width: 40ch;
+  }
+}
+@media screen and (max-width: 900px) {
+  .Product-component:nth-child(1) {
+    display: none;
+  }
+  .Product-component2:nth-child(3) {
+    display: none;
+  }
+  .card-design2 {
+    width: 37ch;
+    
+  }
+  .small-product-photo2 {
+    width:37ch;
+   
+  }
+  .big-product-photo2{
+    width: 35ch;
+  }
+  .big-card-design2{
+    width: 35ch;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .big-product-photo2{
+    width: 100%;
+  }
+  .big-card-design2{
+    width: 111%;
+  }
   
+}
+@media screen and (max-width: 1100px) {
+  .big-product-photo2{
+    width: 27ch;
+  }
+  .big-card-design2{
+    width: 27ch;
+  }
+  
+}
+@media screen and (max-width: 850px) {
+  .Product-component:nth-child(1) {
+    display: none;
+  }
+  .Product-component2:nth-child(3) {
+    display: none;
+  }
+  .card-design2 {
+    width: 33ch;
+    
+  }
+  .small-product-photo2 {
+    width:33ch;
+   
+  }
+ 
+}
+@media screen and (max-width: 800px) {
+  .Product-component:nth-child(1) {
+    display: none;
+  }
+  .Product-component2:nth-child(3) {
+    display: none;
+  }
+  .card-design2 {
+    width: 30ch;
+    
+  }
+  .small-product-photo2 {
+    width:30ch;
+   
+  }
+ 
+}
+@media screen and (max-width: 700px) {
+  .Product-component:nth-child(1) {
+    display: none;
+  }
+  .Product-component2:nth-child(3) {
+    display: none;
+  }
+  .Product-component2:nth-child(2) {
+    display: none;
+  }
+  .card-design2 {
+    width: 30ch;
+    
+  }
+  .small-product-photo2 {
+    width:30ch;
+   
+  }
+ 
+}
+@media screen and (max-width: 2500px) {
+  .card-design2 {
+    width: 100%;
+    
+  }
+  .small-product-photo2 {
+    width:100%;
+   
   }
 
-  @media screen and (max-width:480px) {
-    .newarrivals-container{
-        margin-left: 3ch;
-    }
-    
- 
-   }
+  
+}*/

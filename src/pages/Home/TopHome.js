@@ -18,12 +18,11 @@ function createSlide() {
       <div className="Top-home-container">
         
         <img className="image-design" src={img6} alt="photo du produit" />
-        <div className="Numbers">
-        <p className="number">01</p>
-        <p className="number-of-photos">/ 04</p>
+        <div class="Number">01</div>
+        <div class="Number-of-photos">/04</div>
         </div>
         
-      </div>
+      
     </SwiperSlide>
   );
 }
@@ -32,8 +31,8 @@ function createSlide2() {
     <SwiperSlide>
       <div className="img">
         <img className="image-design" src={img7} alt="photo du produit" />
-        <p className="number">02</p>
-        <p className="number-of-photos">/ 04</p>
+        <div class="Number">02</div>
+        <div class="Number-of-photos">/04</div>
       </div>
     </SwiperSlide>
   );
@@ -43,8 +42,8 @@ function createSlide3() {
     <SwiperSlide>
       <div className="img">
         <img className="image-design" src={img8} alt="photo du produit" />
-        <p className="number">03</p>
-        <p className="number-of-photos">/ 04</p>
+        <div class="Number">03</div>
+        <div class="Number-of-photos">/04</div>
       </div>
     </SwiperSlide>
   );
@@ -55,8 +54,8 @@ function createSlide4() {
       <div>
         <div className="img">
           <img className="image-design" src={img9} alt="photo du produit" />
-          <p className="number">04</p>
-          <p className="number-of-photos">/ 04</p>
+          <div class="Number">04</div>
+        <div class="Number-of-photos">/04</div>
         </div>
       </div>
     </SwiperSlide>
@@ -70,6 +69,7 @@ function TopHome() {
         modules={[ Pagination, Autoplay]}
         SlidesPerView={1}
         Navigation
+       
         autoplay={ true }
         Pagination={{ clickable: true }}
       >
