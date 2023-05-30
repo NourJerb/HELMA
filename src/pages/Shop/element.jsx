@@ -9,8 +9,8 @@ function Element(props){
             <div className="title">Men’s black hat Gucci</div>
             
             <div className="desc">Another masterpiece from the legendary designer. He designed new dress dev…</div>
-            <div className="btn"><button className="boutton">Commander</button></div>
-            
+            <div className="btn" ><button className="boutton">Commander</button></div>
+            <div className="espace"></div>
         </div>
 
             

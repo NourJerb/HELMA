@@ -8,18 +8,18 @@ export const returnPaginationRange = (totalPage, page, limit , siblings) => {
     let leftSiblingsIndex= Math.max(page - siblings,1);
     let rightSiblingsIndex= Math.min(page + siblings,totalPage);
 
-    let showLeftDots= leftSiblingsIndex > 2;
+    let showLeftDots= leftSiblingsIndex > 3;
     let showRightDots= rightSiblingsIndex < totalPage - 2;
 
     if (!showLeftDots && showRightDots){
         let leftItemsCount=3+2*siblings;
-        let leftRange=_.range(1,leftItemsCount+1);
+        let leftRange=_.range(1,leftItemsCount+2);
         return [...leftRange,"...", totalPage];
     }
     else{
         if(showLeftDots && !showRightDots){
         let rightItemsCount=3+2*siblings;
-        let rightRange=_.range(totalPage-rightItemsCount+1,totalPage);
+        let rightRange=_.range(totalPage-rightItemsCount,totalPage);
         return [1,"... " , ...rightRange,totalPage];} 
         else{
          let middleRange=_.range(leftSiblingsIndex,rightSiblingsIndex+1);

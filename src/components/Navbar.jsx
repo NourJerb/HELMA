@@ -1,7 +1,7 @@
 import React from "react";
 
 function Navbar() {
-  return <div style={{height:"200px"}}>Navbar
+  return <div >Navbar
   </div>;
 }
 

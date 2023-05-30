@@ -27,7 +27,7 @@ function Pagination(props){
     
     return(<div className='pagination' >
         
-        <Link to={`/shop/page${previousPage}`}  className="left" onClick={()=>props.onPageChange("&lsaquo;")} ><img src={left} alt="left"></img></Link>
+        <Link to={`/shop/page${previousPage}`}  className="left" onClick={()=>props.onPageChange("&lsaquo;")} ><img src={left} alt="left" className='L'></img></Link>
         <div className='nav'>
         {array.map(value => {
             let pt
@@ -51,7 +51,7 @@ function Pagination(props){
         })}
         </div>
          
-         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className="right"><img src={right} alt="right"></img></Link>
+         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className="right"><img src={right} alt="right" className='R'></img></Link>
          
 
 

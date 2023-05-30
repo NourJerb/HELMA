@@ -13,12 +13,13 @@
     align-items:center;
     cursor: pointer;
     border:none;
-    height: 15vh;
+    height: 100px;
     
     
 }
         
 .PageItem{
+    
     padding-top: 0.5%;
     padding-bottom: 1%;
     padding-left: 5%;
@@ -46,29 +47,23 @@
     
 }
 
-@media (max-width:1495px) {
+
+@media(max-width:615px){
     .pagination{
-    position: relative;
-    top:-0vh;
-}}
-
-@media (max-width:450px) { 
-    .pagination{ 
-        font-size: small; 
-
-}} 
-
-@media (max-width:360px) { 
-    .left{
-        right:17%;
+        font-size: small;
     }
-    .right{
-        left:17%;
+    .L,.R{
+        width:23px;
+        height:23px;
     }
-
-} 
-@media (max-width:280px) { 
-    .pagination{ 
-        font-size: x-small; 
-
-}} 
+    
+}
+@media(max-width:350px){
+    .pagination{
+        font-size: x-small;
+    }
+    .L,.R{
+        width:17px;
+        height:17px;
+    }
+}

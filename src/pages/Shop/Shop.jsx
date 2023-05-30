@@ -8,18 +8,47 @@ import Table from './table';
 import {getUsers,getLength} from '../../data/dataselim'
 
 function Shop() {
-  const mediaQuery = window.matchMedia("(max-width: 1024px)");
-  const mediaQuery1 = window.matchMedia("(min-width: 1025px)");
-  let n=1
-  if (mediaQuery.matches){
-     n=10;
-  }
-  if(mediaQuery1.matches){
-     n=9;
-  }
-  let [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(n);
+  const mediaQuery = window.matchMedia("(max-width: 870px)");
+  const mediaQuery1 = window.matchMedia("(min-width: 871px)");
+  const [count, setCount] = useState(9);
+  const [page, setPage] = useState(1);
+  const [limit, setLimit] = useState(count);
   let totalPages=Math.ceil(getLength()/limit);
+
+  
+  useEffect(() => {
+    const updateCount = () => {
+      if (mediaQuery.matches) {
+        setCount(10);
+        setLimit(count)
+
+      } else if (mediaQuery1.matches) {
+        setCount(9);
+        setLimit(count)
+        
+      }
+    };
+  
+    updateCount(); 
+  
+    const mediaQueryListener = (event) => {
+      updateCount();
+    };
+
+    // Add event listeners to window
+    window.addEventListener("resize", mediaQueryListener);
+
+    // Clean up by removing the event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", mediaQueryListener);
+    };
+  },[count]);
+
+  console.log(page)
+  if(page>totalPages){
+       setPage(totalPages)
+  }
+  
   const location = useLocation();
 
 
@@ -78,85 +107,22 @@ window.scrollTo({
 });
 
 
-// My component 
-const elementLastPage=getLength()-(n*(totalPages-1)) //number of elements in the last Page
+/// My component 
 function MyComponent(){
-  let path=location.pathname
-  
-  if(Number(NumberInPath(path))===totalPages && elementLastPage===1){
-    return(<div id="lastPage1" className="parent" >
-    <Table users={getUsers(page,limit)} className="last" />
-    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-  </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===2){
-      return(<div id="lastPage2" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===3){
-      return(<div id="lastPage3" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===4){
-      return(<div id="lastPage4" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===5){
-      return(<div id="lastPage5" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===6){
-      return(<div id="lastPage6" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===7){
-      return(<div id="lastPage7" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===8){
-      return(<div id="lastPage8" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===9){
-      return(<div id="lastPage9" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  }else{
-    if(Number(NumberInPath(path))===totalPages && elementLastPage===10){
-      return(<div id="lastPage10" className="parent" >
-      <Table users={getUsers(page,limit)} className="last" />
-      <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pagLast" ></Pagination>   
-    </div>)
-  
-  }else{
   return(
   <div id={localStorage.getItem('currentPage')} className="parent" >
-    <Table users={getUsers(page,limit)} className="contain" />
-    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} className="pag" ></Pagination>   
+    <Table users={getUsers(page,limit)}  />
+    <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} ></Pagination>   
   </div>)
-}}}}}}}}}}}
+}
+
+
 
 
 // the problem of previous and next button
 const path = location.pathname;
 useEffect(() => {
   const newPage = Number(NumberInPath(path));
-  console.log(newPage)
   if(newPage===localStorage.getItem('currentPage')){
   setPage(newPage);}
   else{
@@ -182,7 +148,7 @@ if (path1==='/shop'){
 <Route  path={'page'+localStorage.getItem('currentPage')} exact element={<MyComponent  />}></Route>
 </Routes>
 </div>;
-}
 
+}
 export default Shop;
 

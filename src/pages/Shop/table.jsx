@@ -1,10 +1,12 @@
 import React from "react"
 import Element from "./element";
 import './table.css'
+import Shop from './Shop'
 
 function Table (props){
     let users=props.users;
-    return(<div className="container" > 
+    return(
+     <div className="container" > 
             {users.map(user=>(
                     <div  key={user.id} className="divElement" >
                         
