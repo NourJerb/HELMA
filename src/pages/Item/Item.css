@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Quicksand:wght@700&display=swap');
 
 .container-description{
-    margin: 2% 7%;
+    margin: 0 7%;
+    margin-bottom: 3%;
     width: 85% ;
     height: 500px ;
     position: absolute;
