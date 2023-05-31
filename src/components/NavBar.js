@@ -11,11 +11,10 @@ import loop from './../assets/loop.png'
 import './NavBar.css'
 
 function NavBar() {
-   
+  // toggle Menu
     const [toggleMenu, setToggleMenu] = useState(false)
     const toggleNav = () => {
         setToggleMenu(!toggleMenu)
-
       }
       const [screenWidth, setScreenWidth] = useState(window.innerWidth)
       useEffect(() => {
@@ -27,20 +26,26 @@ function NavBar() {
         window.addEventListener('resize', changeWidth)
     
       }, [])
+
       useEffect(() => {
         const changeWidth = () => {
             setScreenWidth(window.innerWidth);
           }
-
-        
-     
          return () => {
              window.removeEventListener('resize', changeWidth)
          }
-     
        }, [])
-   
-    
+
+// search bar
+const [displayInput, setDisplayInput] = useState(false);
+useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 840px)");
+    const handleMediaQueryChange = (e) => {
+        setDisplayInput(false);
+        };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+       }, []);
+
 
     return (
       
@@ -78,14 +83,14 @@ function NavBar() {
 
 
           <div className='searchbar bar2'>
-                  <input type="text"  className='inputText' /> 
-                  <button className='loopBtn ' type="submit" > 
+                  { (displayInput) && (<input type="text"  className='inputText' /> )}
+                  <button className='loopBtn ' type="submit"  onClick={() => setDisplayInput(!displayInput)}> 
                   <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
                   </button>
           </div>
                   
 
-          {((toggleMenu ) && (<div className='secondPart'>
+          {(toggleMenu ) && ((<div className='secondPart'>
                 
                 <div className='elemm1'><a className='elemm' href="#">HOME</a><hr></hr></div>
                 <div className='elemm1'><a className='elemm' href="#">SHOP</a><hr></hr></div>

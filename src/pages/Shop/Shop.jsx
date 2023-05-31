@@ -35,10 +35,8 @@ function Shop() {
       updateCount();
     };
 
-    // Add event listeners to window
     window.addEventListener("resize", mediaQueryListener);
 
-    // Clean up by removing the event listener when component unmounts
     return () => {
       window.removeEventListener("resize", mediaQueryListener);
     };
