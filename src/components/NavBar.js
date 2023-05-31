@@ -15,6 +15,7 @@ function NavBar() {
     const [toggleMenu, setToggleMenu] = useState(false)
     const toggleNav = () => {
         setToggleMenu(!toggleMenu)
+
       }
       const [screenWidth, setScreenWidth] = useState(window.innerWidth)
       useEffect(() => {
@@ -43,65 +44,58 @@ function NavBar() {
 
     return (
       
-       <header className='allNavBar'>
+       <div className='allNavBar'>
         
-        <img className='logoNB' src={logoNavBar} width={90} height={50}/>
+        <img className='logoNB' src={logoNavBar} />
         <nav   className='navBar-container'>
         
             
-            {((toggleMenu || screenWidth > 300) && (<ul className='hbc' >
+             {((toggleMenu || screenWidth > 300) && (<div className='hbc' >
                 
-                <li className='elem elemi'><a href="#">HOME</a></li>
-                <li className='elem elemi'><a href="#">SHOP</a></li>
-                <li className='elemi elemi3' ><a href="#">CONTACTS</a></li>
+                <div className='elem elemi'><a href="#">HOME</a></div>
+                <div className='aaaa'></div>
+                <div className='elem elemi'><a href="#">SHOP</a></div>
+                <div className='aaaa'></div>
+                <div className='elemi elemi3' ><a href="#">CONTACTS</a></div>
               
                 
-            </ul>))}
-             <ul className='searchC'>
-                 <li className=" search-container">
-                     <input type="text"  className='inputText' /> 
-                    <button className='loopBtn ' type="submit" >
-                       <AiOutlineSearch  className='searchloop' color='#fff' size={25}  /> 
-                    </button>
-                    
-                    
-                </li>
-            </ul> 
-        </nav>
-        <div className='respNavBar'>
-          <div className='firstPart'>
-            <div className='respImgLogoNb'><img src={respLogo} /></div>
-            <div class="searchContainerE">
-              <div class="search">
-                  <input className='inputC1' type="text" placeholder=" " />
-                  <div>
-                  <img src={loop} />
+            </div>))}
+                  <div className='searchbar'>
+                  <input type="text"  className='inputText' /> 
+                  <button className='loopBtn ' type="submit" > 
+                  <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
+                  </button>
                   </div>
-              </div>
+                         
+        </nav>
+
+
+        
+        <div className='respNavBar'>
+
+          <div className='firstPart'>
               
-              <a class="dribbble" href="https://dribbble.com/shots/5547403-Search-input-animation" target="_blank"><img src="https://dribbble.com/assets/logo-small-2x-9fe74d2ad7b25fba0f50168523c15fda4c35534f9ea0b1011179275383035439.png" alt=""/></a>
-               
-              
- 
-               
-   
-            </div> 
-          
-            {/* <div><inputSearch></inputSearch></div> */}
-            <div><img src={menuToggle} className='btnMenu1' onClick={toggleNav}/></div>
+
+
+          <div className='searchbar bar2'>
+                  <input type="text"  className='inputText' /> 
+                  <button className='loopBtn ' type="submit" > 
+                  <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
+                  </button>
           </div>
+                  
+
           {((toggleMenu ) && (<div className='secondPart'>
                 
-                <div className='elemm1'><a className='elemm' href="#">HOME</a><hr className='lineNB lineNB1'></hr></div>
-                
-                <div className='elemm1'><a className='elemm' href="#">SHOP</a><hr className='lineNB lineNB2'></hr></div>
-                <div className='elemm1'><a className='elemm' href="#">CONTACTS</a><hr className='lineNB lineNB3'></hr></div>
-            
+                <div className='elemm1'><a className='elemm' href="#">HOME</a><hr></hr></div>
+                <div className='elemm1'><a className='elemm' href="#">SHOP</a><hr></hr></div>
+                <div className='last'><a className='elemm' href="#">CONTACTS</a></div>
           </div>))}
-
+          <div><img src={menuToggle} className='btnMenu' onClick={toggleNav}/></div>
         </div>
-    </header>
-      
+        
+    </div>
+      </div>
         
     )
     }

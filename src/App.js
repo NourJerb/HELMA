@@ -27,7 +27,7 @@ function App() {
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </BrowserRouter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
