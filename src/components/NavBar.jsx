@@ -4,8 +4,9 @@ import { AiOutlineSearch } from  'react-icons/ai';
 import inputSearch from './inputSearchNavBar.js';
 import logoNavBar from'./../assets/logoNavBar.png';
 import respLogo from'./../assets/respLogo.png';
-import menuToggle from './../assets/menuToggle.png'
-import loop from './../assets/loop.png'
+import menuToggle from './../assets/menuToggle.png';
+import loop from './../assets/loop.png';
+import search from './../assets/search.png';
 
 
 import './NavBar.css'
@@ -13,33 +14,41 @@ import './NavBar.css'
 function NavBar() {
   // toggle Menu
     const [toggleMenu, setToggleMenu] = useState(false)
-    const toggleNav = () => {
+     const toggleNav = () => {
         setToggleMenu(!toggleMenu)
-      }
-      const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-      useEffect(() => {
+     }
+     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+     useEffect(() => {
 
-        const changeWidth = () => {
+       const changeWidth = () => {
           setScreenWidth(window.innerWidth);
         }
     
         window.addEventListener('resize', changeWidth)
     
-      }, [])
+       }, [])
 
       useEffect(() => {
         const changeWidth = () => {
-            setScreenWidth(window.innerWidth);
-          }
+           setScreenWidth(window.innerWidth);
+        }
          return () => {
-             window.removeEventListener('resize', changeWidth)
-         }
-       }, [])
+            window.removeEventListener('resize', changeWidth)
+        }
+      }, [])
+// search bar
+    useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 570px)");
+    const handleMediaQueryChange = (e) => {
+        setToggleMenu(false);
+        };
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+       }, []);
 
 // search bar
 const [displayInput, setDisplayInput] = useState(false);
 useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 840px)");
+    const mediaQuery = window.matchMedia("(max-width: 570px)");
     const handleMediaQueryChange = (e) => {
         setDisplayInput(false);
         };
@@ -52,6 +61,7 @@ useEffect(() => {
        <div className='allNavBar'>
         
         <img className='logoNB' src={logoNavBar} />
+        
         <nav   className='navBar-container'>
         
             
@@ -68,7 +78,7 @@ useEffect(() => {
                   <div className='searchbar'>
                   <input type="text"  className='inputText' /> 
                   <button className='loopBtn ' type="submit" > 
-                  <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
+                  <img src={loop} className='loop'/>
                   </button>
                   </div>
                          
@@ -85,7 +95,7 @@ useEffect(() => {
           <div className='searchbar bar2'>
                   { (displayInput) && (<input type="text"  className='inputText' /> )}
                   <button className='loopBtn ' type="submit"  onClick={() => setDisplayInput(!displayInput)}> 
-                  <AiOutlineSearch  className='searchloop' color='#fff' size={25}  />
+                  <img src={search} className='search'/>
                   </button>
           </div>
                   
@@ -93,11 +103,11 @@ useEffect(() => {
           {(toggleMenu ) && ((<div className='secondPart'>
                 
                 <div className='elemm1'><a className='elemm' href="#">HOME</a><hr></hr></div>
-                <div className='elemm1'><a className='elemm' href="#">SHOP</a><hr></hr></div>
+                <div ><a className='elemm' href="#">SHOP</a><hr></hr></div>
                 <div className='last'><a className='elemm' href="#">CONTACTS</a></div>
           </div>))}
-          <div><img src={menuToggle} className='btnMenu' onClick={toggleNav}/></div>
-        </div>
+          <img src={menuToggle} className='btnMenu' onClick={() => setToggleMenu(!toggleMenu)}/></div>
+        
         
     </div>
       </div>

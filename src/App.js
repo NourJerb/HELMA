@@ -1,6 +1,6 @@
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar'
 import Categories from './components/Categories'; 
 import Boutique from './components/Boutique';
 import Footer from './components/Footer';
@@ -27,7 +27,7 @@ function App() {
           <Route path="*" element={<div>404 not found</div>} />
         </Routes>
       </BrowserRouter>
-      {/* <Footer /> */}
+     {/* <Footer />  */}
     </>
   );
 }
