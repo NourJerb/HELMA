@@ -1,5 +1,5 @@
 import "./Commander.css";
-import image from '../assets/image.png';
+import image from '../../assets/image.png';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useState } from 'react';
 
@@ -13,19 +13,19 @@ function Commander() {
     let newErrors = {};
 
     if (!values.firstName.match(/^[a-zA-Z]+$/)) {
-      newErrors.fst = '*This field must only contain letters.';
+      newErrors.fst = '*Use only letters.';
     }
 
     if (!values.lastName.match(/^[a-zA-Z]+$/)) {
-      newErrors.lst = '*This field must only contain letters.';
+      newErrors.lst = '*Use only letters.';
     }
 
     if (!values.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      newErrors.email = '*Please enter a valid email address.';
+      newErrors.email = '*Use a valid email .';
     }
 
     if (!values.phone.match(/^[0-9]+$/) || values.phone.length !== 8) {
-      newErrors.phone = '*This field must contain exactly 8 numbers.';
+      newErrors.phone = '*Use exactly 8 numbers.';
     }
 
     if (values.countryy === "Country") {
@@ -79,7 +79,7 @@ function Commander() {
                 <label htmlFor="lastName" className="titre">Last name</label>
                 <Field type="text" className="inputt" name="lastName" placeholder="Last name" required />
                 <div className="error">
-                {showErrors && errors.lst && <p className="error">{errors.lst}</p>}
+                {showErrors && errors.lst && <p  className="error">{errors.lst}</p>}
                 </div>
               </div>
             </div>
@@ -200,5 +200,3 @@ function Commander() {
 }
 
 export default Commander;
-
-

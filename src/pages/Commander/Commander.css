@@ -3,91 +3,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Rajdhani:wght@500&display=swap');
 
 @import url(//db.onlinewebfonts.com/c/00d5a78493aed4b11e2584ad7cceee49?family=Gilroy+ExtraBold);
+
+
 .forms {
-display:flex;
-flex-direction:column;
-justify-content:center;
-background-color:#40485B;
-padding-left:11%;
-padding-top:6%;
-gap:3%;
-}
-/* #ci{
-  margin-left: -1vh;
-} */
-#zic{
-  background-color: #40485B;
-font-size:medium;
-font-family: "muli", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-color:#C7C7CC  ;
-border: 0.4vh solid #E5E5EA;
-border-radius: 1vh;
-height:2.5vh;
-width:62%;
-padding: 3%;
-}
-/* #add{
-  margin-left: 1vh;
-} */
-.error {
-  padding: 0;
-  color: red;
-  float: left;
-
-  /* margin-top: -1vh; */
-}
-.ddiv{
-   display:flex;
-   flex-direction:row;
-   gap:6%;
-   
-
-}
-input::placeholder {
-  font-size: 1.7vh; 
-  color: #c7c7cc;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background-color:#40485B;
+  padding-left:11%;
+  padding-top:6%;
+  gap:3%;
   }
-
-
-.ddiv2{
-    display:flex;
-    flex-direction:row;
-    gap:3%;
-    
-    
-}
-
-.ddiv3{
-    display:flex;
-    flex-direction:row;
-    gap:3.6%;
-    margin-top: 3vh;
-    
-}
-
-.ss-container1{
-    display:flex;
-    flex-direction:column;
-    gap:1vh;
-}
-
-.ss-container2{
-    display:flex;
-    flex-direction:column;
-    gap:1vh;
-    margin-top:3vh;
-   
-}
-
-.ss-container3{
-    display:flex;
-    flex-direction:column;
-    gap:1vh;
-
-}
-
+  /* #ci{
+    margin-left: -1vh;
+  } */
+  #zic{
+    background-color: #40485B;
+  font-size:medium;
+  font-family: "muli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  color:#C7C7CC  ;
+  border: 0.4vh solid #E5E5EA;
+  border-radius: 1vh;
+  height:2.5vh;
+  width:62%;
+  padding: 3%;
+  }
+  /* #add{
+    margin-left: 1vh;
+  } */
+  .error {
+    margin:0;
+    padding:0;
+    color: red;
+    float: left;
+  
+    /* margin-top: -1vh; */
+  }
+  .ddiv{
+     display:flex;
+     flex-direction:row;
+     gap:6%;
+     
+  
+  }
+  input::placeholder {
+    font-size: 1.7vh; 
+    color: #c7c7cc;
+    }
+  
+  
+  .ddiv2{
+      display:flex;
+      flex-direction:row;
+      gap:3%;
+      
+      
+  }
+  
+  .ddiv3{
+      display:flex;
+      flex-direction:row;
+      gap:3.6%;
+      margin-top: 3vh;
+      
+  }
+  
+  .ss-container1{
+      display:flex;
+      flex-direction:column;
+      gap:1vh;
+      
+  }
+  
+  .ss-container2{
+      display:flex;
+      flex-direction:column;
+      gap:1vh;
+      
+     
+  }
+  
+  .ss-container3{
+      display:flex;
+      flex-direction:column;
+      gap:1vh;
+  
+  }
 .divad{
     display:flex;
     flex-direction:column;
@@ -187,7 +190,6 @@ font-family: "muli", sans-serif;
   font-weight:bolder;
   border: 0.5vh solid #E8C895;
   border-radius: 1.5vh;
-  font-family: 'segoe-ui.otf'; 
   color: #40485B;
   background-color: #E8C895;
   padding: 1vh;
