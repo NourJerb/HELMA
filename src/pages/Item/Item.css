@@ -138,13 +138,14 @@
 @media only screen and (max-width: 700px) {
 
     .container-description {
-      margin: auto 18px;
+      margin: auto 16px;
       width: 90%;
       height: auto;
       background-color: #40485B;
       text-align: center;
       font-family: 'Quicksand', sans-serif;
       position: relative;
+      margin-bottom: 20px;
       
     }
   

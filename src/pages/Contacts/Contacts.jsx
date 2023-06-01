@@ -35,7 +35,7 @@ function Contacts() {
    
   </div>
 
-  <div className="logos">
+  <div className="a-logos">
   <div className="b"><a href="https://www.facebook.com/profile.php?id=100063541813622"><img src={Facebook} alt="Fb link" /></a></div>
   <div className="b"><a href="https://www.instagram.com/helmacreations/"><img src={Instagram} alt="ig link" /></a></div>
   <div className="b"><a href="https://twitter.com/"><img src={Twitter} alt="twitter link" /></a></div>

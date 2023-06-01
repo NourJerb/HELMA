@@ -56,18 +56,17 @@
 
 
 
-.logos{
+.a-logos{
     margin-top: 5vh;
     display: flex;
     justify-content: center;
     gap: 11vw;
-    
   margin-bottom: 3vh;
 }
 
 @media (max-width: 700px) {
     
-    .logos img {
+    .a-logos img {
         height: 52px;
         width: 56px;
 
@@ -86,7 +85,7 @@
        
     }
     
-    .logos{
+    .a-logos{
         margin-right: 0;
         margin-left: 10vw;
     }
@@ -97,9 +96,10 @@
   @media (max-width: 900px) {
 
 
-    .logos{
+    .a-logos{
         margin-right: 5vw;
         gap: 10vw;
+        
        
     }
 
@@ -115,7 +115,7 @@
   @media (max-width: 800px) {
 
 
-    .logos{
+    .a-logos{
         margin-right: 10vw;
         gap: 8vw;
        
