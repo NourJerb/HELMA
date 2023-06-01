@@ -13,19 +13,19 @@ function Commander() {
     let newErrors = {};
 
     if (!values.firstName.match(/^[a-zA-Z]+$/)) {
-      newErrors.fst = '*Use only letters.';
+      newErrors.fst = '*Utiliser seulement des lettres.';
     }
 
     if (!values.lastName.match(/^[a-zA-Z]+$/)) {
-      newErrors.lst = '*Use only letters.';
+      newErrors.lst =  '*Utiliser seulement des lettres.';
     }
 
     if (!values.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      newErrors.email = '*Use a valid email .';
+      newErrors.email = '*Utiliser une adresse mail valide.';
     }
 
     if (!values.phone.match(/^[0-9]+$/) || values.phone.length !== 8) {
-      newErrors.phone = '*Use exactly 8 numbers.';
+      newErrors.phone = '*Utiliser exactement 8 chiffres.';
     }
 
     if (values.countryy === "Country") {
@@ -69,46 +69,50 @@ function Commander() {
           <div>
             <div className="ddiv">
               <div className="ss-container1">
-                <label htmlFor="firstName" className="titre">First name</label>
-                <Field type="text" className="inputt" name="firstName" placeholder="First name" required />
+                <label htmlFor="firstName" className="titre">Prénom</label>
+                <Field type="text" className="inputt" name="firstName" placeholder="Prénom" required />
                 <div className="error">
-                {showErrors && errors.fst && <p style={ {margin:0 , padding:0}   }>{errors.fst}</p>}
+                {showErrors && errors.fst && <p style={ {margin:-5 , padding:0}   }>{errors.fst}</p>}
                 </div>
               </div>
               <div className="ss-container1">
-                <label htmlFor="lastName" className="titre">Last name</label>
-                <Field type="text" className="inputt" name="lastName" placeholder="Last name" required />
+                <label htmlFor="lastName" className="titre">Nom</label>
+                <Field type="text" className="inputt" name="lastName" placeholder="Nom" required />
                 <div className="error">
-                {showErrors && errors.lst && <p  className="error">{errors.lst}</p>}
+                {showErrors && errors.lst && <p  style={ {margin:-5 , padding:0} }>{errors.lst}</p>}
                 </div>
               </div>
             </div>
 
-            <div className="ddiv">
+            <div className="ddiv1">
               <div className="ss-container2">
-                <label htmlFor="email" className="titre">Your Email</label>
+                <label htmlFor="email" className="titre">E-Mail</label>
                 <Field type="email" className="inputt" name="email" placeholder="Your email" required />
-                {showErrors && errors.email && <p className="error">{errors.email}</p>}
+                <div className="error">
+                {showErrors && errors.email && <p style={ {margin:-5 , padding:0}}>{errors.email}</p>}
+              </div>
               </div>
               <div className="ss-container2">
-                <label htmlFor="phone" className="titre" id="ph">Your phone</label>
+                <label htmlFor="phone" className="titre" id="ph">Numéro</label>
                 <Field type="tel" className="inputt" name="phone" placeholder="Your phone" required />
-                {showErrors && errors.phone && <p className="error">{errors.phone}</p>}
+                <div className="error">
+                {showErrors && errors.phone && <p style={ {margin:-5 , padding:0}}>{errors.phone}</p>}
               </div>
+            </div>
             </div>
 
             <div className="ddiv2">
               <div className="ss-container2">
-                <label htmlFor="country" id="country" className="titre">Country</label>
+                <label htmlFor="country" id="country" className="titre">Pays</label>
                 <Field as="select" id="countryy" className="selectt" name="country" required>
                   <option value="" className="vv">Country</option>
                   <option value="TU">Tunisia</option>
                 </Field>
-                {showErrors && errors.countryy && <p className="error">{errors.countryy}</p>}
+                {showErrors && errors.countryy && <p style={ {margin:-5 , padding:0}}>{errors.countryy}</p>}
               </div>
 
               <div className="ss-container2">
-                <label htmlFor="city" id="ci" className="titre">City</label>
+                <label htmlFor="city" id="ci" className="titre">Ville</label>
                 <Field as="select" id="City" className="selectt" name="city" required>
                   <option className="vv" value="">City</option>
                   <option value="TUN">Tunis</option>
@@ -166,9 +170,9 @@ function Commander() {
 
             <div className="ddiv3">
               <div className="ss-container3">
-                <label htmlFor="state" id="st" className="titre">State</label>
+                <label htmlFor="state" id="st" className="titre">Etat</label>
                 <Field as="select" name="state" className="state" id="State" required>
-                  <option value="" className="vv">State</option>
+                  <option value="" className="vv">Etat</option>
                   <option value="kkk">kkkk</option>
                  
                 </Field>
@@ -176,8 +180,8 @@ function Commander() {
               </div>
 
               <div className="divad">
-                <label htmlFor="address" id="add" className="titre">Address</label>
-                <Field type="text" id="Address" className="inputt" name="address" placeholder="Address" />
+                <label htmlFor="address" id="add" className="titre">Adresse</label>
+                <Field type="text" id="Address" className="inputt" name="adresse" placeholder="Address" />
               </div>
               </div>
 
@@ -189,8 +193,8 @@ function Commander() {
 </div>
 
 <div className="bouttton">
-  <input type="button" value="Back" className="bt" required />
-  <input type="submit" value="Continue" className="mbt" required />
+  <input type="button" value="Retour" className="bt" required />
+  <input type="submit" value="Continuer" className="mbt" required />
 </div>
 </div>
 </Form>

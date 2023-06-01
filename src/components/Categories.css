@@ -8,6 +8,12 @@
     padding-top: 3vh;
     
 }
+ div.containerCategoriesHr{
+    position: absolute;  
+  z-index: 200;
+  background-color: white;
+  width:100%;
+  } 
 
 .elem1{
     padding-left: 18vw;
@@ -181,6 +187,7 @@
        font-size: 14px;
        padding-right: 8px;
     }
+
   
 }
 @media screen and (max-width: 282px){
