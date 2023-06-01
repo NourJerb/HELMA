@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Quicksand:wght@700&display=swap');
 *{
-    font-family: 'Quicksand', sans-serif;}
+    font-family: 'Quicksand', sans-serif;
+    }
 
     iframe{
     /* margin-top: 2vh; */
@@ -20,6 +21,7 @@
     justify-content: center;
     align-items: center;
     height: 60px;
+    color: #40485B;
 
 }
 
@@ -52,6 +54,7 @@
     justify-content: center;
     gap: 14vw;
     padding-left: 6vw;
+    color: #40485B;
 }
 
 

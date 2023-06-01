@@ -81,9 +81,9 @@
     height: 6vh;
     width: 150px;
     font-size: 17px;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #E8C895;
-    color: rgb(0, 0, 0);
+    color: #40485B;
     padding: 0.1rem 0.1rem;
     border: none;
     cursor: pointer;
@@ -91,6 +91,7 @@
     position:absolute;
     bottom:20px;
     right: 44%;
+   
 
 }
 
