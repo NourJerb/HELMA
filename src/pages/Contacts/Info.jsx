@@ -1,10 +1,10 @@
-import "./Info.css"
+import styles from "./Info.module.css"
 
 function Info (promps){
-  return <div className="container2">
-     <div className="a"><img src={promps.icon} alt="icon" /></div>
-     <div className="a">{promps.nom}</div>
-     <div className="a">{promps.information}</div>
+  return <div className={styles.container2}>
+     <div className={styles.a}><img src={promps.icon} alt="icon" /></div>
+     <div className={styles.a}>{promps.nom}</div>
+     <div className={styles.a}>{promps.information}</div>
   </div>
 }
 
