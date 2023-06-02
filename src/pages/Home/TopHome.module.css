@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 .top-home-design {
     margin-right: 10ch;
     margin-bottom: 10ch;
@@ -21,6 +22,7 @@
     position: absolute;
     bottom: 5%;
     right: 7%;
+    font-family: 'Oswald', sans-serif;
   }
   .Number-of-photos {
     position: absolute;
@@ -28,7 +30,7 @@
     right: 5%;
     color: white;
     font-size: 20px;
-    
+    font-family: 'Oswald', sans-serif;
   }
   @media  screen and (max-width:480px) {
     .top-home-design{

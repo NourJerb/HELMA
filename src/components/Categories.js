@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BrandList from "./BrandList.js";
 import './Categories.css';
+import iconfleche from './../assets/iconfleche.png'
 function Categories(){
     const [brands, setBrands] = useState([
         { id: 1, name: 'Necklaces' },
@@ -43,20 +44,19 @@ function Categories(){
 
   function handleClick() {
     setIsRotated(!isRotated);
+    
   }
   return (
     <div className='containerCategoriesHr'>
       
-        <div className='containerCategories'>
+      <div className='containerCategories'>
         <div>
-         <div className='hh'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-       
-         
-        </div>
-        
-        <div className='containerBrandList elemItem elem1'>
+          <div className='hh'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          
+           </div>
+          <div className='containerBrandList elemItem elem1'>
            
-           <button  className='btnAllBrands' onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src='iconfleche.png' className={isRotated ? 'iconFlech clicked' : 'iconFlech'} 
+           <button  className='btnAllBrands' onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src={iconfleche} className={isRotated ? 'iconFlech clicked' : 'iconFlech'} 
       onClick={handleClick}/></button>
            
            
@@ -71,12 +71,13 @@ function Categories(){
        <div className='elemItem elem2'>xxxxxx</div>
        <div className='elemItem elem3'>xxxxx</div>
        <div className='elemItem elem4'> xxxxxxx</div>
+
+       
        
        
         </div>
-        <div className="line">
-        <hr></hr>
-       </div>
+              <hr ></hr>
+
     </div>
     
   );

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+.title {
+  margin-inline-start: 10ch;
+  padding: 0.5ch;
+  font-size: x-large;
+  font-family: Quicksand,sans-serif;
+}
+
+.topsellers-container {
+  background-color: rgb(255, 255, 255);
+  margin-right: 10ch;
+  border-top-right-radius: 5ch;
+  border-bottom-right-radius: 3ch;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.title-container-top-seller {
+  background-color: #40485b;
+  border-top-right-radius: 3ch;
+  color: white;
+  height: 6ch;
+}
+@media screen and (max-width: 700px) {
+  .topsellers-container {
+    margin-right: 2ch;
+  }
+}

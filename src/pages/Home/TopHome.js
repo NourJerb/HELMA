@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "./TopHome.css";
+import styles from "./TopHome.module.css";
 import "swiper/css/autoplay";
 //import photos
 import img6 from "./Assets/Product 6.jpg";
@@ -15,11 +15,11 @@ import img9 from "./Assets/Product 9.jpg";
 function createSlide() {
   return (
     <SwiperSlide>
-      <div className="Top-home-container">
+      <div className={styles["Top-home-container"]}>
         
-        <img className="image-design" src={img6} alt="photo du produit" />
-        <div class="Number">01</div>
-        <div class="Number-of-photos">/04</div>
+        <img className={styles["image-design"]} src={img6} alt="photo du produit" />
+        <div class={styles["Number"]}>01</div>
+        <div class={styles["Number-of-photos"]}>/04</div>
         </div>
         
       
@@ -29,10 +29,10 @@ function createSlide() {
 function createSlide2() {
   return (
     <SwiperSlide>
-      <div className="img">
-        <img className="image-design" src={img7} alt="photo du produit" />
-        <div class="Number">02</div>
-        <div class="Number-of-photos">/04</div>
+      <div className={styles["img"]}>
+        <img className={styles["image-design"]} src={img7} alt="photo du produit" />
+        <div class={styles["Number"]}>02</div>
+        <div class={styles["Number-of-photos"]}>/04</div>
       </div>
     </SwiperSlide>
   );
@@ -40,10 +40,10 @@ function createSlide2() {
 function createSlide3() {
   return (
     <SwiperSlide>
-      <div className="img">
-        <img className="image-design" src={img8} alt="photo du produit" />
-        <div class="Number">03</div>
-        <div class="Number-of-photos">/04</div>
+      <div className={styles["img"]}>
+        <img className={styles["image-design"]} src={img8} alt="photo du produit" />
+        <div class={styles["Number"]}>03</div>
+        <div class={styles["Number-of-photos"]}>/04</div>
       </div>
     </SwiperSlide>
   );
@@ -52,10 +52,10 @@ function createSlide4() {
   return (
     <SwiperSlide>
       <div>
-        <div className="img">
-          <img className="image-design" src={img9} alt="photo du produit" />
-          <div class="Number">04</div>
-        <div class="Number-of-photos">/04</div>
+        <div className={styles["img"]}>
+          <img className={styles["image-design"]} src={img9} alt="photo du produit" />
+          <div class={styles["Number"]}>04</div>
+        <div class={styles["Number-of-photos"]}>/04</div>
         </div>
       </div>
     </SwiperSlide>
@@ -64,7 +64,7 @@ function createSlide4() {
 
 function TopHome() {
   return (
-    <div className="top-home-design">
+    <div className={styles["top-home-design"]}>
       <Swiper
         modules={[ Pagination, Autoplay]}
         SlidesPerView={1}

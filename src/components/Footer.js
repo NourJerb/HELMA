@@ -1,6 +1,9 @@
+// import { AiOutlineSearch } from  'react-icons/ai';
+
 import './Footer.css';
 import SocialMedia from './SocialMedia';
 import SubscribeButtonsFooter from './SubscribeButtonsFooter.js';
+import logoHelmaCreations from './../assets/logoHelmaCreations.png' 
 function Footer() {
     return (
         <footer>
@@ -8,7 +11,7 @@ function Footer() {
                 <div className="column   column-1 col-md-12 ">
                     <div className="logoScContainer">
                        <div class="logo">
-                           <img  className='imgLogo' src='logoHelmaCreations.png' />
+                           <img  className='imgLogo' src={logoHelmaCreations} />
                        </div>
                        <div className="socialMedia">
                          <SocialMedia></SocialMedia>
@@ -68,7 +71,7 @@ function Footer() {
 
 <div className="logoSomed">
                     <div class="logo">
-                        <img src='logoHelmaCreations.png' />
+                        <img src={logoHelmaCreations} />
                     </div>
                     <div class="socialMedia">
                       <SocialMedia></SocialMedia>

@@ -1,27 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 .Product-container2 {
-  display: flex;
-  gap: 2ch;
-  justify-content: center;
   padding: 2ch;
-margin-right: 5ch;
-margin-left: 3ch;
+  display: flex;
+  
+  align-items: center;
+  margin-right: 15ch;
+  margin-left: 6ch;
+
+  gap: 2ch;
 }
-.big-card-design2 {
-  width: 42vw;
-  height: 40ch;
-}
-.big-product-photo2 {
+.image1 {
+  width: 100%;
   height: 40ch;
   border-radius: 1ch;
   object-fit: cover;
 }
-.card-design2 {
-  width: 22vw;
-  height: 40ch;
+.div-photo-conatiner-arrival {
+  object-fit: cover;
+  justify-content: center;
 }
-.small-product-photo2 {
+
+.image2 {
+  width: 35vw;
   height: 40ch;
   border-radius: 1ch;
+  object-fit: cover;
+}
+.product-component2 {
+  object-fit: cover;
+}
+.product-component {
+  object-fit: cover;
+  justify-content: center;
+  width: 100%;
 }
 
 .title-container {
@@ -35,6 +46,9 @@ margin-left: 3ch;
 .title {
   margin-inline-start: 10ch;
   padding: 0.5ch;
+  font-family: Quicksand, sans-serif;
+  font-size: x-large;
+
 }
 .newarrivals-container {
   margin-left: 10ch;
@@ -43,43 +57,38 @@ margin-left: 3ch;
   border-bottom-left-radius: 3ch;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 @media screen and (max-width: 1200px) {
-  .Product-component:nth-child(3) {
+  .div-photo-conatiner-arrival:nth-child(3) {
     display: none;
   }
-  .Product-component2:nth-child(3) {
-    display: none;
+  .image2 {
+    width: 100%;
+    height: 40ch;
+    border-radius: 1ch;
+    object-fit: cover;
   }
 }
+
 @media screen and (max-width: 990px) {
-  .big-card-design2 {
-    width: 32vw;
-    height: 40ch;
-  }
-  .card-design2 {
-    width: 32vw;
-    height: 40ch;
-  }
  
 }
 @media screen and (max-width: 700px) {
-  .Product-component:nth-child(2) {
+ 
+  .div-photo-conatiner-arrival:nth-child(2) {
     display: none;
   }
-  .Product-component2:nth-child(2) {
-    display: none;
-  }
-  .big-card-design2 {
-    width: 75vw;
-    height: 40ch;
-  }
-  .newarrivals-container {
-    margin-left: 3ch;
-   
+ 
+  .Product-container2 {
+    margin-left: 6ch;
+   margin-right: 3ch;
+  
   }
   
+  .newarrivals-container {
+    margin-left: 2ch;
+  }
 }
+
 /*
 @media screen and (max-width: 480px) {
   .newarrivals-container {

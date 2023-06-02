@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./TopSellers.css";
+import styles from "./TopSellers.module.css";
 
 
 import ImageSlider from './ImageSlider';
@@ -8,11 +8,11 @@ import { SliderData } from './SliderData';
 
 const TopSellers = () => {
   return (
-    <div className="topsellers-container">
-      <div className="title-container-top-seller">
-        <h3 className="title">TOP SELLERS</h3>
+    <div className={styles["topsellers-container"]}>
+      <div className={styles["title-container-top-seller"]}>
+        <h3 className={styles["title"]}>TOP SELLERS</h3>
       </div>
-      <div className="product-card-container">
+      <div className={styles["product-card-container"]}>
       <ImageSlider slides={SliderData} />
         
       </div>
