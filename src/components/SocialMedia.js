@@ -1,4 +1,4 @@
-import './SocialMedia.css';
+import styles from './SocialMedia.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -17,14 +17,14 @@ const handleButtonClickInstagram = () => {
 
 function SocialMedia() {
     return (
-        <div className='logos'>
-             <div className='logo'>
+        <div className={styles.logos}>
+             <div className={styles.logo}>
                 {/* <button  className='btns' type='submit'> */}
                     <FontAwesomeIcon icon={faFacebook}  onClick={handleButtonClickFacebook}/>
                 {/* </button> */}
              </div>
 
-              <div className='logo'>
+              <div className={styles.logo}>
               
                 <FontAwesomeIcon icon={faInstagram}  onClick={handleButtonClickInstagram}/>
                 

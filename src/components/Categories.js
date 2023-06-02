@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import BrandList from "./BrandList.js";
-import './Categories.css';
+import styles from './Categories.module.css';
 import iconfleche from './../assets/iconfleche.png'
 function Categories(){
     const [brands, setBrands] = useState([
@@ -47,20 +47,20 @@ function Categories(){
     
   }
   return (
-    <div className='containerCategoriesHr'>
+    <div className={styles.containerCategoriesHr}>
       
-      <div className='containerCategories'>
+      <div className={styles.containerCategories}>
         <div>
-          <div className='hh'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          <div className={styles.hh}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
           
            </div>
-          <div className='containerBrandList elemItem elem1'>
+          <div className={`${styles.containerBrandList} ${styles.elemItem} ${styles.elem1}`}>
            
-           <button  className='btnAllBrands' onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src={iconfleche} className={isRotated ? 'iconFlech clicked' : 'iconFlech'} 
+           <button  className={styles.btnAllBrands} onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src={iconfleche} className={styles.isRotated ? 'iconFlech clicked' : 'iconFlech'} 
       onClick={handleClick}/></button>
            
            
-           <div  className='theList' >
+           <div  className={styles.theList} >
            {showBrandList && <BrandList brands={brands} onBrandSelect={handleBrandSelect} />}
            
            </div>
@@ -68,9 +68,9 @@ function Categories(){
            
            {/* {selectedBrand && <p>You selected {selectedBrand.name}</p>} */}
        </div>
-       <div className='elemItem elem2'>xxxxxx</div>
-       <div className='elemItem elem3'>xxxxx</div>
-       <div className='elemItem elem4'> xxxxxxx</div>
+       <div className={`${styles.elemItem} ${styles.elem2}`}>xxxxxx</div>
+       <div className={`${styles.elemItem} ${styles.elem3}`}>xxxxx</div>
+       <div className={`${styles.elemItem} ${styles.elem4}`}> xxxxxxx</div>
 
        
        

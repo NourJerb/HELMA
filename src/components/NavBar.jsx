@@ -9,7 +9,7 @@ import loop from './../assets/loop.png';
 import search from './../assets/search.png';
 
 
-import './NavBar.css'
+import styles from './NavBar.module.css'
 
 function NavBar() {
   // toggle Menu
@@ -58,27 +58,27 @@ useEffect(() => {
 
     return (
       
-       <div className='allNavBar'>
+       <div className={styles.allNavBar}>
         
-        <img className='logoNB' src={logoNavBar} />
+        <img className={styles.logoNB} src={logoNavBar} />
         
-        <nav   className='navBar-container'>
+      <nav className={`${styles.navBar} `}>
         
             
-             {((toggleMenu || screenWidth > 300) && (<div className='hbc' >
+             {((toggleMenu || screenWidth > 300) && (<div className={styles.hbc} >
                 
-                <div className='elem elemi'><a href="#">HOME</a></div>
-                <div className='aaaa'></div>
-                <div className='elem elemi'><a href="#">SHOP</a></div>
-                <div className='aaaa'></div>
-                <div className='elemi elemi3' ><a href="#">CONTACTS</a></div>
+               <div className={`${styles.elem} ${styles.elemi}`}><a href="#">HOME</a></div>
+                <div className={styles.aaaa}></div>
+                <div className={`${styles.elem} ${styles.elemi}`}><a href="#">SHOP</a></div>
+                <div className={styles.aaaa}></div>
+                <div className={`${styles.elemi} ${styles.elemi3}`} ><a href="#">CONTACTS</a></div>
               
                 
             </div>))}
-                  <div className='searchbar'>
-                  <input type="text"  className='inputText' /> 
-                  <button className='loopBtn ' type="submit" > 
-                  <img src={loop} className='loop'/>
+                  <div className={styles.searchbar}>
+                  <input type="text"  className={styles.inputText} /> 
+                  <button className={styles.loopBtn}  type="submit" > 
+                  <img src={loop} className={styles.loop}/>
                   </button>
                   </div>
                          
@@ -86,27 +86,27 @@ useEffect(() => {
 
 
         
-        <div className='respNavBar'>
+        <div className={styles.respNavBar}>
 
-          <div className='firstPart'>
+          <div className={styles.firstPart}>
               
 
 
-          <div className='searchbar bar2'>
-                  { (displayInput) && (<input type="text"  className='inputText' /> )}
-                  <button className='loopBtn ' type="submit"  onClick={() => setDisplayInput(!displayInput)}> 
-                  <img src={search} className='search'/>
+          <div className={`${styles.searchbar} ${styles.bar2}`}>
+                  { (displayInput) && (<input type="text"  className={styles.inputText} /> )}
+                  <button className={styles.loopBtn}  type="submit"  onClick={() => setDisplayInput(!displayInput)}> 
+                  <img src={search} className={styles.search}/>
                   </button>
           </div>
                   
 
-          {(toggleMenu ) && ((<div className='secondPart'>
+          {(toggleMenu ) && ((<div className={styles.secondPart}>
                 
-                <div className='elemm1'><a className='elemm' href="#">HOME</a><hr></hr></div>
-                <div ><a className='elemm' href="#">SHOP</a><hr></hr></div>
-                <div className='last'><a className='elemm' href="#">CONTACTS</a></div>
+                <div className={styles.elemm1}><a className={styles.elemm} href="#">HOME</a><hr></hr></div>
+                <div ><a className={styles.elemm} href="#">SHOP</a><hr></hr></div>
+                <div className={styles.last}><a className={styles.elemm} href="#">CONTACTS</a></div>
           </div>))}
-          <img src={menuToggle} className='btnMenu' onClick={() => setToggleMenu(!toggleMenu)}/></div>
+          <img src={menuToggle} className={styles.btnMenu} onClick={() => setToggleMenu(!toggleMenu)}/></div>
         
         
     </div>

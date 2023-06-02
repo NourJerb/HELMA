@@ -1,5 +1,5 @@
 import React from "react";
-import "./Shop.css";
+import styles from "./Shop.module.css";
 import {useState} from 'react'
 import { useEffect } from 'react';
 import { Route,Routes,useLocation} from 'react-router-dom';
@@ -108,7 +108,7 @@ window.scrollTo({
 /// My component 
 function MyComponent(){
   return(
-  <div id={localStorage.getItem('currentPage')} className="parent" >
+  <div id={localStorage.getItem('currentPage')} className={styles.parent} >
     <Table users={getUsers(page,limit)}  />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} ></Pagination>   
   </div>)
@@ -140,7 +140,7 @@ if (path1==='/shop'){
   location.pathname+='/page1';
 }
 
-  return <div className="parent"> 
+  return <div className={styles.parent}> 
 <Routes>
 <Route  path='page1' exact element={<MyComponent  />}></Route>
 <Route  path={'page'+localStorage.getItem('currentPage')} exact element={<MyComponent  />}></Route>

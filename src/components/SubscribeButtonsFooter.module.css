@@ -1,4 +1,4 @@
-.email-subscription {
+.email {
     width: 25vw;
     display: flex;
 
@@ -9,13 +9,13 @@
     /* padding: 10px; */
   }
   
-  .email-form {
+  .form {
     flex: 1;
     margin-right: 10px;
     
   }
   
-  .input-btn {
+  .btn {
     background-color: #fff;
     width: 100%;
     text-align: center;
@@ -33,12 +33,12 @@
     
   }
   
-  .email-subscription button{
+  .email button{
     background-color: #E8C895; 
     font-size: 1vw;
    
   }
-  .subscribe-button {
+  .sub {
    
     color: #40485B;
     border: none;
@@ -51,100 +51,100 @@
     
   }
   
-  .subscribe-button:hover {
+  .sub:hover {
     cursor: pointer;
   
   }
   @media screen and (max-width: 1058px){
-    .email-subscription{
+    .email{
       width: 21vw;
       margin-right: 8vw;
       margin-top: 10px;
       
     }
-    .email-subscription button{
+    .email button{
       
       font-size: 1.1vw;
      
     }
-    .input-btn {
+    .btn {
       font-size: 1.1vw;
     }
   }
   @media screen and (max-width: 900px){
-    .email-subscription{
+    .email{
       width: 28vw;
       
       margin-right: 8vw;
       margin-top: 10px;
      
     }
-    .email-subscription button{
+    .email button{
       
       font-size: 1.5vw;
      
     }
-    .input-btn {
+    .btn {
       font-size: 1.5vw;
     }
   }
   @media screen and (max-width: 812px){
-     .email-subscription{
+     .email{
       width: 225px;
       
      }
-     .email-subscription button{
+     .email button{
       
       font-size: 12px;
      
     }
-    .input-btn {
+    .btn {
       font-size: 12px;
     }
   }
   @media screen and (max-width: 580px){
-    .email-subscription {
+    .email {
       width: 210px;
   }
-  .email-subscription button{
+  .email button{
       
     font-size: 11px;
    
   }
-  .input-btn {
+  .btn {
     font-size: 11px;
   }
 }
 @media screen and (max-width: 452px){
-  .email-subscription {
+  .email {
     width: 190px;
 }
-.email-subscription button{
+.email button{
     
   font-size: 10px;
  
 }
-.input-btn {
+.btn {
   font-size: 10px;
 }
 }
 @media screen and (max-width: 380px){
-  .email-subscription {
+  .email {
     width: 166px;
 }
-.email-subscription button{
+.email button{
     
   font-size: 8.3px;
  
 }
-.input-btn {
+.btn {
   font-size: 8.4px;
   padding: 7px 7px 7px 7px; 
   
     
 
 }
-.subscribe-button {
+.sub {
    
  
   
@@ -155,15 +155,15 @@
 }
 }
 @media screen and (max-width: 346px){
-  .email-subscription {
+  .email {
     width: 157px;
 }
-.email-subscription button{
+.email button{
     
   font-size: 8.3px;
  
 }
-.input-btn {
+.btn {
   font-size: 8.3px;
   
     
@@ -171,35 +171,35 @@
 }
 }
 @media screen and (max-width: 308px){
-  .email-subscription {
+  .email {
     width: 142.8px;
 }
-.email-subscription button{
+.email button{
     
   font-size: 6.8px;
  
 }
-.input-btn {
+.btn {
   font-size: 6.8px;
 
 
 }
 }
 @media screen and (max-width: 290px){
-  .email-subscription {
+  .email {
     width: 125px;
 }
-.input-btn {
+.btn {
   font-size: 6px;
 
 
 }
-.email-subscription button{
+.email button{
     
   font-size: 6px;
  
 }
-/* .subscribe-button{
+/* .sub{
   padding: 6.9px 4.5px;
 } */
 }

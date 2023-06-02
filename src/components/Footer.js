@@ -1,6 +1,6 @@
 // import { AiOutlineSearch } from  'react-icons/ai';
 
-import './Footer.css';
+import styles from './Footer.module.css';
 import SocialMedia from './SocialMedia';
 import SubscribeButtonsFooter from './SubscribeButtonsFooter.js';
 import logoHelmaCreations from './../assets/logoHelmaCreations.png' 

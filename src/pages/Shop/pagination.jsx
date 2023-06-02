@@ -1,6 +1,6 @@
 
 import { returnPaginationRange } from './apputils';
-import './pagination.css';
+import styles from './pagination.module.css';
 import { Link } from 'react-router-dom';
 import right from "../../assets/right.png"
 import left from "../../assets/left.png"
@@ -25,10 +25,10 @@ function Pagination(props){
             previousPage = 1;
                         }
     
-    return(<div className='pagination' >
+    return(<div className={styles.pagination} >
         
-        <Link to={`/shop/page${previousPage}`}  className="left" onClick={()=>props.onPageChange("&lsaquo;")} ><img src={left} alt="left" className='L'></img></Link>
-        <div className='nav'>
+        <Link to={`/shop/page${previousPage}`}  className={styles.left} onClick={()=>props.onPageChange("&lsaquo;")} ><img src={left} alt="left" className={styles.L}></img></Link>
+        <div className={styles.nav}>
         {array.map(value => {
             let pt
             if (value ===" ..." || value ==="..."){
@@ -42,16 +42,16 @@ function Pagination(props){
             }}
             if(value === props.page){
                 
-               return(<div key={value} className="PageItem" onClick={()=>props.onPageChange(value)} style={{background:"#E8C895",color:"#FFFFFF"}} >{value}</div>);}
+               return(<div key={value} className={styles.PageItem} onClick={()=>props.onPageChange(value)} style={{background:"#E8C895",color:"#FFFFFF"}} >{value}</div>);}
             else {
                 
-                return(<Link to={`/shop/page${pt}`} key={value} className="PageItem" onClick={()=>props.onPageChange(value)}>{value}</Link>);
+                return(<Link to={`/shop/page${pt}`} key={value} className={styles.PageItem} onClick={()=>props.onPageChange(value)}>{value}</Link>);
 
             }
         })}
         </div>
          
-         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className="right"><img src={right} alt="right" className='R'></img></Link>
+         <Link to={`/shop/page${nextPage}`} onClick={()=>props.onPageChange("&rsaquo;")} className={styles.right}><img src={right} alt="right" className={styles.R}></img></Link>
          
 
 

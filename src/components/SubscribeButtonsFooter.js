@@ -1,4 +1,4 @@
-import './SubscribeButtonsFooter.css';
+import styles from './SubscribeButtonsFooter.module.css';
 import React, { useState } from 'react';
 
 
@@ -12,11 +12,11 @@ function SubscribeButtonsFooter() {
   }
 
   return (
-    <div className="email-subscription">
-      <form onSubmit={handleSubmit} className="email-form">
-        <input  className='input-btn' type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <div className={styles.email}>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input  className={styles.btn} type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} />
       </form>
-      <button className=" subscribe-button">Subscribe</button>
+      <button className={styles.sub}>Subscribe</button>
     </div>
   );
 }

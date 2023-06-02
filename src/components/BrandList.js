@@ -1,12 +1,12 @@
- import './BrandList.css';
+ import styles from './BrandList.module.css';
  import React from 'react';
 
 
 function BrandList({ brands, onBrandSelect }) {
   return(
-    <div className='brandListContainer'>
+    <div className={styles.brandListContainer}>
       {brands.map(brand => (
-        <button className='brandListBtn' key={brand.id} onClick={() => onBrandSelect(brand)}>{brand.name}</button>
+        <button className={styles.brandListBtn} key={brand.id} onClick={() => onBrandSelect(brand)}>{brand.name}</button>
       ))}
     </div>
   )

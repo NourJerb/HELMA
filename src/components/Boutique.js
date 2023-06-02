@@ -1,13 +1,13 @@
-import './Boutique.css';
+import styles from './Boutique.module.css';
 function Boutique(){
     return(
-        <div className='container-boutique'>
-            <div className='helmaJewelry'>
-                <p className='helma'>HELMA</p>
-                <p className='text'>All <span className='jewelry'>jewellery</span> items</p>
+        <div className={styles.boutique}>
+            <div className={styles.helmaJewelry}>
+                <p className={styles.helma}>HELMA</p>
+                <p className='text'>All <span className={styles.jewelry}>jewellery</span> items</p>
             </div>
-            <div className='btnSeeShop'>
-                <button className='btnSeeShop1'>See Shop</button>
+            <div className={styles.btnSeeShop}>
+                <button className={styles.btnSeeShop1}>See Shop</button>
             </div>
 
         </div>

@@ -1,4 +1,4 @@
-import './inputSearchNavBar.css';
+import styles from'./inputSearchNavBar.module.css';
 function inputSearch(){
     
     const searchIcon = document.querySelector('.search-icon');

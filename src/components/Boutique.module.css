@@ -1,5 +1,5 @@
 
-.container-boutique{
+.boutique{
     
     display: flex;
     
@@ -46,7 +46,7 @@
 }
 
 
-.container-boutique div .btnSeeShop{
+.boutique div .btnSeeShop{
      width: 20vw; 
 
 
@@ -82,7 +82,7 @@
 
 }
 @media screen and (max-width: 1028px){
-    .container-boutique{
+    .boutique{
         width: 100%;
         display: flex;
         flex-direction: column;
