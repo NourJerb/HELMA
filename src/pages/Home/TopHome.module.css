@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.top-home-design {
+    margin-right: 10ch;
+    margin-bottom: 10ch;
+    
+  }
+  .Top-home-container {
+    height: 60ch;
+    width: 100%;
+    color: white;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .image-design {
+    height: 60ch;
+    width: 100%;
+    object-fit:cover;}
+  .Number {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    position: absolute;
+    bottom: 5%;
+    right: 7%;
+    font-family: 'Oswald', sans-serif;
+  }
+  .Number-of-photos {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    color: white;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+  }
+  @media  screen and (max-width:480px) {
+    .top-home-design{
+      margin-right: 0ch;
+      margin-top: 0ch;
+    }
+    .image-design {
+      height: 25ch;
+    }
+    .Top-home-container{
+      height: 25ch;
+    }
+    .Number {
+      font-size: 80px;
+    }
+    .Number-of-photos {
+      font-size: 16px;
+    }
+    
+  }
+  @media  screen and (min-width:480px ) and (max-width:900px) {
+   
+    .image-design {
+      height: 30ch;
+    }
+    .Top-home-container{
+      height: 30ch;
+     
+    }
+    .top-home-design {
+      margin-right: 7ch;
+      
+      
+    }
+    
+  }
+  
