@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
+
 import NavBar from "./components/NavBar.jsx";
 import Shop from "./pages/Shop/Shop";
 import Item from "./pages/Item/Item";
@@ -8,6 +9,7 @@ import Commander from "./pages/Commander/Commander";
 import Confirmer from "./pages/Confirmer/Confirmer";
 import Footer from "./components/Footer.js";
 import Boutique from "./components/Boutique.js";
+
 
 import Categories from "./components/Categories.js";
 function App() {
