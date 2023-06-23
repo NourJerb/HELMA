@@ -12,7 +12,7 @@ import HelmaFooter from "./Footer/HelmaFooter";
 
 
 
-
+/* Merge*/
 import Categories from "./components/Categories.js";
 function App() {
   return (
