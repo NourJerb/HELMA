@@ -1,4 +1,5 @@
 import styles from "./Newarrivals.module.css";
+import React from 'react';
 import img1 from "./Assets/Product 1.jpg";
 import img2 from "./Assets/Product 2.jpg";
 import img3 from "./Assets/Product 3.jpg";
@@ -11,31 +12,35 @@ const Newarrivals = () => {
 
     <div className={styles["newarrivals-container"]}>
       <div className={styles["title-container"]}>
-        <h3 className={styles["title"]}>New arrivals</h3>
-      </div>
+        <h3 className={styles["title"]}>nouveautés</h3>
+        </div>
+        <div className={styles["home-container"]}>
+          <div className={styles["grid1"]}>
+          
+          <img src={img1} className={styles["grid-image"]}/>
+          
+          
+          <img src={img2} className={styles["grid-image"]}/>
+        
+          
+          <img src={img3} className={styles["grid-image"]}/>
+          </div>
 
-      <div className={styles["Product-container2"]}>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img1} className={styles["image2"]} />
+      
+          <div className={styles["grid2"]}>
+          <img src={img4} className={styles["grid-image"]}/>
+          
+         
+          <img src={img5} className={styles["grid-image"]}/>
+        
+          
+          <img src={img6} className={styles["grid-image"]}/>
+          </div>
+        
         </div>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img2} className={styles["image1"]} />
-        </div>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img1} className={styles["image1"]} />
-        </div>
-      </div>
-      <div className={styles["Product-container2"]}>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img1} className={styles["image1"]} />
-        </div>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img2} className={styles["image1"]} />
-        </div>
-        <div className={styles["div-photo-conatiner-arrival"]}>
-          <img src={img3} className={styles["image2"]} />
-        </div>
-      </div>
+      
+
+      
     </div>
     
   );

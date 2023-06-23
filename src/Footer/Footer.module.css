@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+.container
+{
+    height: 40px;
+    max-width: 500px;
+}
+.form .email
+{
+    width: 17vw;
+    background-color: #E3E3E3;
+    height: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    font-size: 70%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    border: none;    
+    outline: none;
+    color: #40485B;
+}
+
+.form .email:focus::placeholder {
+    color: transparent;
+  }
+
+.form
+{
+    display: flex;
+}
+.form .submit_email
+{
+    background-color: #E0B89F;
+    border: none; 
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 7vw;
+    color: #40485B;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 70%;
+    text-align: center;
+    padding: 0;
+}
+
+.merci
+{
+    opacity: 0; /* Set initial opacity to 0 */
+    animation-name: fade-in;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards; /* Maintain the final state after animation */
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+      opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.submit .email
+{
+    display: none;
+    transition: width 1s;
+}
+
+.submit .submit_email
+{
+    transition-delay: 1s;
+    transition-property: display;
+    float: right;
+    background-color: #E0B89F;
+    border: none; 
+    border-radius: 40px;
+    height: 50px;
+    width: 25vw;
+    color: #40485B;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    transition: width 1s;
+}
+
+
+@media screen and (max-width: 1150px) {
+    .submit .submit_email{}
+
+    .submit .email{}
+
+    .merci{}
+
+    .form .email{}
+
+    .form .submit_email{font-size: 60%;}
+
+}
+
+@media screen and (max-width: 960px) {
+
+    .submit .submit_email{height: 35px;}
+
+    .submit .email{height: 35px;}
+
+    .merci{height: 35px;}
+
+    .form .email{font-size: 50%;height: 35px;}
+
+    .form .submit_email{font-size: 50%;}
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .submit .submit_email{height: 40px;}
+
+    .submit .email{height: 40px;}
+
+    .merci{height: 40px;}
+
+    .form .email{font-size: 45%;height: 30px;}
+
+    .form .submit_email{font-size: 45%;}
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .submit .submit_email{}
+
+    .submit .email{}
+
+    .merci{}
+
+    .form .email{font-size: 45%;height: 25px;}
+
+    .form .submit_email{font-size: 30%;}
+
+}
+
+@media screen and (max-width:600px) {
+
+    .submit .submit_email{height: 40px;}
+
+    .submit .email{height: 40px;}
+
+    .merci{height: 40px;}
+
+    .form .email{font-size: 25%;height: 20px;}
+
+    .form .submit_email{font-size: 5px;}
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .submit .submit_email{height: 40px;}
+
+    .submit .email{height: 40px;}
+
+    .merci{height: 40px;}
+
+    .form .email{font-size: 4px;height: 15px;}
+
+    .form .submit_email{font-size: 4px;}
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .submit .submit_email{height: 40px;}
+
+    .submit .email{height: 40px;}
+
+    .merci{height: 40px;}
+
+    .form .email{font-size: 3.8px;height: 15px;}
+
+    .form .submit_email{font-size: 3.2px;}
+
+}

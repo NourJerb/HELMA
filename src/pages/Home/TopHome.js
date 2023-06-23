@@ -1,16 +1,34 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { Pagination, Autoplay } from "swiper";
+import { Navigation } from 'swiper';
+import 'swiper/swiper.css';
+import React from 'react';
+// import 'swiper/css';
+// import 'swiper/swiper.min.css';
+// import 'swiper/js/navigation';
+// import 'swiper/js/pagination';
+
+import 'swiper/swiper-bundle.min.css';
+
+
+
+
+
+// import 'swiper/css/navigation';
+
+// import "swiper/css/scrollbar";
 import styles from "./TopHome.module.css";
-import "swiper/css/autoplay";
+
+
+// import "swiper/css/autoplay";
 //import photos
 import img6 from "./Assets/Product 6.jpg";
 import img7 from "./Assets/Product 7.jpg";
 import img8 from "./Assets/Product 8.jpg";
 import img9 from "./Assets/Product 9.jpg";
+
+
+
 
 function createSlide() {
   return (

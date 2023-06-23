@@ -1,0 +1,262 @@
+@import url('https://fonts.cdnfonts.com/css/quicksand');
+
+.footer {
+    background-color: #40485B;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.helma {
+    color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 70%;
+    font-weight: 700;
+    align-self: flex-start;
+    margin: 10px 0 0 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_footer {
+    width: 100%;
+    height: auto;
+}
+
+.icons {
+    display: none;
+}
+
+.social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+}
+
+.social_media p {
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 1vw;
+    color: #E8C895;
+}
+
+.social_media p:hover
+{
+    text-decoration: underline #E8C895 2px;
+    cursor: pointer;
+}
+
+.social_media span {
+    width: 0.1vw;
+    background-color: #E8C895;
+    height: 25px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.sections {
+    display: flex;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    margin-left: 4vw;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h6 {
+    color: #E8C895;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.section title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section p {
+    color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 70%;
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
+.section p:hover
+{
+    text-decoration: underline #E8C895 2px;
+    cursor: pointer;
+}
+
+.title hr {
+    border: #E8C895 solid 2px;
+    width: 95%;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.logo_social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2vw;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    margin-left: 4vw;
+}
+
+.contact {
+    display: none;
+}
+
+.subscribe p {
+    color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 70%;
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 950px) {
+    .subscribe p {
+        font-size: 1vw;
+    }
+
+    .title h6 {
+        font-size: 1.2vw;
+    }
+
+    .section p {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo_social {
+        order: 2;
+        -webkit-order: 2;
+        box-sizing: border-box;
+        margin-right: 0;
+    }
+
+    .sections {
+        order: 1;
+        -webkit-order: 1;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        order: 3;
+        -webkit-order: 3;
+        align-items: center;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .sections {
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    .subscribe p {
+        font-size: 1.5vw;
+    }
+
+    .title h6 {
+        font-size: 1.8vw;
+    }
+
+    .section p {
+        font-size: 1.5vw;
+    }
+
+    .logo_footer {
+        width: 15vw;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .social_media {
+        display: none;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icon {
+        width: 3vw;
+        height: auto;
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+
+    .contact h6 {
+        color: #E8C895;
+        font-family: 'Quicksand Book', sans-serif;
+        font-size: 2.5vw;
+        font-weight: 700;
+        letter-spacing: 0.5vw;
+        margin: 0;
+    }
+
+    .contact p {
+        color: #E8C895;
+        font-family: 'Quicksand Book', sans-serif;
+        font-weight: 100;
+        font-size: 1.5vw;
+        margin: 10px 0 0 0;
+    }
+
+    .helma{
+        align-self: center;
+        color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+    }
+
+
+
+}
