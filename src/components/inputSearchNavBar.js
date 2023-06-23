@@ -1,5 +1,4 @@
-import './inputSearchNavBar.css';
-import React from 'react';
+import styles from'./inputSearchNavBar.module.css';
 function inputSearch(){
     
     const searchIcon = document.querySelector('.search-icon');

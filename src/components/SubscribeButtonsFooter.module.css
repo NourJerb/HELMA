@@ -1,0 +1,206 @@
+.email {
+    width: 25vw;
+    display: flex;
+
+    align-items: center;
+   
+    
+    /* border: 1px solid #ddd; */
+    /* padding: 10px; */
+  }
+  
+  .form {
+    flex: 1;
+    margin-right: 10px;
+    
+  }
+  
+  .btn {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+     padding: 8px 8px 8px 8px; 
+    
+    border: none;
+    color: #514F62;
+
+    
+
+    border-bottom-left-radius:20px;
+    border-top-left-radius:20px;
+    /* font-size: 14px; */
+    font-size: 1vw;
+    
+  }
+  
+  .email button{
+    background-color: #E8C895; 
+    font-size: 1vw;
+   
+  }
+  .sub {
+   
+    color: #40485B;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 1vw;
+    border-bottom-right-radius:20px;
+    border-top-right-radius:20px;
+    text-align: center;
+    
+  }
+  
+  .sub:hover {
+    cursor: pointer;
+  
+  }
+  @media screen and (max-width: 1058px){
+    .email{
+      width: 21vw;
+      margin-right: 8vw;
+      margin-top: 10px;
+      
+    }
+    .email button{
+      
+      font-size: 1.1vw;
+     
+    }
+    .btn {
+      font-size: 1.1vw;
+    }
+  }
+  @media screen and (max-width: 900px){
+    .email{
+      width: 28vw;
+      
+      margin-right: 8vw;
+      margin-top: 10px;
+     
+    }
+    .email button{
+      
+      font-size: 1.5vw;
+     
+    }
+    .btn {
+      font-size: 1.5vw;
+    }
+  }
+  @media screen and (max-width: 812px){
+     .email{
+      width: 225px;
+      
+     }
+     .email button{
+      
+      font-size: 12px;
+     
+    }
+    .btn {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 580px){
+    .email {
+      width: 210px;
+  }
+  .email button{
+      
+    font-size: 11px;
+   
+  }
+  .btn {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 452px){
+  .email {
+    width: 190px;
+}
+.email button{
+    
+  font-size: 10px;
+ 
+}
+.btn {
+  font-size: 10px;
+}
+}
+@media screen and (max-width: 380px){
+  .email {
+    width: 166px;
+}
+.email button{
+    
+  font-size: 8.3px;
+ 
+}
+.btn {
+  font-size: 8.4px;
+  padding: 7px 7px 7px 7px; 
+  
+    
+
+}
+.sub {
+   
+ 
+  
+  padding: 7px 11px;
+  font-size: 1vw;
+  
+  
+}
+}
+@media screen and (max-width: 346px){
+  .email {
+    width: 157px;
+}
+.email button{
+    
+  font-size: 8.3px;
+ 
+}
+.btn {
+  font-size: 8.3px;
+  
+    
+
+}
+}
+@media screen and (max-width: 308px){
+  .email {
+    width: 142.8px;
+}
+.email button{
+    
+  font-size: 6.8px;
+ 
+}
+.btn {
+  font-size: 6.8px;
+
+
+}
+}
+@media screen and (max-width: 290px){
+  .email {
+    width: 125px;
+}
+.btn {
+  font-size: 6px;
+
+
+}
+.email button{
+    
+  font-size: 6px;
+ 
+}
+/* .sub{
+  padding: 6.9px 4.5px;
+} */
+}
+
