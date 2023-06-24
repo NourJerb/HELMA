@@ -1,0 +1,30 @@
+
+.a{
+    padding-bottom: 5px;
+    padding-top: 8px;
+   font-size: 1em;
+   color: #40485B;
+   
+
+    
+}
+
+.container2{
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    
+}
+
+@media (max-width: 900px) {
+    .a img{width: 3vw;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+    .a img{width: 20px;
+
+    }
+
+}
