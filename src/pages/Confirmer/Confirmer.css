@@ -1,0 +1,78 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+  .imagecontainer{
+    text-align: center;
+  }
+  body {
+    background-color: white;
+    color: white;
+  
+  }
+  .big{
+    background-color: #40485B;
+  }
+  .ct{
+    display:flex;
+flex-direction:column;
+justify-content:center;
+gap:3%;
+  }
+  .paragraph{
+    padding: 0.8vh;
+    display:flex;
+flex-direction:column;
+justify-content:center;
+gap:1.5%;
+  }
+  
+  .image {
+    width:12vh ;
+    height: auto;
+    margin-top: 12vh;
+   
+  }
+  
+  .first-paragraph {
+    font-size: 2.1em;
+    font-family: 'Roboto', sans-serif;
+  
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+  }    
+  
+  .second-paragraph {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: -5vh;
+  } 
+  
+  .buuton {
+    
+    margin-top: -1vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3.8%;
+    padding-top:0.7% ;
+    padding-right:3.8% ;
+    padding-bottom:0.7% ;
+    font-size: 1.5em;
+    border-radius: 0.6em;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #40485B;
+
+                                                
+  }
+  
+  @media screen and (max-width:1079px){
+    
+  }
+ 
