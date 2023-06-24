@@ -1,4 +1,4 @@
-import "./Commander.css";
+import styles from "./Commander.module.css";
 import image from '../../assets/image.png';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useState } from 'react';
@@ -50,7 +50,7 @@ function Commander() {
   };
 
   return (
-    <div className="big">
+    <div className={styles.big}>
       <Formik
         initialValues={{
           firstName: "",
@@ -65,56 +65,56 @@ function Commander() {
         }}
         onSubmit={handleSubmit}
       >
-        <Form action="../cofirmer" method="get" className="forms" >
+        <Form action="../cofirmer" method="get" className={styles.forms} >
           <div>
-            <div className="ddiv">
-              <div className="ss-container1">
-                <label htmlFor="firstName" className="titre">Prénom</label>
-                <Field type="text" className="inputt" name="firstName" placeholder="Prénom" required />
-                <div className="error">
+            <div className={styles.ddiv}>
+              <div className={styles.ss_container1}>
+                <label htmlFor="firstName" className={styles.titre}>Prénom</label>
+                <Field type="text" className={styles.inputt} name="firstName" placeholder="Prénom" required />
+                <div className={styles.error}>
                 {showErrors && errors.fst && <p style={ {margin:-5 , padding:0}   }>{errors.fst}</p>}
                 </div>
               </div>
-              <div className="ss-container1">
-                <label htmlFor="lastName" className="titre">Nom</label>
-                <Field type="text" className="inputt" name="lastName" placeholder="Nom" required />
-                <div className="error">
+              <div className={styles.ss_container1}>
+                <label htmlFor="lastName" className={styles.titre}>Nom</label>
+                <Field type="text" className={styles.inputt} name="lastName" placeholder="Nom" required />
+                <div className={styles.error}>
                 {showErrors && errors.lst && <p  style={ {margin:-5 , padding:0} }>{errors.lst}</p>}
                 </div>
               </div>
             </div>
 
-            <div className="ddiv1">
-              <div className="ss-container2">
-                <label htmlFor="email" className="titre">E-Mail</label>
-                <Field type="email" className="inputt" name="email" placeholder="Your email" required />
-                <div className="error">
+            <div  className={styles.ddiv1}>
+              <div className={styles.ss_container2}>
+                <label htmlFor="email" className={styles.titre}>E-Mail</label>
+                <Field type="email" className={styles.inputt} name="email" placeholder="Your email" required />
+                <div className={styles.error}>
                 {showErrors && errors.email && <p style={ {margin:-5 , padding:0}}>{errors.email}</p>}
               </div>
               </div>
-              <div className="ss-container2">
-                <label htmlFor="phone" className="titre" id="ph">Numéro</label>
-                <Field type="tel" className="inputt" name="phone" placeholder="Your phone" required />
-                <div className="error">
+              <div className={styles.ss_container2}>
+                <label htmlFor="phone" className={styles.titre} id={styles.ph}>Numéro</label>
+                <Field type="tel" className={styles.inputt} name="phone" placeholder="Your phone" required />
+                <div className={styles.error}>
                 {showErrors && errors.phone && <p style={ {margin:-5 , padding:0}}>{errors.phone}</p>}
               </div>
             </div>
             </div>
 
-            <div className="ddiv2">
-              <div className="ss-container2">
-                <label htmlFor="country" id="country" className="titre">Pays</label>
-                <Field as="select" id="countryy" className="selectt" name="country" required>
-                  <option value="" className="vv">Country</option>
+            <div className={styles.ddiv2}>
+              <div className={styles.ss_container2}>
+                <label htmlFor="country" id={styles.country} className={styles.titre} >Pays</label>
+                <Field as="select" id={styles.countryy} className={styles.selectt} name="country" required>
+                  <option value="" className={styles.vv}>Country</option>
                   <option value="TU">Tunisia</option>
                 </Field>
                 {showErrors && errors.countryy && <p style={ {margin:-5 , padding:0}}>{errors.countryy}</p>}
               </div>
 
-              <div className="ss-container2">
-                <label htmlFor="city" id="ci" className="titre">Ville</label>
-                <Field as="select" id="City" className="selectt" name="city" required>
-                  <option className="vv" value="">City</option>
+              <div className={styles.ss_container2}>
+                <label htmlFor="city" id={styles.ci} className={styles.titre}>Ville</label>
+                <Field as="select" id={styles.City} className={styles.selectt} name="city" required>
+                  <option className={styles.vv} value="">City</option>
                   <option value="TUN">Tunis</option>
                   <option value="SF">Sfax</option>
                   <option value="SS">Sousse</option>
@@ -156,45 +156,45 @@ function Commander() {
 <option value="MN">Manouba</option>
 <option value="KB">Kélibia</option>
                 </Field>
-                {showErrors && errors.city && <p className="error">{errors.city}</p>}
+                {showErrors && errors.city && <p className={styles.error}>{errors.city}</p>}
               </div>
 
-              <div className="ss-container2">
-                <label htmlFor="zipcode" id="zc" className="titre">Zip code</label>
-                <Field type="text"  name="zipcode" placeholder="Zip code" required id="zic"  />
+              <div className={styles.ss_container2}>
+                <label htmlFor="zipcode" id={styles.zc} className={styles.titre}>Zip code</label>
+                <Field type="text"  name="zipcode" placeholder="Zip code" required id={styles.zic} />
                   
                 
-                {showErrors && errors.zipcode && <p className="error">{errors.zipcode}</p>}
+                {showErrors && errors.zipcode && <p className={styles.error}>{errors.zipcode}</p>}
               </div>
             </div>
 
-            <div className="ddiv3">
-              <div className="ss-container3">
-                <label htmlFor="state" id="st" className="titre">Etat</label>
-                <Field as="select" name="state" className="state" id="State" required>
-                  <option value="" className="vv">Etat</option>
+            <div className={styles.ddiv3}>
+              <div className={styles.ss_container3}>
+                <label htmlFor="state" id={styles.st} className={styles.titre}>Etat</label>
+                <Field as="select" name="state" className={styles.state} id={styles.State} required>
+                  <option value="" className={styles.vv}>Etat</option>
                   <option value="kkk">kkkk</option>
                  
                 </Field>
-                {showErrors && errors.state && <p className="error">{errors.state}</p>}
+                {showErrors && errors.state && <p className={styles.error}>{errors.state}</p>}
               </div>
 
-              <div className="divad">
-                <label htmlFor="address" id="add" className="titre">Adresse</label>
-                <Field type="text" id="Address" className="inputt" name="adresse" placeholder="Address" />
+              <div className={styles.divad}>
+                <label htmlFor="address" id={styles.add} className={styles.titre}>Adresse</label>
+                <Field type="text" id={styles.Address} className={styles.inputt} name="adresse" placeholder="Address" />
               </div>
               </div>
 
-<div className="tt">
-  <img src={image} className="imaage" />
-  <div className="parbt">
-    <p className="firstparagraph">Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
+<div className={styles.tt}>
+  <img src={image} className={styles.imaage}/>
+  <div className={styles.parbt}>
+    <p className={styles.firstparagraph}>Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
   </div>
 </div>
 
-<div className="bouttton">
-  <input type="button" value="Retour" className="bt" required />
-  <input type="submit" value="Continuer" className="mbt" required />
+<div className={styles.bouttton}>
+  <input type="button" value="Retour" className={styles.bt} required />
+  <input type="submit" value="Continuer" className={styles.mbt} required />
 </div>
 </div>
 </Form>

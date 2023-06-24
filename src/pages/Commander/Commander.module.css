@@ -83,14 +83,14 @@
       
   }
   
-  .ss-container1{
+  .ss_container1{
       display:flex;
       flex-direction:column;
       gap:1vh;
       
   }
   
-  .ss-container2{
+  .ss_container2{
       display:flex;
       flex-direction:column;
       gap:1vh;
@@ -98,7 +98,7 @@
      
   }
   
-  .ss-container3{
+  .ss_container3{
       display:flex;
       flex-direction:column;
       gap:1vh;
