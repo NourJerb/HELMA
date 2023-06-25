@@ -5,6 +5,11 @@
     height: 40px;
     max-width: 500px;
 }
+
+.errors
+{
+    color: #F22F2F;
+}
 .form .email
 {
     width: 17vw;
@@ -20,10 +25,16 @@
     outline: none;
     color: #40485B;
 }
+.form .email::placeholder{
+    color: #40485B;
+    font-size: 100%;
+
+}
 
 .form .email:focus::placeholder {
     color: transparent;
   }
+
 
 .form
 {

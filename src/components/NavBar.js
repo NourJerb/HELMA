@@ -6,11 +6,13 @@ import logoNavBar from'./../assets/logoNavBar.png';
 import respLogo from'./../assets/respLogo.png';
 import menuToggle from './../assets/menuToggle.png'
 import loop from './../assets/loop.png'
+import { useNavigate } from "react-router-dom";
 
 
 import './NavBar.css'
 
 function NavBar() {
+  let navigate = useNavigate();
   // toggle Menu
     const [toggleMenu, setToggleMenu] = useState(false)
     const toggleNav = () => {
@@ -57,11 +59,11 @@ useEffect(() => {
             
              {((toggleMenu || screenWidth > 300) && (<div className='hbc' >
                 
-                <div className='elem elemi'><a href="#">HOME</a></div>
+                <div className='elem elemi'><a href="/home">HOME</a></div>
                 <div className='aaaa'></div>
-                <div className='elem elemi'><a href="#">SHOP</a></div>
+                <div className='elem elemi'><a href="/shop">SHOP</a></div>
                 <div className='aaaa'></div>
-                <div className='elemi elemi3' ><a href="#">CONTACTS</a></div>
+                <div className='elemi elemi3' ><a href="/contacts">CONTACTS</a></div>
               
                 
             </div>))}

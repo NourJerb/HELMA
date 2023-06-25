@@ -1,0 +1,293 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+.big{
+    background-color: #40485B;
+    width: 80%;
+    margin-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 20px;
+}
+
+.req{
+    color: red;
+}
+.ddiv{
+    display: flex;
+    justify-content: center;
+}
+.ss_container1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 2%;
+}
+.inputt{
+    background-color: #40485B;
+    border: 2px solid #E5E5EA ;
+    width: 20vw;
+    height: 40px;
+    padding-left: 2%;
+    border-radius: 8px;
+    color: #E5E5EA;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.inputt:focus::placeholder {
+    color: transparent;
+  }
+
+.titre{
+    margin-bottom: 10px;
+    font-size: 1.2vw;
+}
+.ddiv2{
+    display: flex;
+    justify-content: center;
+
+}
+
+.ss_container2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.selectt{
+    background-color: #40485B;
+    border: 2px solid #E5E5EA ;
+    width: 12.8vw;
+    height: 46px;
+    padding-left: 3.3%;
+    border-radius: 8px;
+    color: #E5E5EA;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.selectt option{
+    background-color: #E5E5EA;
+    color: #40485B;
+    
+}
+
+.ville{
+    background-color: #40485B;
+    border: 2px solid #E5E5EA ;
+    width: 12.666vw;
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 3%;
+    color: #E5E5EA;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.ville:focus::placeholder {
+    color: transparent;
+  }
+
+.ddiv3{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.ss_container3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.address{
+    background-color: #40485B;
+    border: 2px solid #E5E5EA ;
+    width: 27.334vw;
+    height: 40px;
+    border-radius: 8px;
+    padding-left: 3%;
+    color: #E5E5EA;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.address:focus::placeholder {
+    color: transparent;
+  }
+
+.forms{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class{
+    display: flex;
+    flex-direction: column;
+}
+
+.commander{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.firstparagraph{
+    font-family: 'Gilroy-Bold', sans-serif;
+    width: 60%;
+    text-align: center;
+}
+
+.tt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imaage{
+    width: 20vw;
+    height: auto;
+}
+
+.retourner
+{
+    background-color: #40485B;
+    border: 2px solid #E8C895;
+    color: #E8C895;
+    height: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 10px;
+    margin-right: 20vw;
+}
+
+.retourner:hover{
+    background-color: #E8C895;
+    border: 2px solid #E8C895;
+    color: #40485B;
+    cursor: pointer;
+}
+
+.continuer
+{
+    background-color: #E8C895;
+    border: 2px solid #E8C895;
+    color: #40485B;
+    height: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    border-radius: 10px;
+    margin-left: 20vw;
+}
+
+.continuer:hover
+{
+    background-color: #40485B;
+    border: 2px solid #E8C895;
+    color: #E8C895;
+    cursor: pointer;
+}
+
+.bouttton{
+    margin-top: 20px;
+}
+
+.error{
+    color: #F22F2F;
+    margin-top: 10px;
+    margin-left: 2%;
+    font-size: 0.9vw;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.trans{
+    color: transparent;
+    margin-top: 10px;
+    margin-left: 2%;
+    font-size: 0.9vw;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+@media screen and (max-width:720px) {
+
+
+    .big
+    {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .inputt
+    {
+        height: 30px;
+    }
+    .ville {
+        height: 30px;
+    }
+    .address{
+        height: 30px;
+    }
+    .selectt{
+        height: 36px;
+    }
+
+    .tt{
+        order : 1;
+    }
+
+    .class
+    {
+        order: 2;
+    }
+
+    .commander{
+        display: flex;
+        flex-direction: column;
+    }
+    .retourner{
+        margin-right: 5vw;
+    }
+    .continuer{
+        margin-left: 5vw;
+    }
+
+    .error{
+        font-size: 1.2vw;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .inputt
+    {
+        height: 25px;
+    }
+    .ville {
+        height: 25px;
+    }
+    .address{
+        height: 25px;
+    }
+    .selectt{
+        height: 31px;
+    }
+}

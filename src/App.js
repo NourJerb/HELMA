@@ -14,6 +14,7 @@ import HelmaFooter from "./Footer/HelmaFooter";
 
 /* Merge*/
 import Categories from "./components/Categories.js";
+import Cm from "./pages/Commander/cm";
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/item" element={<Item />} />
         <Route path="/commander" element={<Commander />} />
         <Route path="/confirmer" element={<Confirmer />} />
+        <Route path="/cm" element={<Cm />} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<div>404 not found</div>} />
       </Routes>
