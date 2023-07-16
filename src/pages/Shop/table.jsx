@@ -4,13 +4,13 @@ import styles from './table.module.css'
 import Shop from './Shop'
 
 function Table (props){
-    let users=props.users;
+    let products=props.products;
     return(
      <div className={styles.containerrr} > 
-            {users.map(user=>(
-                    <div  key={user.id} className={styles.divElement} >
+            {products.map(product=>(
+                    <div  key={product.id} className={styles.divElement} >
                         
-                        <Element e={[user.id,user.first_name,user.last_name,user.email,user.gender,user.ip_address]}></Element>   
+                        <Element e={[product.id,product.image,product.name,product.description,product.category]}></Element>   
                     </div>))}
                    
     </div>);

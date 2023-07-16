@@ -14,12 +14,13 @@
   background-color: #40485B;
   padding-left: 11%;
   padding-top: 6%;
+  width: 100%;
 }
 
 /* #ci{
     margin-left: -1vh;
   } */
-#zic {
+/* #zic {
   background-color: #40485B;
   font-size: medium;
   font-family: "muli", sans-serif;
@@ -31,7 +32,8 @@
   height: 2.5vh;
   width: 62%;
   padding: 3%;
-}
+
+} */
 
 /* #add{
     margin-left: 1vh;
@@ -53,7 +55,7 @@
   flex-direction: row;
   gap: 6%;
   margin-top: -2.3vh;
-
+  width: 100%;
 
 }
 
@@ -62,6 +64,8 @@
   flex-direction: row;
   gap: 6%;
   margin-top: 1.2vh;
+  width: 100%;
+
 }
 
 input::placeholder {
@@ -75,6 +79,8 @@ input::placeholder {
   flex-direction: row;
   gap: 3%;
   margin-top: 1.2vh;
+  width: 100%;
+
 
 
 }
@@ -84,6 +90,8 @@ input::placeholder {
   flex-direction: row;
   gap: 3.6%;
   margin-top: 2vh;
+  width: 100%;
+
 
 }
 
@@ -91,6 +99,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  width:16.7%;
 
 }
 
@@ -98,6 +107,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  width:16.7%;
 
 
 }
@@ -106,6 +116,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  width:13%;
 
 }
 
@@ -142,6 +153,11 @@ input::placeholder {
   margin-left: 2.5%;
   margin-top: 3.5%;
 }
+
+input[type="submit"],input[type="button"]{
+  cursor:pointer;
+}
+
 
 .titre {
   color: #c7c7cc;

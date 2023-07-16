@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import BrandList from "./BrandList.js";
 import styles from './Categories.module.css';
 import iconfleche from './../assets/iconfleche.png'
+import { useNavigate } from 'react-router-dom';
+import { products } from '../data/data.js';
 function Categories(){
+    const navigate=useNavigate()
     const [brands, setBrands] = useState([
         { id: 1, name: 'Necklaces' },
         { id: 2, name: 'Earnings' },
@@ -46,6 +49,52 @@ function Categories(){
     setIsRotated(!isRotated);
     
   }
+
+  function handleclick1() {
+    const filteredProducts = products.filter((product) =>
+      product.category.toLowerCase().includes("bracelet".toLowerCase())
+    );
+
+    const queryParams = new URLSearchParams();
+    
+    queryParams.append('tab', JSON.stringify(filteredProducts));
+
+    navigate(`/shop?${queryParams.toString()}`);
+  }
+  function handleclick2() {
+    const filteredProducts = products.filter((product) =>
+      product.category.toLowerCase().includes("colier".toLowerCase())
+    );
+
+    const queryParams = new URLSearchParams();
+    queryParams.append('tab', JSON.stringify(filteredProducts));
+
+    navigate(`/shop?${queryParams.toString()}`);
+  }
+
+  function handleclick3() {
+    const filteredProducts = products.filter((product) =>
+      product.category.toLowerCase().includes("bague".toLowerCase())
+    );
+    const queryParams = new URLSearchParams();
+    queryParams.append('tab', JSON.stringify(filteredProducts));
+    navigate(`/shop?${queryParams.toString()}`);
+  }
+
+  function handleclick4() {
+    const filteredProducts = products.filter((product) =>
+      product.category.toLowerCase().includes("boucle".toLowerCase())
+    );
+
+    const queryParams = new URLSearchParams();
+    queryParams.append('tab', JSON.stringify(filteredProducts));
+
+    navigate(`/shop?${queryParams.toString()}`);
+  }
+  function handleClear(){
+    const queryParams = new URLSearchParams();
+    queryParams.append('tab', JSON.stringify(products));
+    navigate(`/shop?${queryParams.toString()}`);  }
   return (
     <div className={styles.containerCategoriesHr}>
       
@@ -56,21 +105,23 @@ function Categories(){
            </div>
           <div className={`${styles.containerBrandList} ${styles.elemItem} ${styles.elem1}`}>
            
-           <button  className={styles.btnAllBrands} onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src={iconfleche} className={styles.isRotated ? 'iconFlech clicked' : 'iconFlech'} 
+           {/* <button  className={styles.btnAllBrands} onClick={() => setShowBrandList(!showBrandList)}>ALL BRANDS  <img   src={iconfleche} className={styles.isRotated ? 'iconFlech clicked' : 'iconFlech'} 
       onClick={handleClick}/></button>
            
            
            <div  className={styles.theList} >
            {showBrandList && <BrandList brands={brands} onBrandSelect={handleBrandSelect} />}
            
-           </div>
+           </div> */}
            
            
            {/* {selectedBrand && <p>You selected {selectedBrand.name}</p>} */}
        </div>
-       <div className={`${styles.elemItem} ${styles.elem2}`}>xxxxxx</div>
-       <div className={`${styles.elemItem} ${styles.elem3}`}>xxxxx</div>
-       <div className={`${styles.elemItem} ${styles.elem4}`}> xxxxxxx</div>
+       <div className={`${styles.elemItem} ${styles.elem2}`} onClick={handleclick1}>Bracelet</div>
+       <div className={`${styles.elemItem} ${styles.elem2}`} onClick={handleclick2}>Collier</div>
+       <div className={`${styles.elemItem} ${styles.elem3}`} onClick={handleclick3}>Bague</div>
+       <div className={`${styles.elemItem} ${styles.elem4}`} onClick={handleclick4}> Boucles oreilles</div>
+       <div className={`${styles.elemItem} ${styles.elem4}`} onClick={handleClear}>clear</div>
 
        
        

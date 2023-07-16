@@ -5,28 +5,35 @@ import { useEffect } from 'react';
 import { Route,Routes,useLocation} from 'react-router-dom';
 import Pagination from './pagination';
 import Table from './table';
-import {getUsers,getLength} from '../../data/dataselim'
+import {getLength, products} from '../../data/data';
+import { getProducts } from "../../data/data";
+// import { getProducts } from '../../components/NavBar';
+
+
+
 
 function Shop() {
   const mediaQuery = window.matchMedia("(max-width: 870px)");
   const mediaQuery1 = window.matchMedia("(min-width: 871px)");
-  const [count, setCount] = useState(9);
+  const [count, setCount] = useState(6);
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(count);
-  let totalPages=Math.ceil(getLength()/limit);
+  const [tab,setTab]=useState(products)
+  const [totalPages,setTotalPages]=useState(Math.ceil(getLength()/limit))
 
   
   useEffect(() => {
     const updateCount = () => {
       if (mediaQuery.matches) {
-        setCount(10);
+        setCount(6);
         setLimit(count)
 
       } else if (mediaQuery1.matches) {
-        setCount(9);
+        setCount(6);
         setLimit(count)
         
       }
+      localStorage.setItem("limit",limit)
     };
   
     updateCount(); 
@@ -40,9 +47,9 @@ function Shop() {
     return () => {
       window.removeEventListener("resize", mediaQueryListener);
     };
+    
   },[count]);
 
-  console.log(page)
   if(page>totalPages){
        setPage(totalPages)
   }
@@ -79,6 +86,33 @@ function Shop() {
       localStorage.setItem('currentPage',value);
     } 
   }
+
+
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const tabData = JSON.parse(queryParams.get('tab'));
+    if (tabData && Array.isArray(tabData) && tabData.length > 0) {
+      setTab(tabData);
+      setTotalPages(Math.ceil(tabData.length/limit))
+    }
+  }, [location.search]);
+
+
+function getProducts(page,limit){
+    
+   let array=[];
+   if (tab && Array.isArray(tab) && tab.length > 0) {
+   for (let i=(page-1)*limit;i<(page*limit)&&tab[i];i++){
+     array.push(tab[i]);
+      }}
+       return array;
+   }
+
+  
+
+
+
   
 
   // refreshing page issue
@@ -104,17 +138,14 @@ window.scrollTo({
   left: 0,
 });
 
-
 /// My component 
 function MyComponent(){
   return(
   <div id={localStorage.getItem('currentPage')} className={styles.parent} >
-    <Table users={getUsers(page,limit)}  />
+    <Table products={getProducts(page,limit)}  />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} ></Pagination>   
   </div>)
 }
-
-
 
 
 // the problem of previous and next button
@@ -150,3 +181,103 @@ if (path1==='/shop'){
 }
 export default Shop;
 
+
+
+
+
+// // Get current jobs
+// const indexOfLastJob = currentPage * jobPerPage;
+// const indexOfFirstJob = indexOfLastJob - jobPerPage;
+// const currentjobs = data.slice(indexOfFirstJob, indexOfLastJob);
+
+// // Change page
+// const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+// //filtring the data with this function
+// const handleTextSearch = (e) => {
+//   if (e.target.value === "") {
+//     setData(filterdata);
+//   } else {
+//     const filterresult = filterdata.filter(
+//       (jobs) =>
+//         jobs.title.toLowerCase().includes(e.target.value) ||
+//         jobs.team.toLowerCase().includes(e.target.value)
+//     );
+//     setData(filterresult);
+//   }
+
+//   setFilterVal(e.target.value);
+// };
+
+
+
+// return (
+//   <>
+//     <Container className="dashboard">
+//       <TextField
+//         className="search"
+//         id="standard-search"
+//         label="Search field"
+//         type="search"
+//         value={filterval}
+//         variant="standard"
+//         onChange={handleTextSearch}
+//       />
+//       <Button
+//         className="addjobbut"
+//         size="large"
+//         onClick={() => {
+//           console.log("im working");
+//           navigate("/adminjobform");
+//         }}
+//       >
+//         <AddCircleOutlineIcon
+//           style={{ color: "#3e9ede", paddingRight: "5px" }}
+//         />
+//         Add A Job
+//       </Button>
+//       <Button
+//         className="addjobbut"
+//         size="large"
+//         onClick={() => {
+//           navigate("/userinfo");
+//         }}
+//       >
+//         <ContactPageIcon style={{ color: "#3e9ede", paddingRight: "5px" }} />
+//         Consult The Applications
+//       </Button>
+//       <Jobs data={ currentjobs } loading={ loading } onDelete={ onDelete } />
+//       <Pagination
+//         jobPerPage={jobPerPage}
+//         totalJobs={data.length}
+//         paginate={paginate}
+//       />
+//     </Container>
+//   </>
+// );
+// }
+
+// Ashwek Werghi
+// const Pagination = ({ jobPerPage, totalJobs, paginate }) => {
+// const pageNumbers = [];
+
+// for (let i = 1; i <= Math.ceil(totalJobs / jobPerPage); i++) {
+//   pageNumbers.push(i);
+// }
+
+// return (
+//   <nav className='page-nav'>
+//     <ul className='pag-elt'>
+//       {pageNumbers.map(number => (
+//         <li key={number} className='page-number'>
+//           <a onClick={() => paginate(number)}  >
+//             {number}
+//           </a>
+//         </li>
+//       ))}
+//     </ul>
+//   </nav>
+// );
+// };
+
+// export default Pagination;
