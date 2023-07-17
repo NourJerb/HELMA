@@ -6,15 +6,19 @@
     padding-bottom: 1.5%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .helma {
+    width: 150%;
     color: #E8C895;
     font-family: 'Quicksand Book', sans-serif;
-    font-size: 70%;
+    font-size: 100%;
     font-weight: 700;
-    align-self: flex-start;
-    margin: 10px 0 0 20%;
+    margin-top: 20px;
+    text-align: center;
+
+
 }
 
 .container {
@@ -22,10 +26,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap:4%
 }
 
 .logo_footer {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
@@ -39,14 +44,53 @@
     align-items: center;
     margin-top: 1vw;
 }
-
-.social_media p {
+.social_p{
+    text-decoration: none;
     font-family: 'Quicksand Book', sans-serif;
-    font-size: 1vw;
+    font-size: 18px;
     color: #E8C895;
 }
 
-.social_media p:hover
+.contact_container{
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    gap:18px;
+    margin-top: -9px;
+}
+
+
+.contactt {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.contactt .iconss {
+    width: 12px;
+}
+
+
+.contact_para {
+    color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 15px;
+    align-self: flex-start;
+    width: 100%;
+}
+.pages{
+    text-decoration: none;
+    color: #E8C895;
+    font-family: 'Quicksand Book', sans-serif;
+    font-size: 16px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+
+
+
+.social_p:hover
 {
     text-decoration: underline #E8C895 2px;
     cursor: pointer;
@@ -70,6 +114,8 @@
     align-items: center;
     align-items: flex-start;
     margin-left: 4vw;
+    gap:22px;
+
 }
 
 .title {
@@ -83,7 +129,7 @@
     color: #E8C895;
     padding: 0;
     margin: 0;
-    font-size: 100%;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 2px;
 }
@@ -95,18 +141,22 @@
     align-items: center;
 }
 
-.section p {
+.section,.section .contactt p {
     color: #E8C895;
     font-family: 'Quicksand Book', sans-serif;
-    font-size: 70%;
-    margin-top: 5px;
+    font-size: 15px;
     align-self: flex-start;
+    width:100%
 }
 
-.section p:hover
+.contact_para:hover
 {
     text-decoration: underline #E8C895 2px;
     cursor: pointer;
+}
+.pages:hover{
+    text-decoration: underline #E8C895 2px;
+    cursor: pointer;  
 }
 
 .title hr {
@@ -121,6 +171,8 @@
     flex-direction: column;
     align-items: center;
     margin-right: 2vw;
+    justify-content: center;
+    width:18%;
 }
 
 .newsletter {
@@ -128,6 +180,7 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+
 
 .subscribe {
     display: flex;
@@ -144,8 +197,8 @@
 .subscribe p {
     color: #E8C895;
     font-family: 'Quicksand Book', sans-serif;
-    font-size: 70%;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 20px;
     align-self: flex-start;
 }
 

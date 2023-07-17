@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { SliderData } from './SliderData';
+import { SliderData1 } from './SliderData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
 
@@ -7,7 +7,7 @@ const ImageSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const [index,setIndex]=useState(1);
   const posX=useRef(0);
-  const long=SliderData.length;
+  const long=SliderData1.length;
 
   function nextIndex() {
     if (index==long-1)
@@ -20,7 +20,7 @@ const ImageSlider = ({ slides }) => {
       return (long-1);
     else return index-1;
   };
-  function  prevSlide() {
+  function  nextSlide() {
     if (index==long-1)
     {
       setIndex(0);
@@ -29,7 +29,7 @@ const ImageSlider = ({ slides }) => {
     console.log("prev")
   };
 
-  function nextSlide() {
+  function prevSlide() {
     if (index==0)
     {
       setIndex(long-1);
@@ -52,31 +52,36 @@ const ImageSlider = ({ slides }) => {
     console.log("heeey")
 }
 
-function Slide()
-{
-        return (
-          <div className="div-swiper-slide">
-          <div className="div-swiper-slide-photo">
-            <VscChevronLeft className="left-arrow" onClick={prevSlide} />
-          </div>
-          <div className="div-swiper-slide-photo">
-              <img src={SliderData[prevIndex()].image} alt='travel image' onDragStart={(e)=>{posX.current=e.clientX;console.log(posX.current)}} onDragEnd={(e)=>handlePrevious(e)} className='image' />
-              </div>
-              <div className="div-swiper-slide-photo">
-              <img src={SliderData[index].image} alt='travel image' className='image' />
-              </div>
-              <div className="div-swiper-slide-photo">
-              <img src={SliderData[nextIndex()].image} alt='travel image' onDragStart={(e)=>posX.current=e.clientX} onDragEnd={(e)=>handlePrevious(e)} className='image' />
-              </div>
-              <div className="div-swiper-slide-photo">
-              <img src={SliderData[nextIndex()].image} alt='travel image' onDragStart={(e)=>posX.current=e.clientX} onDragEnd={(e)=>handlePrevious(e)} className='image' />
-              </div>
-              <div className="div-swiper-slide-photo">
+function Slide() {
+  const prevIndex = (index - 1 + long) % long;
+  const nextIndex = (index + 1) % long;
+  const prevPrevIndex = (index - 2 + long) % long;
+  const nextNextIndex = (index + 2) % long;
+
+  return (
+    <div className="div-swiper-slide">
+      <div className="div-swiper-slide-photo">
+        <VscChevronLeft className="left-arrow" onClick={prevSlide} />
+      </div>
+      <div className="div-swiper-slide-photo">
+        <img src={SliderData1[prevPrevIndex].image} alt='travel image' className='image' />
+      </div>
+      <div className="div-swiper-slide-photo">
+        <img src={SliderData1[prevIndex].image} alt='travel image' className='image' />
+      </div>
+      <div className="div-swiper-slide-photo">
+        <img src={SliderData1[index].image} alt='travel image' onDragStart={(e) => { posX.current = e.clientX; console.log(posX.current) }} onDragEnd={(e) => handlePrevious(e)} className='image' />
+      </div>
+      <div className="div-swiper-slide-photo">
+        <img src={SliderData1[nextIndex].image} alt='travel image' className='image' />
+      </div>
+      <div className="div-swiper-slide-photo">
         <VscChevronRight className="right-arrow" onClick={nextSlide} />
       </div>
-              </div>
-        )
+    </div>
+  );
 }
+
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;

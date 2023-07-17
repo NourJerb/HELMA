@@ -20,6 +20,9 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  width:100%;
+  height: auto;
+
 }
 
 .left-arrow {
@@ -28,6 +31,9 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+  width:100%;
+  height: auto;
+
 }
 
 .slide {
@@ -42,7 +48,8 @@
 }
 
 .div-swiper-slide {
-  display: flex;
+  display: grid;
+    grid-template-columns:3% 21% 21% 21% 21% 3%;
   justify-content: space-evenly;
   align-items: center;
   margin-left: 10ch;
@@ -50,13 +57,15 @@ margin-bottom: 2ch;
   gap: 2ch;
 }
 .div-swiper-slide2 {
-    display: flex;
-    justify-content: space-evenly;
+    width:100vw;
+    display: grid;
+    grid-template-columns:3% 21% 21% 21% 21% 3%;
+    gap:2%;
     align-items: center;
     margin-left: 10ch;
-    margin-right: 10ch;
-    gap: 2ch;
+    margin-right: 11.1ch;
     margin-bottom: 2ch;
+    justify-content: center;
   }
 .div-swiper-slide-photo {
   object-fit: cover;

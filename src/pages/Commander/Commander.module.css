@@ -49,49 +49,17 @@
 
   /* margin-top: -1vh; */
 }
-
-.ddiv {
-  display: flex;
-  flex-direction: row;
-  gap: 6%;
-  margin-top: -2.3vh;
-  width: 100%;
-
-}
-
-.ddiv1 {
-  display: flex;
-  flex-direction: row;
-  gap: 6%;
-  margin-top: 1.2vh;
-  width: 100%;
-
-}
-
 input::placeholder {
   font-size: 1.7vh;
   color: #c7c7cc;
 }
 
-
-.ddiv2 {
+.ddiv {
   display: flex;
   flex-direction: row;
-  gap: 3%;
-  margin-top: 1.2vh;
-  width: 100%;
-
-
-
-}
-
-.ddiv3 {
-  display: flex;
-  flex-direction: row;
-  gap: 3.6%;
-  margin-top: 2vh;
-  width: 100%;
-
+  gap: 5vw;
+  margin-top: -2.3vh;
+  width: 37vw;
 
 }
 
@@ -99,7 +67,16 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  width:16.7%;
+  width:13vw;
+
+}
+
+.ddiv1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  margin-top: 1.2vh;
+  width: 37vw;
 
 }
 
@@ -107,8 +84,17 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  width:16.7%;
+  width:13vw;
 
+
+}
+
+.ddiv2 {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin-top: 1.2vh;
+  width: 37vw;
 
 }
 
@@ -116,9 +102,33 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  width:13%;
+  width:10vw;
 
 }
+
+
+
+.ddiv3 {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin-top: 2vh;
+  width: 37vw;
+
+
+}
+
+.ss_container4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width:10vw;
+
+
+}
+
+
+
 
 .divad {
   display: flex;
@@ -128,21 +138,24 @@ input::placeholder {
 
 }
 
+.container{
+  display:flex;
+  gap:5%;
+
+}
+
 .tt {
   display: flex;
   flex-direction: column;
   gap: 7%;
   width: 40%;
   height: 50vh;
-  margin-left: 58%;
-  margin-top: -28%;
-
-
+  margin-top:-10px;
+  padding-right: 270px;
 }
 
 .parbt {
-
-  margin-left: 5vh;
+  width: 100%;
   margin-top: -5%;
 }
 
@@ -150,8 +163,7 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   height: 6vh;
-  margin-left: 2.5%;
-  margin-top: 3.5%;
+
 }
 
 input[type="submit"],input[type="button"]{
@@ -181,6 +193,8 @@ input[type="submit"],input[type="button"]{
 }
 
 
+
+
 #countryy,
 #City,
 #Zipcode,
@@ -192,34 +206,34 @@ input[type="submit"],input[type="button"]{
   border: 0.4vh solid #E5E5EA;
   padding: 2%;
   border-radius: 1vh;
-  height: 5vh;
+  height: 33px;
 
 
 }
 
 #City,
 #Zipcode {
-  width: 20.4vh;
+  width: 9vw;
 }
 
 #countryy {
-  width: 20.4vh;
+  width: 9vw;
 }
-
+.state{
+  width: 9vw;
+  height: 32.7px;
+}
 /* #City{
   margin-left: -1.5vh;
 }  */
 #Address {
-  width: 41vh;
-  padding-left: 3%;
-  padding-right: 4%;
+  width: 21.78vw;
   font-family: "muli", sans-serif;
   font-weight: 400;
   font-style: normal;
-  height: 1.8vh;
 
 
-}
+} 
 
 .opt {
   font-family: "muli", sans-serif;
@@ -238,7 +252,7 @@ input[type="submit"],input[type="button"]{
   padding-top: 1vh;
   padding-bottom: 1vh;
   font-size: 1.2vw;
-  margin-left: 77vh;
+  margin-left: 37.5vw;
   padding-left: 3vh;
   padding-right: 3vh;
 
@@ -258,21 +272,22 @@ input[type="submit"],input[type="button"]{
 }
 
 .imaage {
-  width: 50%;
-  height: 80%;
-  margin-left: 15vh;
-  margin-top: 2vh;
+  width: auto;
+  height: 75%;
+
+  margin-top: 13px;
+  
 
 
 }
 
 .firstparagraph {
-  width: 78%;
+  width: 100%;
   font-size: 160%;
   text-align: center;
   color: #F8F8F8;
   font-weight: bolder;
-  margin-right: 9%;
+
   font-family: 'Gilroy ExtraBold';
   margin-top: 1vh;
 
@@ -296,15 +311,12 @@ body {
   border: 1px solid #707070;
   overflow: hidden;
   font-size: 80%;
-  margin-top: 1.8%;
   margin-bottom: 2%;
 }
 
-.state {
-  width: 19.3vh;
-}
 
-@media screen and (max-width:1285px) {
+
+/* @media screen and (max-width:1285px) {
 
   .ddiv1 {
     gap: 3.7%;
@@ -916,7 +928,7 @@ body {
   #State {
     font-size: 1.3vw;
   }
-}
+} */
 
 /* @media screen and (max-width:969px){
   .imaage{
@@ -1002,7 +1014,7 @@ margin-left: -1vh;
 }
 } */
 
-
+/* 
 @media screen and (max-width:942px) {
   .imaage {
     margin-top: -10vh;
@@ -1715,7 +1727,7 @@ margin-left: -1vh;
   #State {
     font-size: 1.5vw;
   }
-}
+} */
 
 /* @media screen and (max-width:625px){
   
@@ -1771,7 +1783,7 @@ height: 50%;
   font-size: 1.8vw;
 }
 } */
-@media screen and (max-width:600px) {
+/* @media screen and (max-width:600px) {
 
   .forms {
     height: 60vh;
@@ -3097,4 +3109,4 @@ height: 50%;
   .titre {
     font-size: 3vw;
   }
-}
+} */

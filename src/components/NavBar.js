@@ -71,11 +71,11 @@ export default function NavBar() {
         {(toggleMenu || screenWidth > 300) && (
           <div className="hbc">
             <div className="elem elemi">
-              <a href="/home">HOME</a>
+              <a href="/home">ACCUEIL</a>
             </div>
             <div className="aaaa"></div>
             <div className="elem elemi">
-              <a href="/shop">SHOP</a>
+              <a href="/shop">BOUTIQUE</a>
             </div>
             <div className="aaaa"></div>
             <div className="elemi elemi3">
@@ -110,7 +110,7 @@ export default function NavBar() {
             <button
               className="loopBtn"
               type="submit"
-              onClick={() => setDisplayInput(!displayInput)}
+              onClick={() => {setDisplayInput(!displayInput);}}
             >
               <AiOutlineSearch className="searchloop" color="#fff" size={25} />
             </button>

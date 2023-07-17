@@ -71,10 +71,11 @@ function Commander() {
 				}}
 				onSubmit={handleSubmit}
 			>
-				<Form action="/confirmer" method="post" className={styles.forms} >
-					<div>
+					<Form action="/confirmer" method="post" className={styles.forms} >
 
+					<div className={styles.container}>
 
+                    <div>
 
 
 						<div className={styles.ddiv}>
@@ -134,7 +135,7 @@ function Commander() {
 								{showErrors && errors.countryy && <p style={{ margin: -5, padding: 0 }}>{errors.countryy}</p>}
 							</div>
 
-							<div className={styles.ss_container2}>
+							<div className={styles.ss_container3}>
 								<label htmlFor="city" id={styles.ci} className={styles.titre}>Ville</label>
 								<Field as="select" id={styles.City} className={styles.selectt} name="city" required>
 									<option className={styles.vv} value="">City</option>
@@ -182,9 +183,9 @@ function Commander() {
 								{showErrors && errors.city && <p className={styles.error}>{errors.city}</p>}
 							</div>
 
-							<div className={styles.ss_container2}>
-								<label htmlFor="zipcode"  className={styles.titre}>Zip code</label>
-								<Field type="text" name="zipcode" placeholder="Zip code" required className={styles.inputt} />
+							<div className={styles.ss_container3}>
+								<label htmlFor="zipcode" className={styles.titre}>Zip code</label>
+								<Field type="text" className={styles.inputt} name="zipcode" placeholder="Zip code" required />
 
 
 								{showErrors && errors.zipcode && <p className={styles.error}>{errors.zipcode}</p>}
@@ -200,7 +201,7 @@ function Commander() {
 
 
 						<div className={styles.ddiv3}>
-							<div className={styles.ss_container3}>
+							<div className={styles.ss_container4}>
 								<label htmlFor="state" id={styles.st} className={styles.titre}>Etat</label>
 								<Field as="select" name="state" className={styles.state} id={styles.State} required>
 									<option value="" className={styles.vv}>Etat</option>
@@ -215,7 +216,7 @@ function Commander() {
 								<Field type="text" id={styles.Address} className={styles.inputt} name="adresse" placeholder="Address" />
 							</div>
 						</div>
-
+                        </div>
 
 
 
@@ -225,20 +226,20 @@ function Commander() {
 						<div className={styles.tt}>
 							<img src={product[1]} className={styles.imaage} />
 							<div className={styles.parbt}>
-								<p className={styles.firstparagraph}>Bague CELOR en Or 375/1000 Blanc et oxyde blanc</p>
+								<p className={styles.firstparagraph}>{product[2]}</p>
 							</div>
 						</div>
 
+				</div>
 
+				<div className={styles.bouttton}>
+					<input type="button" value="Retour" className={styles.bt} required onClick={() => { navigate(`/shop/page${localStorage.getItem("currentPage")}`) }} />
+					<input type="submit" value="Continuer" className={styles.mbt} required />
+				</div>
 
-						<div className={styles.bouttton}>
-							<input type="button" value="Retour" className={styles.bt} required onClick={() => { navigate(`/shop/page${localStorage.getItem("currentPage")}`) }} />
-							<input type="submit" value="Continuer" className={styles.mbt} required />
-						</div>
-					</div>
-				</Form>
-			</Formik>
-		</div>
+			</Form>
+		</Formik>
+		</div >
 	);
 }
 
