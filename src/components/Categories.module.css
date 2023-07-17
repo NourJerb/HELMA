@@ -1,11 +1,17 @@
+.containerCategoriesHr{
+    align-items: center;
+}
+
 .containerCategories{
    
     display: flex;
     justify-content: flex-start;
     width:100%;
     
+    padding-bottom: 7px;
+    padding-top: 15px;
+    justify-content: center;
 
-    padding-top: 3vh;
     
 }
 
@@ -16,7 +22,17 @@
     padding-right: 5vw;
     color: #40485B;
 }
+.elemItem:hover {
+    color: #e8c895;
+}
+.icon{
+    color: #40485B;
+}
 
+.icon:hover{
+    color: #e8c895;
+
+}
 
 .line{
    z-index: 0;

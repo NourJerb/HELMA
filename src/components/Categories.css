@@ -3,10 +3,14 @@
     display: flex;
     justify-content: flex-start;
     width:100%;
-    
-
+    align-items: center;
     padding-top: 3vh;
+    padding-bottom: 3vh;
     
+}
+
+.containerCategoriesHr{
+    border: #e8c895;
 }
 
 .elem1{
@@ -15,6 +19,10 @@
 .elemItem{
     padding-right: 5vw;
     color: #40485B;
+}
+
+.elem2:hover{
+    color: #e8c895;
 }
 
 
