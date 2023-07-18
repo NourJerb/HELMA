@@ -79,6 +79,14 @@
     margin-top: 3px;
    font-size: 17px;
 }
+
+@media (max-width:863px){
+    
+    .containerCategoriesHr{
+        overflow: hidden;
+        width: 100%;
+    }
+}
 @media screen and (max-width: 633px){
     .elemItem{
        font-size: 15px;
@@ -106,9 +114,11 @@
 
 }
 @media screen and (max-width: 384px){
-    .elem4, .elem2 , .elem3{
-        margin-top: 3px;
-       font-size: 15px;
+    .elemItem{
+       font-size: 13px;
+    }
+    .containerCategories{
+        margin-left: 2%;
     }
     .btnAllBrands {
       text-align: center;
@@ -143,11 +153,9 @@
       .btnAllBrands{
         margin-left: -70px;
       }
-      .elem4, .elem2 , .elem3{
-        margin-top: 4px;
-       font-size: 15px;
-       padding-right: 15px;
-    }
+      .elemItem{
+        font-size: 12px;
+     }
    
    }
    @media screen and (max-width: 343px){
@@ -167,9 +175,9 @@
       
          
       }
-      .elem4, .elem2 , .elem3{
-       padding-right: 11px;
-    }
+      .elemItem{
+        font-size: 13px;
+     }
 }
 @media screen and (max-width: 342px){
     .btnAllBrands {
@@ -192,11 +200,9 @@
       .btnAllBrands{
         margin-left: -65px;
       }
-      .elem4, .elem2 , .elem3{
-        margin-top: 4px;
-       font-size: 14px;
-       padding-right: 8px;
-    }
+      .elemItem{
+        font-size: 11px;
+     }
   
 }
 @media screen and (max-width: 282px){

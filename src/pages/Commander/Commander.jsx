@@ -14,13 +14,14 @@ function Commander() {
 	const handleSubmit = (values) => {
 		let newErrors = {};
 
-		if (!values.firstName.match(/^[a-zA-Z]+$/)) {
+		if (!values.firstName.match(/^[a-zA-Z ]+$/)) {
 			newErrors.fst = '*Utiliser seulement des lettres.';
-		}
-
-		if (!values.lastName.match(/^[a-zA-Z]+$/)) {
+		  }
+		  
+		  if (!values.lastName.match(/^[a-zA-Z ]+$/)) {
 			newErrors.lst = '*Utiliser seulement des lettres.';
-		}
+		  }
+		  
 
 		if (!values.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
 			newErrors.email = '*Utiliser une adresse mail valide.';

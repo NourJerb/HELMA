@@ -14,6 +14,8 @@ function HelmaFooter() {
     return (
         <div className={styles.footer}>
             <div className={styles.container}>
+
+
                 <div className={styles.logo_social}>
                     <img className={styles.logo_footer} src={logo} alt="logo" />
                     <div className={styles.social_media}>
@@ -31,8 +33,10 @@ function HelmaFooter() {
                     <p className={styles.helma}>© 2022 Helma. All Rights Reserved.</p>
 
                 </div>
-                <div className={styles.sections}>
-                    <div className={styles.section}>
+
+
+                
+                    <div className={styles.section1}>
                         <div className={styles.title}>
                             <h6>HELMA</h6>
                             <hr />
@@ -42,28 +46,31 @@ function HelmaFooter() {
                         <Link to="/contacts" className={styles.pages}>Contacts</Link>
                     </div>
 
-                    <div className={styles.section}>
+
+
+                    <div className={styles.section2}>
                         <div className={styles.title}>
                             <h6>CONTACTS</h6>
                             <hr />
                         </div>
                         <div className={styles.contact_container}>
-                        <div className={styles.contactt}>
-                            <div className={styles.iconss}><FontAwesomeIcon icon={faLocationDot} style={{ color: "#e8c895" }} /></div>
-                            <div className={styles.contact_para}>Rue Du Général Jawhar، Ariana</div>
-                        </div>
+                            <div className={styles.contactt}>
+                                <div className={styles.iconss}><FontAwesomeIcon icon={faLocationDot} style={{ color: "#e8c895" }} /></div>
+                                <div className={styles.contact_para}>Rue Du Général Jawhar، Ariana</div>
+                            </div>
 
-                        <div className={styles.contactt}>
-                            <div className={styles.iconss}><FontAwesomeIcon icon={faEnvelope} style={{ color: "#e8c895" }} /></div>
-                            <div className={styles.contact_para}>helmacreations@gmail.com</div>
-                        </div>
+                            <div className={styles.contactt}>
+                                <div className={styles.iconss}><FontAwesomeIcon icon={faEnvelope} style={{ color: "#e8c895" }} /></div>
+                                <div className={styles.contact_para}>helmacreations@gmail.com</div>
+                            </div>
 
-                        <div className={styles.contactt}>
-                            <div className={styles.iconss}><FontAwesomeIcon icon={faPhone} style={{ color: "#e8c895" }} /></div>
-                            <div className={styles.contact_para}>23 445 888</div>
-                        </div>
+                            <div className={styles.contactt}>
+                                <div className={styles.iconss}><FontAwesomeIcon icon={faPhone} style={{ color: "#e8c895" }} /></div>
+                                <div className={styles.contact_para}>23 445 888</div>
+                            </div>
                         </div>
                     </div>
+
 
 
 
@@ -78,6 +85,8 @@ function HelmaFooter() {
                         </div>
 
                     </div>
+
+                    
                 </div>
                 <div className={styles.contact}>
                     <h6>NOUS CONTACTER</h6>
@@ -86,7 +95,7 @@ function HelmaFooter() {
                 </div>
             </div>
 
-        </div>
+        
     )
 }
 export default HelmaFooter;

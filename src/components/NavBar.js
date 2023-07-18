@@ -64,6 +64,12 @@ export default function NavBar() {
 
     navigate(`/shop?${queryParams.toString()}`);
   }
+
+  function handleloop(){
+    
+    setDisplayInput(true);
+    handleclick()
+  }
   return (
     <div className="allNavBar">
       <img className="logoNB" src={logoNavBar} />
@@ -110,7 +116,7 @@ export default function NavBar() {
             <button
               className="loopBtn"
               type="submit"
-              onClick={() => {setDisplayInput(!displayInput);}}
+              onClick={handleloop}
             >
               <AiOutlineSearch className="searchloop" color="#fff" size={25} />
             </button>
@@ -119,19 +125,19 @@ export default function NavBar() {
           {toggleMenu && (
             <div className="secondPart">
               <div className="elemm1">
-                <a className="elemm" href="#">
-                  HOME
+                <a className="elemm" href="/home">
+                ACCUEIL
                 </a>
                 <hr></hr>
               </div>
-              <div className="elemm1">
-                <a className="elemm" href="#">
-                  SHOP
+              <div className="elemm1 elemm2">
+                <a className="elemm" href="/shop">
+                BOUTIQUE
                 </a>
                 <hr></hr>
               </div>
               <div className="last">
-                <a className="elemm" href="#">
+                <a className="elemm" href="/contacts">
                   CONTACTS
                 </a>
               </div>
