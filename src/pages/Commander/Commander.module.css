@@ -189,6 +189,7 @@ input[type="submit"],input[type="button"]{
   border-radius: 1vh;
   height: 2.5vh;
   width: 110%;
+  height: 100%;
   padding: 3%;
 }
 
@@ -201,12 +202,16 @@ input[type="submit"],input[type="button"]{
 .state {
 
   background-color: #40485B;
-  font-size: 0.8vw;
   color: #c7c7cc;
   border: 0.4vh solid #E5E5EA;
   padding: 2%;
   border-radius: 1vh;
   height: 33px;
+  font-size: 12px;
+  font-family: "muli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
 
 
 }
@@ -214,6 +219,7 @@ input[type="submit"],input[type="button"]{
 #City,
 #Zipcode {
   width: 9vw;
+  height: 100%;
 }
 
 #countryy {
@@ -231,7 +237,7 @@ input[type="submit"],input[type="button"]{
   font-family: "muli", sans-serif;
   font-weight: 400;
   font-style: normal;
-
+  height:100%;
 
 } 
 
@@ -312,8 +318,313 @@ body {
   overflow: hidden;
   font-size: 80%;
   margin-bottom: 2%;
+  margin-top: 2%;
+}
+@media screen and (max-width:1000px){
+  .big{
+    width:90%;
+    margin:initial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+  }
 }
 
+
+
+
+@media screen and (max-width:850px){
+  .big{
+    width:90%;
+    margin-left: 5%;
+    height: 900px;
+
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap:100px;
+  }
+  .forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #40485B;
+    padding-left: initial;
+    padding-top: 6%;
+    width: 100%;
+  }
+  .tt {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 100%;
+    height: 50vh;
+    margin-top:-10px;
+  }
+  .imaage{
+    width:auto;
+    height:100%;
+    align-self: center;
+  }
+  .container_form{
+    width:100%
+  }
+  .ddiv,.ddiv1, .ddiv2, .ddiv3{
+    width: 100%;
+    justify-content: center;
+  }
+  .ddiv2{
+    gap:3.2%;
+  }
+  .ddiv3{
+    gap:3%;
+    margin-left: 9.3%;
+  }
+
+
+
+
+  .ddiv,.ddiv1, .ddiv2,.ddiv3{
+    width: 100%;
+    justify-content: center;
+  }
+  .ddiv2{
+    gap:3.2%;
+  }
+
+  .ss_container1,.ss_container2,.ss_container3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width:38%;
+  
+  }
+
+  .ss_container3{
+    width:25%;
+
+  }
+
+  .ss_container4{
+    width:35%;
+  }
+  .divad{
+    width:100%;
+    height:30px;
+
+
+  }
+
+  #Address{
+    width:71.5%;
+    height:100%;
+    padding: initial;
+    padding:10px;
+
+  }
+
+  .ss_container4 input{
+    width:100%;
+  }
+  #countryy,#City {
+    width: 100%;
+  }
+
+  .ss_container3 input{
+    width: 103.5%;
+
+  }
+  .inputt {
+    width: 100%;
+    padding: 3%;
+  }
+  .state {
+
+    background-color: #40485B;
+    padding: 2%;
+    border-radius: 1vh;
+    width:100%;
+    height:40px;
+  
+  
+  }
+
+  .bouttton{
+    margin:70px auto;
+    gap:10px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .bt{
+    padding-left:5vw;
+    padding-right: 5vw;
+    font-size: 14px;
+
+  }
+  .mbt{
+    margin-left: initial;
+    padding-left:5vw;
+    padding-right: 5vw;
+    font-size: 14px;
+
+
+  }
+}
+
+@media screen and (max-width:450px){
+  .big{
+    width:95%;
+    margin-left: 2.5%;
+    height: 1200px;
+
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    gap:10px;
+  }
+  .forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #40485B;
+    padding-left: initial;
+    padding-top: 6%;
+    width: 100%;
+  }
+  .tt {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 100%;
+    height: 400px;
+    margin-top:-10px;
+  }
+  .imaage{
+    width:auto;
+    height:60%;
+    align-self: center;
+  }
+  .container_form{
+    width:100%
+  }
+  .ddiv,.ddiv1,.ddiv2,.ddiv3{
+    width: 93%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    
+  }
+ 
+  .ddiv,.ddiv1{gap:10px;}
+.ddiv2{margin-left:-5px; gap:15px;} 
+
+.ddiv{
+  margin-top: -70px;
+}
+
+
+
+
+  .ss_container1,.ss_container2,.ss_container3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width:80%;
+  
+  }
+
+  .ss_container3{
+    width:77.5%;
+
+  }
+
+  .ss_container4{
+    width:100%;
+    margin-left: 20%;
+  }
+  .divad{
+    margin-top: 10px;
+    width:100%;
+    height:40px;
+    margin-left: 20%;
+
+  }
+
+ 
+  #Address {
+    width: 79%;
+    height:12px;
+    margin-left: -0.25%;
+  
+  } 
+  
+  .ddiv3{
+    gap:40px;
+    margin:initial;
+  }
+  .ss_container4 input{
+    width:100%;
+  }
+  #countryy,#City {
+    width: 111%;
+    height:38px;
+    font-size: 11px;
+    font-family: "muli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .ss_container3 input{
+    width: 103.5%;
+    height:18.5px;
+    margin: initial;
+
+  }
+  .inputt {
+    width: 100%;
+    padding: 3%;
+  }
+  .state {
+
+    background-color: #40485B;
+    font-size: 0.8vw;
+    padding: 2%;
+    border-radius: 1vh;
+    height: 38px;
+    width:86%;
+    font-size: 12px;
+    font-family: "muli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  }
+
+  .bouttton{
+    margin:30px auto;
+    gap:10px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .bt{
+    padding-left:10vw;
+    padding-right: 10vw;
+    font-size: 14px;
+
+  }
+  .mbt{
+    margin-left: initial;
+    padding-left:8vw;
+    padding-right: 8vw;
+    font-size: 14px;
+
+
+  }
+}
 
 
 /* @media screen and (max-width:1285px) {

@@ -2,20 +2,55 @@
 .top-home-design {
     margin-right: 10ch;
     margin-bottom: 10ch;
+    border-radius: 0 0 3ch 0ch;
+    overflow: hidden;
+
+
     
   }
+
+  .TopHome_image-design{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
   .Top-home-container {
     height: 60ch;
     width: 100%;
     color: white;
     position: relative;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
   }
+
+
+  /* .container{
+    border-bottom-right-radius: 3ch;
+  }
+  img{
+    border-bottom-right-radius: 3ch;
+
+  }
+  .swiper-wrapper{
+    border-bottom-right-radius: 3ch;
+
+  } */
+
+  /* .swiper-wrapper{
+    border-bottom-right-radius: 3ch;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  } */
+
+
   .image-design {
     height: 60ch;
     width: 100%;
-    object-fit:cover;}
+    object-fit:cover;
+    border-bottom-right-radius: 3ch;
+
+   }
   .Number {
     color: rgb(255, 255, 255);
     font-size: 100px;
@@ -32,32 +67,40 @@
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
   }
-  @media  screen and (max-width:480px) {
-    .top-home-design{
-      margin-right: 0ch;
-      margin-top: 0ch;
-    }
-    .image-design {
-      height: 25ch;
-    }
-    .Top-home-container{
-      height: 25ch;
-    }
+
+  @media  screen and (max-width:1180px) {
     .Number {
-      font-size: 80px;
-    }
-    .Number-of-photos {
-      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-size: 100px;
+      position: absolute;
+      bottom: 5%;
+      right: 7.5%;
+      font-family: 'Oswald', sans-serif;
     }
     
+    
   }
+
+  @media  screen and (max-width:1000px) {
+    .Number {
+      color: rgb(255, 255, 255);
+      font-size: 100px;
+      position: absolute;
+      bottom: 5%;
+      right: 8%;
+      font-family: 'Oswald', sans-serif;
+    }
+    
+    
+  }
+
   @media  screen and (min-width:480px ) and (max-width:900px) {
    
     .image-design {
-      height: 30ch;
+      height: 45ch;
     }
     .Top-home-container{
-      height: 30ch;
+      height: 45ch;
      
     }
     .top-home-design {
@@ -67,4 +110,118 @@
     }
     
   }
+
+  @media  screen and (max-width:900px ) {
+    .top-home-design {
+      margin-bottom: 4ch;
+   
+    }
+    .Number {
+      color: rgb(255, 255, 255);
+      font-size: 100px;
+      position: absolute;
+      bottom: 4.25%;
+      right: 9%;
+      font-family: 'Oswald', sans-serif;
+    }
+    
+    
+  }
+
+  @media  screen and (max-width:700px ) {
+    .top-home-design {
+      margin-right: 2ch;
+      margin-bottom: 2ch;
+      border-radius: 0 0 3ch 0ch;
+      overflow: hidden;
   
+  
+      
+    }
+    
+    
+  }
+
+  @media  screen and (max-width:550px ) {
+    .Number {
+      color: rgb(255, 255, 255);
+      font-size: 100px;
+      position: absolute;
+      bottom: 4.25%;
+      right: 9.75%;
+      font-family: 'Oswald', sans-serif;
+    }
+    
+    
+  }
+
+  @media  screen and (max-width:480px) {
+    .top-home-design{
+      margin-right: 0ch;
+      margin-top: 0ch;
+        }
+
+
+    .image-design {
+      height: 30ch;
+      border-bottom-right-radius: 3ch;
+
+
+    }
+    .Top-home-container{
+      height: 30ch;
+    }
+    .Number {
+      font-size: 80px;
+      position: absolute;
+      bottom: 3.5%;
+      right: 9%;
+    }
+    .Number-of-photos {
+      font-size: 16px;
+    }
+    .top-home-design {
+      border-radius: 0;
+    }
+    .image-design {
+      border-bottom-right-radius: 0ch;
+  
+     }
+     
+    
+    
+  }
+  @media  screen and (max-width:430px ) {
+    .Number {
+      font-size: 80px;
+      position: absolute;
+      bottom: 3%;
+      right: 10%;
+    }
+  }
+  @media  screen and (max-width:300px ) {
+    .top-home-design {
+      margin-right: 0ch;
+      margin-bottom: 2ch;
+      border-radius: 0;
+      overflow: hidden;
+    }
+    .image-design {
+      border-bottom-right-radius: 0ch;
+  
+     }
+     .Number {
+      font-size: 80px;
+      position: absolute;
+      bottom: 3%;
+      right: 11.5%;
+    }
+    
+    
+    
+  }
+  
+
+  
+
+

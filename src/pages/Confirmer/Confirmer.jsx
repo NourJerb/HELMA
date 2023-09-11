@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Confirmer() {
   let navigate = useNavigate();
-  return <div className={styles.big} style={{border:"solid",width:"80%",marginLeft:"10%",alignSelf: "center",marginTop:"2.8%",marginBottom:"2.8%",borderRadius:"3vh",border:"1px solid #707070"}}>
+  return <div className={styles.big}>
     <div  className={styles.ct}>
       <div className={styles.imagecontainer}>
     <img className={styles.image} src={image3}/>

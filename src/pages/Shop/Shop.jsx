@@ -7,6 +7,7 @@ import Pagination from './pagination';
 import Table from './table';
 import {getLength, products} from '../../data/data';
 import { getProducts } from "../../data/data";
+import Categories from "./../../components/Categories";
 // import { getProducts } from '../../components/NavBar';
 
 
@@ -142,6 +143,7 @@ window.scrollTo({
 function MyComponent(){
   return(
   <div id={localStorage.getItem('currentPage')} className={styles.parent} >
+    <Categories></Categories>
     <Table products={getProducts(page,limit)}  />
     <Pagination totalPage={totalPages} page={page} limit={limit} siblings={1} onPageChange={handlePageChange} ></Pagination>   
   </div>)
@@ -172,6 +174,7 @@ if (path1==='/shop'){
 }
 
   return <div className={styles.parent}> 
+  
 <Routes>
 <Route  path='page1' exact element={<MyComponent  />}></Route>
 <Route  path={'page'+localStorage.getItem('currentPage')} exact element={<MyComponent  />}></Route>

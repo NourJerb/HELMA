@@ -4,15 +4,20 @@
 {
     height: 40px;
     max-width: 500px;
+    align-self: center;
 }
 
-.errors
+
+
+.container .errors
 {
     color: #F22F2F;
+    font-size: 0.8 vw;
+    margin-top: 10px;
 }
 .form .email
 {
-    width: 17vw;
+    width: 200px;
     background-color: #E3E3E3;
     height: 40px;
     border-top-left-radius: 40px;
@@ -42,7 +47,7 @@
 }
 .form .submit_email
 {
-    background-color: #E0B89F;
+    background-color: #E8C895;
     border: none; 
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -83,7 +88,7 @@
     transition-delay: 1s;
     transition-property: display;
     float: right;
-    background-color: #E0B89F;
+    background-color: #E8C895;
     border: none; 
     border-radius: 40px;
     height: 50px;
@@ -94,6 +99,19 @@
     transition: width 1s;
 }
 
+
+@media screen and (max-width: 1200px) {
+    .submit .submit_email{}
+
+    .submit .email{ width:150px}
+
+    .merci{width:150px}
+
+    .form .email{ width:150px}
+
+    .form .submit_email{font-size: 60%;}
+
+}
 
 @media screen and (max-width: 1150px) {
     .submit .submit_email{}
@@ -112,17 +130,17 @@
 
     .submit .submit_email{height: 35px;}
 
-    .submit .email{height: 35px;}
+    .submit .email{height: 35px; }
 
-    .merci{height: 35px;}
+    .merci{height: 35px; width:120px}
 
-    .form .email{font-size: 50%;height: 35px;}
+    .form .email{font-size: 50%;height: 35px; width:120px}
 
-    .form .submit_email{font-size: 50%;}
+    .form .submit_email{font-size: 50%; width:50px}
 
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
 
     .submit .submit_email{height: 40px;}
 
@@ -134,9 +152,70 @@
 
     .form .submit_email{font-size: 45%;}
 
+} */
+@media screen and (max-width: 800px) {
+
+    .container{
+        padding-bottom: 40px;
+    }
+
+    .submit .submit_email{height: 40px; width: 220px;}
+
+    .submit .email{height: 40px;}
+
+    .form{
+        width: 280px;
+    }
+    .merci{
+        padding-left: 20px;
+        white-space: nowrap;
+   }
+
+    .merci{height: 40px; margin-right: 20%;}
+
+    .form .email{font-size: 70%;height: 40px; width: 200px;}
+
+    .form .submit_email{font-size: 60%; width: 100px;}
+
+
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 340px) {
+
+    .container{
+        padding-bottom: 40px;
+    }
+
+    .submit .submit_email{height: 40px; width: 220px;}
+
+    .submit .email{height: 40px;}
+
+    .form{
+        width: 280px;
+    }
+    .merci{
+        padding-left: 20px;
+        white-space: nowrap;
+   }
+
+    .merci{height: 40px; margin-right: 20%;}
+
+    .form .email{font-size: 60%;height: 40px; width:50%; margin-left: 10%;}
+
+    .form .submit_email{font-size: 60%; width: 25%;}
+
+    .container .errors
+{
+    color: #F22F2F;
+    font-size: 0.8 vw;
+    margin-top: 10px;
+    margin-left:30px;
+}
+
+
+}
+
+/* @media screen and (max-width: 700px) {
 
     .submit .submit_email{}
 
@@ -190,4 +269,4 @@
 
     .form .submit_email{font-size: 3.2px;}
 
-}
+} */

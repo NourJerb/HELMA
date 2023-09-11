@@ -3,8 +3,12 @@
   margin-inline-start: 10ch;
   padding: 0.5ch;
   font-size: x-large;
-  font-family: Quicksand,sans-serif;
+  font-family: Quicksand, sans-serif;
+  text-align: end; 
+  margin-right: 5ch;
+  white-space: nowrap;
 }
+
 
 .topsellers-container {
   background-color: rgb(255, 255, 255);
@@ -22,5 +26,24 @@
 @media screen and (max-width: 700px) {
   .topsellers-container {
     margin-right: 2ch;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    padding: 0.5ch;
+    font-size: x-large;
+    font-family: Quicksand, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    margin:initial;
+    margin-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 300px) {
+  .topsellers-container {
+    margin-right: 0.5ch;
   }
 }

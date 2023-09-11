@@ -65,5 +65,27 @@
     .L,.R{
         width:17px;
         height:17px;
+        
     }
+  
+}
+
+@media(max-width:305px){
+    .pagination{
+        font-size: small;
+    }
+    .nav{
+        gap:1px;
+    }
+    .left{
+        right:13%;
+
+    }
+    .right{
+        position: relative;
+        left:13%;
+        
+    }
+
+  
 }

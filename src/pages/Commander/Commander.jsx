@@ -3,15 +3,41 @@ import image from '../../assets/image.png';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
+
+
+async function sendEmail(userEmail, imageSrc, productName) {
+    try {
+        const response = await fetch('http://localhost:8000/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ userEmail, imageSrc, productName }), // Send user's email, image, and product name to the backend
+        });
+
+        if (response.status === 200) {
+            return true; // Email sent successfully
+        } else {
+            return false; // Email sending failed
+        }
+    } catch (error) {
+        console.error('Error sending email:', error);
+        return false; // Handle error and return false
+    }
+}
+
+
 function Commander() {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const product = location.state?.product;
+	const imageSrc = `${product[1]}`;
+	console.log(imageSrc)
 
 	const [errors, setErrors] = useState({});
 	const [showErrors, setShowErrors] = useState(false);
 
-	const handleSubmit = (values) => {
+	const handleSubmit = async (values) => {
 		let newErrors = {};
 
 		if (!values.firstName.match(/^[a-zA-Z ]+$/)) {
@@ -51,8 +77,13 @@ function Commander() {
 		setShowErrors(true);
 
 		if (Object.keys(newErrors).length === 0) {
-			navigate("/confirmer", { state: { formData: values, product: product } });
-		}
+			const emailSent = await sendEmail(values.email, imageSrc, product[2]);
+			if (emailSent) {
+			  navigate('/confirmer', { state: { formData: values, product: product } });
+			} else {
+			  // Handle email sending failure
+			}
+		  }
 
 	};
 
@@ -76,7 +107,7 @@ function Commander() {
 
 					<div className={styles.container}>
 
-                    <div>
+                    <div className={styles.container_form}>
 
 
 						<div className={styles.ddiv}>

@@ -39,22 +39,31 @@
 .title{
     color:#1B2437;
     font-size: larger;
-    width:60%;
+    width:80%;
     height:30%;
     padding-left: 9%;
     padding-top: 10%;
     font-family: Playfair Display;
-    white-space: nowrap;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     
 }
 
-.desc{
+.desc {
+    width:85%;
     color: #8E8E93;
     font-size: small;
     padding-left: 9%;
     padding-top: 7%;
-}
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limite le texte à deux lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ajoute les trois points de suspension */
+  }
+  
 
 .btn{
     margin-top: 8%;

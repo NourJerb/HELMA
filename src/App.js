@@ -20,8 +20,6 @@ function App() {
     <>
       <div className="App1">
         <NavBar className="navigationBar"></NavBar>
-
-        <Categories></Categories>
       </div>
       
 
@@ -36,6 +34,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<div>404 not found</div>} />
       </Routes>
+
+
       <HelmaFooter/>
       
     </>
