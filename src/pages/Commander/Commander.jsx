@@ -5,14 +5,14 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 
 
-async function sendEmail(userEmail, imageSrc, productName) {
+async function sendEmail(userEmail, imageSrc, productName,id) {
     try {
         const response = await fetch('http://localhost:8000/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ userEmail, imageSrc, productName }), // Send user's email, image, and product name to the backend
+            body: JSON.stringify({ userEmail, imageSrc, productName,id }), // Send user's email, image, and product name to the backend
         });
 
         if (response.status === 200) {
@@ -77,7 +77,7 @@ function Commander() {
 		setShowErrors(true);
 
 		if (Object.keys(newErrors).length === 0) {
-			const emailSent = await sendEmail(values.email, imageSrc, product[2]);
+			const emailSent = await sendEmail(values.email, imageSrc, product[2],product[0]);
 			if (emailSent) {
 			  navigate('/confirmer', { state: { formData: values, product: product } });
 			} else {
@@ -265,7 +265,7 @@ function Commander() {
 				</div>
 
 				<div className={styles.bouttton}>
-					<input type="button" value="Retour" className={styles.bt} required onClick={() => { navigate(`/shop/page${localStorage.getItem("currentPage")}`) }} />
+					<input type="button" value="Retour" className={styles.bt} required onClick={() => { navigate(`/item/product${localStorage.getItem("product")}`,{ state: { product: product} }) }} />
 					<input type="submit" value="Continuer" className={styles.mbt} required />
 				</div>
 

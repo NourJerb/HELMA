@@ -6,7 +6,10 @@ import { useNavigate } from "react-router-dom";
 function Element(props){
     let navigate=useNavigate()
     const handleCommanderClick = () => {
-    navigate("/commander", { state: { product: props.e } });
+        if (props.e && props.e.length > 0) {
+            localStorage.setItem("product", props.e[0]);
+            navigate(`/item/product${localStorage.getItem("product")}`, { state: { product: props.e } });
+          } 
   };
     return(<div className={styles.element}>
         <div className={styles.divv}>

@@ -1,43 +1,32 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const path = require('path'); // Import the 'path' module
-
+const path = require('path');
+const config = require('./config'); // Import the configuration file
 
 const app = express();
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {
   try {
-    const { userEmail, imageSrc, productName } = req.body; // Extract the additional data
-    console.log(req.body)
-    // Create a transporter using SMTP details (Gmail in this case)
-    const transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: "ketata.15.selim@gmail.com", // Your email address
-            pass: "fednmzjrdvsquqim",   // App password (not your main password)
-        },
-    });
+    const { userEmail, imageSrc, productName, id } = req.body;
 
+    const transporter = nodemailer.createTransport(config.emailConfig);
 
-
-
-
-
-// Définissez les options de l'e-mail avec l'image incorporée
-const mailOptions = {
-  from: 'ketata.152.selim@gmail.com',
-  to: userEmail,
-  subject: 'Testing Nodemailer',
-  html: `<h1>Hello from Nodemailer!</h1>
-        <p>This is a test email.</p>
-        <p>Product Name: ${productName}</p>
-        `,
-
-};
-
-    // Send the email and wait for the result
+    const mailOptions = {
+      from: config.fromEmail,
+      to: userEmail,
+      subject: `Achat du produit de référence ${id}`, 
+      html: `<h1>Bonjour,</h1>
+            <p>Merci d'avoir effectué un achat de :</p>
+            <p>Nom du produit: ${productName}</p>
+            <p>Référence du produit: ${id}</p>
+            <img src="${imageSrc}" alt="Product Image">
+            <p>Votre demande d'achat a été bien reçu.</p>
+            <p>Nous vous contacterons dès que possible afin de vous offrir le produit souhaité.</p>
+            <p>HelmaCreations,</p>`,
+    };
+    
     const info = await transporter.sendMail(mailOptions);
     console.log('Email sent:', info.response);
 
@@ -48,7 +37,7 @@ const mailOptions = {
   }
 });
 
-const PORT = 8000;
+const PORT = config.port;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

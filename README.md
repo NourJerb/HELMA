@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HelmaCreations
+It's a website for a jewelery shop
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Configuration](#Configuration)
+- [Usage](#usage)
+- [Main Components](#Main-Components)
+- [API Routes](#API-Routes)
+- [Contact](#Contact)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository.
+2. run `npm install` to install frontend dependencies.
+3. Navigate to the Backend folder and run `npm install` to install backend dependencies.
+4. Configure environment variables for the backend, such as SMTP settings for Node Mailer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Configuration
 
-### `npm test`
+1. Sign in to your Google account.
+2. Select "Security."
+3. Under "Signing in to Google," select "Two-Step Verification."
+4. At the bottom of the page, select "App passwords."
+5. Enter a name to help you remember where you'll use the app password.
+6. Select "Generate."
+7. To enter the app password, follow the on-screen instructions. The app password is the 16-character code generated on your device.
+8. Copy this password for later use.-------------------------------------------------------------------------------------------------------
+9. select the config.js file in the Backend folder : 
+change 'your-email@gmail.com' by your email account (which is used to generate the password)
+change 'your-email-password' by the copied (generated) password .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Start the frontend: Navigate to the project root and run `npm start`.
+2. Start the backend: Navigate to the backend folder and run `npm start`.
+3. Access the application at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Main_Components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Navbar: Navigation across pages.
+- Categories: Product category filtering.
+- Home: The home page.
+- Shop: Contains all the products.
+- Item: Detailed information about selected products.
+- Commander: Form for making a purchase.
+- Confirmer: Confirmation message.
+- Contact: HelmaCreations contact information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Routes
 
-### `npm run eject`
+- /send-email API to send email from the shop to the client 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any technical questions, feedback, or business inquiries, feel free to contact us at junior.ensi@gmail.com.
